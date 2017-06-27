@@ -9,11 +9,15 @@
 import UIKit
 
 class PtInfoViewController: UIViewController {
+        
+        //前の画面から何行目が選択されたかわかる行番号を格納するプロパティ
+        var sIndex = -1
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            print("前の画面から選択された行:\(sIndex)")
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

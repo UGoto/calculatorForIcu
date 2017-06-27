@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssessForRespViewController: UIViewController {
+class AssessDeliViewController: UIViewController {
         var sIndex = -1
     
         override func viewDidLoad() {
