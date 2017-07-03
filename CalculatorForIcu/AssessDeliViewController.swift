@@ -123,6 +123,7 @@ class AssessDeliViewController: UIViewController {
 //            resultLabel.text = "せん妄"
         }else if cam1Score == 1 && cam2Score == 1 && cam3Score == 1 && cam4aScore == 1 && cam4bScore == 1{
             resultLabel.text = "せん妄"
+        
             
 //        }else if amount == 2{
 //            resultLabel.text = ""
@@ -135,8 +136,8 @@ class AssessDeliViewController: UIViewController {
             resultLabel.text = "せん妄"
         }else if cam4bScore == 1{
             resultLabel.text = "せん妄"
-//        }else{
-//            resultLabel.text = ""
+        }else{
+            resultLabel.text = ""
         }
     }
     
