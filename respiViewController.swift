@@ -10,10 +10,51 @@ import UIKit
 
 class respiViewController: UIViewController {
 
+    @IBOutlet weak var tv: UITextField!
+    @IBOutlet weak var deadSpace: UITextField!
+    @IBOutlet weak var rr: UITextField!
+    @IBOutlet weak var fio2: UITextField!
+    @IBOutlet weak var breathe: UITextField!
     @IBOutlet weak var paco2: UITextField!
+    @IBOutlet weak var pao2: UITextField!
+    @IBOutlet weak var co: UITextField!
+    @IBOutlet weak var hb: UITextField!
+    @IBOutlet weak var sao2: UITextField!
+    @IBOutlet weak var cvo2: UITextField!
+    @IBOutlet weak var pressure: UITextField!
+    @IBOutlet weak var vaporPressure: UITextField!
     
     
+    
+    
+    //Returnキーを閉じる
+    @IBAction func tapReturnTv(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnDs(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnRr(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnFio2(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnBreathe(_ sender: UITextField) {
+    }
     @IBAction func tapReturnPaco2(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnPao2(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnCo(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnHb(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnSao2(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnSvo2(_ sender: UITextField) {
+    }
+    @IBAction func tapReturnCvo2(_ sender: UITextField) {
+    }
+    @IBAction func pressure(_ sender: UITextField) {
+    }
+    @IBAction func vaporPressure(_ sender: UITextField) {
     }
     
     
@@ -23,17 +64,21 @@ class respiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
+    
 //重複するデータの遷移
     
     //血液ガス分析のページへ遷移
     @IBAction func buttonToAbg(_ sender: UIButton) {
+        appDelegate.valueOfPao2 = pao2.text!
         appDelegate.valueOfPaco2 = paco2.text!
     }
     
+    //ApacheⅡのページへ遷移
+    @IBAction func buttonToApache(_ sender: UIButton) {
+//        appDelegate.valueOfRr = rr.text!
+    }
 
 //下の欄のボタン（6つ）を押した際に次の画面へ遷移
     

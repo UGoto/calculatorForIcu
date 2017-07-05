@@ -14,7 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     //重複するデータをAppDelegateのプロパティーとして作成
+    var valueOfPao2:String = ""
     var valueOfPaco2:String = ""
+//    var valueOfRr:String = ""
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
