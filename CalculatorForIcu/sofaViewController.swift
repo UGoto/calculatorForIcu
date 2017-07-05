@@ -1,5 +1,5 @@
 //
-//  abgViewController.swift
+//  sofaViewController.swift
 //  CalculatorForIcu
 //
 //  Created by Yuji Yamamoto on 2017/07/04.
@@ -8,20 +8,10 @@
 
 import UIKit
 
-class abgViewController: UIViewController {
-    @IBOutlet weak var phOfAbg: UITextField!
+class sofaViewController: UIViewController {
 
-    @IBOutlet weak var paco2OfAbg: UITextField!
-    
-    //returnキーが押された時
-    @IBAction func tapReturnPaco2(_ sender: UITextField) {
-    }
-    
-    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        paco2OfAbg.text = appDelegate.valueOfPaco2
 
         
     }

@@ -10,6 +10,8 @@
 		BA49288E1EF678CA009B8988 /* AssessDeliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */; };
 		BA592A6C1F0348B1008997F1 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6B1F0348B1008997F1 /* historyViewController.swift */; };
 		BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6D1F0348F2008997F1 /* formulaViewController.swift */; };
+		BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */; };
+		BA8ABCF31F0B6783001A13F3 /* sofaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */; };
 		BAC50A341F0B0452004C183F /* abgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC50A331F0B0452004C183F /* abgViewController.swift */; };
 		BAC50A361F0B053E004C183F /* respiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC50A351F0B053E004C183F /* respiViewController.swift */; };
 		BAE88B7E1EF5EB6E001D0557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88B7D1EF5EB6E001D0557 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 		BAE88B931EF5EB6F001D0557 /* CalculatorForIcuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88B921EF5EB6F001D0557 /* CalculatorForIcuTests.swift */; };
 		BAE88B9E1EF5EB6F001D0557 /* CalculatorForIcuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88B9D1EF5EB6F001D0557 /* CalculatorForIcuUITests.swift */; };
 		BAE88BAC1EF5F010001D0557 /* PtInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */; };
+		BAFC96D61F0BCF6900B5C714 /* dicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */; };
+		BAFC96D81F0CAB0400B5C714 /* apachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,8 @@
 		BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessDeliViewController.swift; sourceTree = "<group>"; };
 		BA592A6B1F0348B1008997F1 /* historyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		BA592A6D1F0348F2008997F1 /* formulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formulaViewController.swift; sourceTree = "<group>"; };
+		BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nutriViewController.swift; sourceTree = "<group>"; };
+		BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sofaViewController.swift; sourceTree = "<group>"; };
 		BAC50A331F0B0452004C183F /* abgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = abgViewController.swift; sourceTree = "<group>"; };
 		BAC50A351F0B053E004C183F /* respiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = respiViewController.swift; path = ../respiViewController.swift; sourceTree = "<group>"; };
 		BAE88B7A1EF5EB6E001D0557 /* CalculatorForIcu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorForIcu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +65,8 @@
 		BAE88B9D1EF5EB6F001D0557 /* CalculatorForIcuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorForIcuUITests.swift; sourceTree = "<group>"; };
 		BAE88B9F1EF5EB6F001D0557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PtInfoViewController.swift; sourceTree = "<group>"; };
+		BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dicViewController.swift; sourceTree = "<group>"; };
+		BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apachViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +120,11 @@
 				BAE88B7D1EF5EB6E001D0557 /* AppDelegate.swift */,
 				BAE88B7F1EF5EB6E001D0557 /* ViewController.swift */,
 				BAC50A351F0B053E004C183F /* respiViewController.swift */,
+				BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */,
 				BAC50A331F0B0452004C183F /* abgViewController.swift */,
+				BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */,
+				BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */,
+				BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */,
 				BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */,
 				BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */,
 				BA592A6D1F0348F2008997F1 /* formulaViewController.swift */,
@@ -277,12 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFC96D81F0CAB0400B5C714 /* apachViewController.swift in Sources */,
 				BAE88B801EF5EB6E001D0557 /* ViewController.swift in Sources */,
 				BAE88B7E1EF5EB6E001D0557 /* AppDelegate.swift in Sources */,
+				BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */,
 				BAC50A341F0B0452004C183F /* abgViewController.swift in Sources */,
 				BA49288E1EF678CA009B8988 /* AssessDeliViewController.swift in Sources */,
 				BAE88BAC1EF5F010001D0557 /* PtInfoViewController.swift in Sources */,
+				BAFC96D61F0BCF6900B5C714 /* dicViewController.swift in Sources */,
 				BA592A6C1F0348B1008997F1 /* historyViewController.swift in Sources */,
+				BA8ABCF31F0B6783001A13F3 /* sofaViewController.swift in Sources */,
 				BAC50A361F0B053E004C183F /* respiViewController.swift in Sources */,
 				BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */,
 			);
