@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA05A2011F0DB4360062D408 /* resultRespiOfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05A2001F0DB4360062D408 /* resultRespiOfViewController.swift */; };
+		BA05A2031F0DFE530062D408 /* resultNutriOfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05A2021F0DFE530062D408 /* resultNutriOfViewController.swift */; };
 		BA49288E1EF678CA009B8988 /* AssessDeliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */; };
 		BA592A6C1F0348B1008997F1 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6B1F0348B1008997F1 /* historyViewController.swift */; };
 		BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6D1F0348F2008997F1 /* formulaViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA05A2001F0DB4360062D408 /* resultRespiOfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultRespiOfViewController.swift; sourceTree = "<group>"; };
+		BA05A2021F0DFE530062D408 /* resultNutriOfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultNutriOfViewController.swift; sourceTree = "<group>"; };
 		BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessDeliViewController.swift; sourceTree = "<group>"; };
 		BA592A6B1F0348B1008997F1 /* historyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		BA592A6D1F0348F2008997F1 /* formulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formulaViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +124,9 @@
 				BAE88B7D1EF5EB6E001D0557 /* AppDelegate.swift */,
 				BAE88B7F1EF5EB6E001D0557 /* ViewController.swift */,
 				BAC50A351F0B053E004C183F /* respiViewController.swift */,
+				BA05A2001F0DB4360062D408 /* resultRespiOfViewController.swift */,
 				BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */,
+				BA05A2021F0DFE530062D408 /* resultNutriOfViewController.swift */,
 				BAC50A331F0B0452004C183F /* abgViewController.swift */,
 				BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */,
 				BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */,
@@ -289,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA05A2011F0DB4360062D408 /* resultRespiOfViewController.swift in Sources */,
 				BAFC96D81F0CAB0400B5C714 /* apachViewController.swift in Sources */,
 				BAE88B801EF5EB6E001D0557 /* ViewController.swift in Sources */,
+				BA05A2031F0DFE530062D408 /* resultNutriOfViewController.swift in Sources */,
 				BAE88B7E1EF5EB6E001D0557 /* AppDelegate.swift in Sources */,
 				BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */,
 				BAC50A341F0B0452004C183F /* abgViewController.swift in Sources */,

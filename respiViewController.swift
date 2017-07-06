@@ -20,6 +20,7 @@ class respiViewController: UIViewController {
     @IBOutlet weak var co: UITextField!
     @IBOutlet weak var hb: UITextField!
     @IBOutlet weak var sao2: UITextField!
+    @IBOutlet weak var svo2: UITextField!
     @IBOutlet weak var cvo2: UITextField!
     @IBOutlet weak var pressure: UITextField!
     @IBOutlet weak var vaporPressure: UITextField!
@@ -65,14 +66,65 @@ class respiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+  
+//呼吸アセスメントの結果ページへデータを遷移
+    @IBAction func resultButton(_ sender: UIButton) {
+
+        
+    //計算した値を呼吸アセスメントのデータへ遷移
+        //肺胞換気量の値
+        if tv.text == "" || deadSpace.text == "" || rr.text == ""{
+            print("入力されていない項目があります")
+        }else{
+          appDelegate.valueOfTvv = (Int(tv.text!)! - Int(deadSpace.text!)!) * Int(rr.text!)!
+        }
+        
+        //A-aDo2の値
+        if fio2.text == "" || paco2.text == "" || pao2.text == "" || breathe.text == ""{
+            print("入力されていない項目があります")
+        }else{
+        appDelegate.valueOfAaDo2 = (Float(fio2.text!)! * 715 - Float(paco2.text!)! / Float(breathe.text!)!) - Float(pao2.text!)!
+        }
+        
+        //P/F値
+        if pao2.text == "" || fio2.text == ""{
+            print("入力されていない項目があります")
+        }else{
+        appDelegate.valueOfPf = Float(pao2.text!)! / Float(fio2.text!)!
+        }
+        
+        
+        if co.text == "" || sao2.text == "" || hb.text == "" || pao2.text == "" || cvo2.text == "" {
+            print("入力されていない項目があります")
+        }else{
+        //DO2の値
+        appDelegate.valueOfDo2 = appDelegate.valueOfQt * appDelegate.valueOfCao2
+        
+        //Qtの値
+        appDelegate.valueOfQt = Float(co.text!)! * 10
+        
+        //Cao2の値
+        appDelegate.valueOfCao2 = (1.38 * Float(hb.text!)! * Float(sao2.text!)!) + (Float(pao2.text!)! * 0.0031)
+        
+        //VO2の値
+        appDelegate.valueOfVo2 = appDelegate.valueOfCao2 - Float(cvo2.text!)! * appDelegate.valueOfQt 
+        
+        //OERの値
+        appDelegate.valueOfOer = appDelegate.valueOfVo2 / appDelegate.valueOfDo2 * 100
+        
+        }
+    }
+    
 
     
-//重複するデータの遷移
     
+    
+//重複するデータの遷移
     //血液ガス分析のページへ遷移
     @IBAction func buttonToAbg(_ sender: UIButton) {
-        appDelegate.valueOfPao2 = pao2.text!
-        appDelegate.valueOfPaco2 = paco2.text!
+        appDelegate.valueOfPao2 = Float(pao2.text!)!
+        appDelegate.valueOfPaco2 = Float(paco2.text!)!
+        
     }
     
     //ApacheⅡのページへ遷移
@@ -80,6 +132,8 @@ class respiViewController: UIViewController {
 //        appDelegate.valueOfRr = rr.text!
     }
 
+    
+    
 //下の欄のボタン（6つ）を押した際に次の画面へ遷移
     
     //栄養アセスメントの画面へ遷移
@@ -107,6 +161,10 @@ class respiViewController: UIViewController {
         performSegue(withIdentifier: "showApach", sender: nil )
     }
     
+    //呼吸アセスメントの結果画面への遷移
+    @IBAction func tapbuttonRofR(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRofR", sender: nil )
+    }
     
     //セグエを通って次の画面へ移動する
     //栄養アセスメントの画面へ

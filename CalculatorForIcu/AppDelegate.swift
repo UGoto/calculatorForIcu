@@ -14,9 +14,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     //重複するデータをAppDelegateのプロパティーとして作成
-    var valueOfPao2:String = ""
-    var valueOfPaco2:String = ""
-//    var valueOfRr:String = ""
+    //呼吸アセスメント
+    var valueOfPao2:Float = 0
+    var valueOfPaco2:Float = 0
+    var valueOfTvv:Int = 0
+    var valueOfAaDo2:Float = 0
+    var valueOfPf:Float =  0
+    var valueOfQt:Float = 0
+    var valueOfCao2:Float = 0
+    var valueOfDo2:Float = 0
+    var valueOfVo2:Float = 0
+    var valueOfOer:Float = 0
+    
+    //栄養アセスメント
+    var mof:Float = 0
+    var mof2:Float = 0
+    var mof4:Float = 0
+    var mof6:Float = 0
+    var mof8:Float = 0
+    var mof0:Float = 0
+    var fof:Float = 0
+    var fof2:Float = 0
+    var fof4:Float = 0
+    var fof6:Float = 0
+    var fof8:Float = 0
+    var fof0:Float = 0
+    
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
