@@ -39,9 +39,8 @@ class sofaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
+    
     
     //PaO2/FiO2のセグメント設定
     @IBAction func pfSeg(_ sender: UISegmentedControl) {
@@ -152,19 +151,18 @@ class sofaViewController: UIViewController {
         totalScore.text = String(amount)
     }
     
-
     
-    
-    
-    
-    
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
+    //セグメントの高さ調整
+//    extension UISegmentedControl {
+//        func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor){
+//        }
+//    }
+
     
 
     /*

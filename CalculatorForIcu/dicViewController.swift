@@ -26,6 +26,7 @@ class dicViewController: UIViewController {
     
     //合計点数の変数を作成
     var amount:Int = 0
+    
     //セグメントが選択されない時の初期値の設定
     var btNumber:Int = 0
     var hrNumber:Int = 0
