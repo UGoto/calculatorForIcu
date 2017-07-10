@@ -17,8 +17,6 @@ class dicViewController: UIViewController {
     @IBOutlet weak var ptSeg: UISegmentedControl!
     @IBOutlet weak var fdpSeg: UISegmentedControl!
     
-    
-    
     @IBOutlet weak var totalScore: UITextField!
     
     //appDelegateのインスタンスを作成
@@ -36,7 +34,18 @@ class dicViewController: UIViewController {
     var ptNumber:Int = 0
     var fdpNumber:Int = 0
 
+    
+//画面の遷移
+    //呼吸アセスメントへ画面の遷移
+    
+    //栄養アセスメントへ画面の遷移
     @IBAction func tapButtonNutri(_ sender: UIButton) { performSegue(withIdentifier: "showNutri", sender: nil )
+    //血液ガスアセスメントへ画面の遷移
+    
+    //SOFAへ画面の遷移
+        
+    //APACHEⅡへ画面の遷移
+    
         
     }
     override func viewDidLoad() {
@@ -44,6 +53,7 @@ class dicViewController: UIViewController {
 
     }
     
+//セグメントの設定
     //体温のセグメント設定
     @IBAction func btSeg(_ sender: UISegmentedControl) {
         if btSeg.selectedSegmentIndex == 0{
@@ -112,7 +122,8 @@ class dicViewController: UIViewController {
         }
     }
     
-    
+
+//結果の表示
     @IBAction func totalScoreButton(_ sender: UIButton) {
         if btSeg.selectedSegmentIndex == 1 && hrSeg.selectedSegmentIndex == 1 && rrSeg.selectedSegmentIndex == 1{
             amount = 3 + pltNumber + ptNumber + fdpNumber
@@ -144,16 +155,4 @@ class dicViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

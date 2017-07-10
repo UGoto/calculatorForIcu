@@ -26,6 +26,15 @@ class resultNutriOfViewController: UIViewController {
     @IBOutlet weak var fof8: UITextField!
     @IBOutlet weak var fof0: UITextField!
     
+    //BMI,体重減少,エネルギー消費量,Nバランス,投与窒素量,窒素排泄量,窒素出納
+    @IBOutlet weak var bmi: UITextField!
+    @IBOutlet weak var loseWt: UITextField!
+    @IBOutlet weak var energy: UITextField!
+    @IBOutlet weak var nb: UIView!
+    @IBOutlet weak var giveNi: UITextField!
+    @IBOutlet weak var outNi: UITextField!
+    @IBOutlet weak var inOutNi: UITextField!
+    
     
     //appDelegateのインスタンスの作成
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -50,6 +59,9 @@ class resultNutriOfViewController: UIViewController {
         fof8.text = String(appDelegate.fof8)
         fof0.text = String(appDelegate.fof0)
         
+        //
+        bmi.text = String(appDelegate.bmi)
+        
         
     }
 
@@ -57,16 +69,4 @@ class resultNutriOfViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

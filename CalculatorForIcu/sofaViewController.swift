@@ -39,9 +39,27 @@ class sofaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//呼吸アセスメントから値を引き受ける
+        if appDelegate.valueOfPao2/appDelegate.valueOfFio2 >= 400{
+            pfSeg.selectedSegmentIndex = 0
+            pfNumber = 0
+        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 400 && appDelegate.valueOfFio2 >= 300 {
+            pfSeg.selectedSegmentIndex = 1
+            pfNumber = 1
+        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 300 && appDelegate.valueOfFio2 >= 200 {
+            pfSeg.selectedSegmentIndex = 2
+            pfNumber = 2
+        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 200 && appDelegate.valueOfFio2 >= 100{
+            pfSeg.selectedSegmentIndex = 3
+            pfNumber = 3
+        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 100{
+            pfSeg.selectedSegmentIndex = 4
+            pfNumber = 4
+        }
     }
     
-    
+
+//セグメントの設定
     //PaO2/FiO2のセグメント設定
     @IBAction func pfSeg(_ sender: UISegmentedControl) {
         if pfSeg.selectedSegmentIndex == 0{
@@ -105,30 +123,30 @@ class sofaViewController: UIViewController {
     
       //GCSのセグメントの設定
     @IBAction func gcsSeg(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+        if gcsSeg.selectedSegmentIndex == 0{
             gcsNumber = 0
-        }else if sender.selectedSegmentIndex == 1{
+        }else if gcsSeg.selectedSegmentIndex == 1{
             gcsNumber = 1
-        }else if sender.selectedSegmentIndex == 2{
+        }else if gcsSeg.selectedSegmentIndex == 2{
             gcsNumber = 2
-        }else if sender.selectedSegmentIndex == 3{
+        }else if gcsSeg.selectedSegmentIndex == 3{
             gcsNumber = 3
-        }else if sender.selectedSegmentIndex == 4{
+        }else if gcsSeg.selectedSegmentIndex == 4{
             gcsNumber = 4
         }
     }
     
     //クレアチニンのセグメントの設定
     @IBAction func creSeg(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+        if creSeg.selectedSegmentIndex == 0{
             creNumber = 0
-        }else if sender.selectedSegmentIndex == 1{
+        }else if creSeg.selectedSegmentIndex == 1{
             creNumber = 1
-        }else if sender.selectedSegmentIndex == 2{
+        }else if creSeg.selectedSegmentIndex == 2{
             creNumber = 2
-        }else if sender.selectedSegmentIndex == 3{
+        }else if creSeg.selectedSegmentIndex == 3{
             creNumber = 3
-        }else if sender.selectedSegmentIndex == 4{
+        }else if creSeg.selectedSegmentIndex == 4{
             creNumber = 4
         }
     }
@@ -145,34 +163,27 @@ class sofaViewController: UIViewController {
     }
     
     
-    //結果buttonが押された時、totalに合計点が出力される
+//結果buttonが押された時、totalに合計点が出力される
     @IBAction func totalScoreButton(_ sender: UIButton) {
         amount = pfNumber + pltNumber + bilNumber + mapNumber + gcsNumber + creNumber + hrNumber
         totalScore.text = String(amount)
     }
+    
+//画面の遷移
+    //APACHEへ画面の遷移（GCS,クレアチニン）
+    @IBAction func buttonToApache(_ sender: UIButton) {
+        appDelegate.valueOfGcs = Float(gcsSeg.selectedSegmentIndex)
+        appDelegate.valueOfCre = Float(creSeg.selectedSegmentIndex)
+    }
+    
+    
+    
+
+
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-    //セグメントの高さ調整
-//    extension UISegmentedControl {
-//        func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor){
-//        }
-//    }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -49,7 +49,7 @@ class nutriViewController: UIViewController {
     
     //栄養アセスメントの結果ページへデータを遷移
     @IBAction func resultButton(_ sender: UIButton) {
-        if pwt.text == "" || ht.text == "" || age.text == ""{
+        if pwt.text == "" || ht.text == "" || age.text == "" || protein.text == "" || bun.text == "" || hrBun.text == "" || wt.text == "" {
             print("入力されていない項目があります")
         }else{
         //BEE男
@@ -68,6 +68,29 @@ class nutriViewController: UIViewController {
         appDelegate.fof8 = appDelegate.fof * 1.8
         appDelegate.fof0 = appDelegate.fof * 2.0
         
+        //BMI
+        appDelegate.bmi = Float(wt.text!)! / (Float(ht.text!)! * Float(ht.text!)!)
+        
+        //体重減少率
+        appDelegate.loseWt = (Float(wt.text!)!-Float(pwt.text!)!) / Float(wt.text!)! * 100
+        
+        //エネルギー消費量（EE） vo2の値を呼吸アセスメントの結果から引っ張ってくる作業が必要
+            
+        appDelegate.ee = 3.94 + appDelegate.valueOfVo2 + 1.11 + appDelegate.valueOfVo2 - 2.17 * Float(hrBun.text!)!
+            
+        
+        //Nバランス
+        appDelegate.nb = Float(protein.text!)!/6.25 - (Float(bun.text!)! * 1000 + 4 )
+        
+        //投与窒素量
+        appDelegate.giveN = Float(protein.text!)! * 1000 / 6.25
+        
+        //窒素排泄量
+        appDelegate.excreteN = Float(hrBun.text!)! * 1000 * 1.25
+        
+        //窒素出納
+        appDelegate.casherN = appDelegate.giveN - appDelegate.excreteN
+            
         }
     }
     

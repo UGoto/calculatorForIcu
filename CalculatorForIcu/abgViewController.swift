@@ -42,25 +42,30 @@ class abgViewController: UIViewController {
     @IBAction func tapReturnCl(_ sender: UITextField) {
     }
     
-
+    //appDelegateのインスタンスの作成
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
+    
+    //呼吸アセスメントのページからデータを受け取る
+        super.viewDidLoad()
+        pao2OfAbg.text = String(appDelegate.valueOfPao2)
+        paco2OfAbg.text = String(appDelegate.valueOfPaco2)
+        }
+    
+    //結果の表示
+        //AG計算
     @IBAction func resultButton(_ sender: UIButton) {
         if naOfAbg.text == "" || kOfAbg.text == "" || clOfAbg.text == "" {
             print("数値が入力されていない")}
         let getNa:Double = Double(naOfAbg.text!)!
         let getK:Double = Double(kOfAbg.text!)!
         let getCl:Double = Double(clOfAbg.text!)!
-        
-        
-        
         ag.text = String(getNa - ( getK + getCl))
         ag.textAlignment = NSTextAlignment.center
         
-        
+    
         //血液ガス計算
         if phOfAbg.text == "" || paco2OfAbg.text == "" || hco3OfAbg.text == ""{
             print("数値が入力されていない")
@@ -71,7 +76,7 @@ class abgViewController: UIViewController {
             let getHco3:Double = Double(hco3OfAbg
                 .text!)!
             
-            //血ガス診断　４種類
+        //血ガス診断　４種類
             if (getPh < 7.35 && getPaco2 > 45) {
                 bloodGas.text = "呼吸性アシドーシス"
             }else if(getPh < 7.35 && getHco3 > 24){
@@ -109,89 +114,51 @@ class abgViewController: UIViewController {
         }
         
     }
-//    //代償されているか
-//   
-//    @IBAction func concomitantButton(_ sender: UITextField) {
-//        let getPh:Double = Double(phOfAbg.text!)!
-//        let getPaco2:Double = Double(paco2OfAbg
-//            .text!)!
-//        let getHco3:Double = Double(hco3OfAbg
-//            .text!)!
-//        let concomiRespi = 1.2 * getHco3
-//        let concomiMetab = 0.7 * getHco3
-//        if (getPaco2 <= concomiRespi) {
-//            concomitant.text = "代償性呼吸性アシドーシス"
-//        }else if(getPaco2 <= concomiMetab){
-//            concomitant.text = "代償性代謝性アルカローシス"
-//        }
-//
-//    }
-//    
-//    //血液ガス計算
-//    @IBAction func bloodGasButton(_ sender: UITextField) {
-//        if phOfAbg.text == "" || paco2OfAbg.text == "" || hco3OfAbg.text == ""{
-//            print("数値が入力されていない")
-//        }else{
-//            let getPh:Double = Double(phOfAbg.text!)!
-//            let getPaco2:Double = Double(paco2OfAbg
-//                .text!)!
-//            let getHco3:Double = Double(hco3OfAbg
-//                .text!)!
-//            
-//            //血ガス診断　４種類
-//            if (getPh < 7.35 && getPaco2 > 45) {
-//                bloodGas.text = "呼吸性アシドーシス"
-//            }else if(getPh < 7.35 && getHco3 > 24){
-//                bloodGas.text = "代謝性アシドーシス"
-//            }else if(getPh > 7.45 && getPaco2 < 35){
-//                bloodGas.text = "呼吸性アルカローシス"
-//            }else if(getPh > 7.45 && getHco3 < 24){
-//                bloodGas.text = "代謝性アルカローシス"
-//            }else{
-//                bloodGas.text = ""
-//            }
-//        }
-//
-//    }
-//        
-//    
-//    //AnionGapの計算式
-//    @IBAction func agButton(_ sender: UITextField) {
-//        if naOfAbg.text == "" || kOfAbg.text == "" || clOfAbg.text == "" {
-//            print("数値が入力されていない")}
-//        let getNa:Double = Double(naOfAbg.text!)!
-//        let getK:Double = Double(kOfAbg.text!)!
-//        let getCl:Double = Double(clOfAbg.text!)!
-//        
-//        ag.text = String(getNa - ( getK + getCl))
-//        ag.textAlignment = NSTextAlignment.center
-//    }
-   
-    
-    
-//    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-   
-        
-//        paco2OfAbg.text = appDelegate.valueOfPaco2
-//        pao2OfAbg.text = appDelegate.valueOfPao2
 
+
+//重複するデータの遷移
+    //Sofaのページへ遷移（PaO2）
+    @IBAction func buttonToSofa(_ sender: UIButton) {
+        appDelegate.valueOfPao2 = Float(paco2OfAbg.text!)!
+    }
+    
+    //APACHEのページへ遷移（pH,PaO2,Na,K,HCO3）
+    @IBAction func buttonToApache(_ sender: UIButton) {
+        appDelegate.valueOfPf = Float(phOfAbg.text!)!
+        appDelegate.valueOfPao2 = Float(pao2OfAbg.text!)!
+        appDelegate.valueOfNa = Float(naOfAbg.text!)!
+        appDelegate.valueOfK = Float(kOfAbg.text!)!
+        appDelegate.valueOfHco3 = Float(hco3OfAbg.text!)!
+    }
+    
+    
+    
+//画面の遷移
+    //呼吸アセスメントへ画面を遷移
+    @IBAction func tapButtonToRespi(_ sender: UIButton) {
+    }
+    
+    //栄養アセスメントへ画面を遷移
+    @IBAction func tapButtonToNutri(_ sender: UIButton) {
+    }
+    
+    //Sofaへ画面を遷移
+    @IBAction func tapButtonToSofa(_ sender: UIButton) {
+         performSegue(withIdentifier: "showSofaFromAbg", sender: nil )
+    }
+    
+    //DICへ画面を遷移
+    @IBAction func tapButtonToDic(_ sender: UIButton) {
+    }
+
+    //APACHE2へ画面を遷移
+    @IBAction func tapButtonToApa(_ sender: UIButton) {
+    }
+    
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

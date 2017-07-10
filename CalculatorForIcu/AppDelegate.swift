@@ -15,11 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //重複するデータをAppDelegateのプロパティーとして作成
     //呼吸アセスメント
-    var valueOfPao2:Float = 0
-    var valueOfPaco2:Float = 0
     var valueOfTvv:Int = 0
     var valueOfAaDo2:Float = 0
-    var valueOfPf:Float =  0
+    var valueOfPf:Float = 0
     var valueOfQt:Float = 0
     var valueOfCao2:Float = 0
     var valueOfDo2:Float = 0
@@ -39,9 +37,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var fof6:Float = 0
     var fof8:Float = 0
     var fof0:Float = 0
+    var bmi:Float = 0
+    var loseWt:Float = 0
+    var ee:Float = 0
+    var nb:Float = 0
+    var giveN:Float = 0
+    var excreteN:Float = 0
+    var casherN:Float = 0
     
-
-
+    //重複のある入力項目
+    var valueOfPao2:Float = 0
+    var valueOfPaco2:Float = 0
+    var valueOfFio2:Float = 0
+    var valueOfrr:Float = 0
+    var valueOfPh:Float = 0
+    var valueOfHr:Float = 0
+    var valueOfHco3:Float = 0
+    var valueOfAge:Float = 0
+    var valueOfNa:Float = 0
+    var valueOfK:Float = 0
+    var valueOfGcs:Float = 0
+    var valueOfCre:Float = 0
+    var valueOfPlt:Float = 0
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

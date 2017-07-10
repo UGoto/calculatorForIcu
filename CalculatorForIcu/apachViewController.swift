@@ -31,6 +31,11 @@ class apachViewController: UIViewController {
     //GCSのスコア
     @IBOutlet weak var gcs: UITextField!
     
+    //GCS　returnキーが押されたらテンキーが閉じる
+    @IBAction func gcsScore(_ sender: UITextField) {
+    }
+    
+    
     //結果ボタンのtext
     @IBOutlet weak var totalScore: UITextField!
     @IBOutlet weak var comment: UITextField!
@@ -56,11 +61,57 @@ class apachViewController: UIViewController {
     var ageNumber:Int = 0
     var opeNumber:Int = 0
     var afteropeNumber:Int = 0
+
+    //appDelegateのインスタンスの作成
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    //呼吸アセスメントから値を引き継いで、その値が入るセグメントを選択する
+        //PaO2
+        if appDelegate.valueOfPao2 > 70.0 {
+            po2.selectedSegmentIndex = 0
+            po2Number = 0
+        }else if appDelegate.valueOfPao2 <= 70.0 && appDelegate.valueOfPao2 > 60.0 {
+            po2.selectedSegmentIndex = 1
+            po2Number = 1
+        }else if appDelegate.valueOfPao2 <= 60.0 && appDelegate.valueOfPao2 >= 55.0 {
+            po2.selectedSegmentIndex = 2
+            po2Number = 3
+        }else if appDelegate.valueOfPao2 < 55.0 {
+            po2.selectedSegmentIndex = 3
+            po2Number = 4
+        }
+        
+        //RR
+        if appDelegate.valueOfrr >= 50 {
+            rr.selectedSegmentIndex = 0
+            rrNumber = 4
+        }else if appDelegate.valueOfrr <= 49 && appDelegate.valueOfrr >= 35 {
+            rr.selectedSegmentIndex = 1
+            rrNumber = 3
+        }else if appDelegate.valueOfrr <= 34 && appDelegate.valueOfrr >= 25 {
+            rr.selectedSegmentIndex = 2
+            rrNumber = 1
+        }else if appDelegate.valueOfrr <= 24  && appDelegate.valueOfrr >= 12 {
+            rr.selectedSegmentIndex = 3
+            rrNumber = 0
+        }else if appDelegate.valueOfrr <= 11 && appDelegate.valueOfrr >= 10 {
+            rr.selectedSegmentIndex = 4
+            rrNumber = 1
+        }else if appDelegate.valueOfrr <= 9 && appDelegate.valueOfrr >= 6 {
+            rr.selectedSegmentIndex = 5
+            rrNumber = 2
+        }else if appDelegate.valueOfrr <= 5 {
+            rr.selectedSegmentIndex = 6
+            rrNumber = 4
+        }
+
+        
+       
+    
         //セグメントの設定　Systemは普段edit画面で使っているものと同じ
-//        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
+        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: 0)
     }
     
     
@@ -69,12 +120,14 @@ class apachViewController: UIViewController {
 //        //selectedIndex = 白　それ以外を青　でif文にするø
 //        if pfSeg.selectedSegmentIndex == 0{
 //            pfNumber = 0
-        if sender.isMomentary == true{
-            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue)
-        }else{
-            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
-
-        }
+//        if sender.isMomentary == true{
+//            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,)
+//        }else{
+//            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
+//
+//        }
+        
+        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: sender.selectedSegmentIndex)
     }
     
 
@@ -325,12 +378,15 @@ class apachViewController: UIViewController {
     
     //結果ボタンが押されたとき、データの結果が表示される
     @IBAction func totalScore(_ sender: UIButton) {
-        if gcs.text == ""{
-            comment.text == "GCSのスコアが未入力です"
-        }else{
+        if gcs.text == "" {
+            comment.text = "GCSスコアが未入力です"
+        }else if Int(gcs.text!)! > 15 || Int(gcs.text!)! < 3{
+            comment.text = "GCスコアを正しく入力してください"
+        }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3 {
             amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + Int(gcs.text!)!
             
             totalScore.text = String(amount)
+            comment.text = ""
         }
     
     }
@@ -346,13 +402,19 @@ class apachViewController: UIViewController {
 
 //セグメントのための拡張機能　セグメントを２段にする
 extension UISegmentedControl {
-    func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor){
+    func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor,selectedIndex:Int){
         for index in 0...self.numberOfSegments - 1 {
             
             var setIndex = self.numberOfSegments - 1 - index
             let label = UILabel(frame: CGRect(x:0,y:0,width:self.frame.width/CGFloat(self.numberOfSegments),height:self.frame.height))
             label.font = UIFont(name: fontName, size: fontSize)
-            label.textColor = textColor
+            if selectedIndex == setIndex{
+                label.textColor = UIColor.white
+            
+            }else{
+                label.textColor = textColor
+
+            }
             label.text = self.titleForSegment(at: setIndex)
             label.numberOfLines = 0
             label.textAlignment = .center

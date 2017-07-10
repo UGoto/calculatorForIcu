@@ -120,17 +120,44 @@ class respiViewController: UIViewController {
     
     
 //重複するデータの遷移
-    //血液ガス分析のページへ遷移
+    //血液ガス分析のページへ遷移(PaO2,PaCo2)
     @IBAction func buttonToAbg(_ sender: UIButton) {
+        if pao2.text == "" || paco2.text == ""{
+           print("未入力項目があります")
+        }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
         appDelegate.valueOfPaco2 = Float(paco2.text!)!
-        
-    }
+        }
+        }
     
-    //ApacheⅡのページへ遷移
+    //ApacheⅡのページへ遷移(PaO2,RR)
     @IBAction func buttonToApache(_ sender: UIButton) {
-//        appDelegate.valueOfRr = rr.text!
-    }
+        if pao2.text == ""{
+            print("未入力項目があります")
+        }else if rr.text == ""{
+            print("未入力も項目があります")
+        }else{
+        appDelegate.valueOfPao2 = Float(pao2.text!)!
+        appDelegate.valueOfrr = Float(rr.text!)!
+        }
+        }
+    
+    //SOFAのページへ遷移（PaO2）
+    @IBAction func buttonToSofa(_ sender: UIButton) {
+        if pao2.text == "" || fio2.text == ""{
+            print("未入力項目があります")
+        }else{
+        appDelegate.valueOfPao2 = Float(pao2.text!)!
+        appDelegate.valueOfFio2 = Float(fio2.text!)!
+        }
+        }
+    
+    //DICのページへ遷移（RR）
+    @IBAction func buttonToDic(_ sender: UIButton) {
+        appDelegate.valueOfrr = Float(rr.text!)!
+        }
+    
+
 
     
     
@@ -161,36 +188,17 @@ class respiViewController: UIViewController {
         performSegue(withIdentifier: "showApach", sender: nil )
     }
     
+
     //呼吸アセスメントの結果画面への遷移
     @IBAction func tapbuttonRofR(_ sender: UIButton) {
         performSegue(withIdentifier: "showRofR", sender: nil )
     }
     
-    //セグエを通って次の画面へ移動する
-    //栄養アセスメントの画面へ
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        //次の画面（nutriViewController)のインスタンス化(as:ダウンキャスト型変換)
-//        //nvc:detailviewcontroller
-//        var nvc = segue.destination as! nutriViewController
-//    }
     
-
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
