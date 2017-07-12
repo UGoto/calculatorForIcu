@@ -69,7 +69,9 @@ class apachViewController: UIViewController {
         super.viewDidLoad()
     //呼吸アセスメントから値を引き継いで、その値が入るセグメントを選択する
         //PaO2
-        if appDelegate.valueOfPao2 > 70.0 {
+        if  appDelegate.valueOfPao2 == 0 {
+            po2.selectedSegmentIndex = 0
+        }else if appDelegate.valueOfPao2 > 70.0 {
             po2.selectedSegmentIndex = 0
             po2Number = 0
         }else if appDelegate.valueOfPao2 <= 70.0 && appDelegate.valueOfPao2 > 60.0 {
@@ -84,7 +86,9 @@ class apachViewController: UIViewController {
         }
         
         //RR
-        if appDelegate.valueOfrr >= 50 {
+        if appDelegate.valueOfrr == 0{
+            rr.selectedSegmentIndex = 0
+        }else if appDelegate.valueOfrr >= 50 {
             rr.selectedSegmentIndex = 0
             rrNumber = 4
         }else if appDelegate.valueOfrr <= 49 && appDelegate.valueOfrr >= 35 {
@@ -106,9 +110,80 @@ class apachViewController: UIViewController {
             rr.selectedSegmentIndex = 6
             rrNumber = 4
         }
-
         
-       
+        
+    //栄養アセスメントから値を受け取る(age)
+        if appDelegate.valueOfAge <= 44{
+            age.selectedSegmentIndex = 0
+            ageNumber = 0
+        }else if appDelegate.valueOfAge >= 45 && appDelegate.valueOfAge <= 54 {
+            age.selectedSegmentIndex = 1
+            ageNumber = 1
+        }else if appDelegate.valueOfAge >= 55 && appDelegate.valueOfAge <= 64{
+            age.selectedSegmentIndex = 2
+            ageNumber = 3
+        }else if appDelegate.valueOfAge >= 65 && appDelegate.valueOfAge <= 74{
+            age.selectedSegmentIndex = 3
+            ageNumber = 5
+        }else if appDelegate.valueOfAge >= 75 {
+            age.selectedSegmentIndex = 4
+            ageNumber = 6
+        }
+    
+    //ABGから値を受け取る（ph,PaO2,HCO3,Na,K,）
+        if appDelegate.valueOfPh == 0{
+            ph.selectedSegmentIndex = 0
+            phNumber = 4
+        }else if appDelegate.valueOfPh > 7.7 {
+            ph.selectedSegmentIndex = 0
+            phNumber = 4
+        }else if appDelegate.valueOfPh >= 7.6 && appDelegate.valueOfPh < 7.7{
+            ph.selectedSegmentIndex = 1
+            phNumber = 3
+        }else if appDelegate.valueOfPh >= 7.5 && appDelegate.valueOfPh < 7.6{
+            ph.selectedSegmentIndex = 2
+            phNumber = 2
+        }else if appDelegate.valueOfPh >= 7.33 && appDelegate.valueOfPh < 7.5{
+            ph.selectedSegmentIndex = 3
+            phNumber = 0
+        }else if appDelegate.valueOfPh >= 7.25 && appDelegate.valueOfPh < 7.33{
+            ph.selectedSegmentIndex = 4
+            phNumber = 2
+        }else if appDelegate.valueOfPh >= 7.15 && appDelegate.valueOfPh < 7.25{
+            ph.selectedSegmentIndex = 5
+            phNumber = 3
+        }else if appDelegate.valueOfPh < 7.15{
+            ph.selectedSegmentIndex = 6
+            phNumber = 4
+        }
+        
+        if appDelegate.valueOfHco3 == 0 || appDelegate.valueOfHco3 >= 52 {
+            hco3.selectedSegmentIndex = 0
+            hco3Number = 4
+        }else if appDelegate.valueOfHco3 < 52  && appDelegate.valueOfHco3 >= 41 {
+            hco3.selectedSegmentIndex = 1
+            hco3Number = 3
+        }else if appDelegate.valueOfHco3 < 41 && appDelegate.valueOfHco3 >= 32{
+            hco3.selectedSegmentIndex = 2
+            hco3Number = 1
+        }else if appDelegate.valueOfHco3 < 32 && appDelegate.valueOfHco3 >= 22 {
+            hco3.selectedSegmentIndex = 4
+            hco3Number = 0
+        }else if appDelegate.valueOfHco3 < 22 && appDelegate.valueOfHco3 >= 18 {
+            hco3.selectedSegmentIndex = 5
+            hco3Number = 2
+        }else if appDelegate.valueOfHco3 < 18 && appDelegate.valueOfHco3 >= 15 {
+            hco3.selectedSegmentIndex = 6
+            hco3Number = 3
+        }else if appDelegate.valueOfHco3 < 15 {
+            hco3.selectedSegmentIndex = 7
+            hco3Number = 4
+        }
+            
+    //DICから値を受け取る（HR,RR）
+
+    
+    
     
         //セグメントの設定　Systemは普段edit画面で使っているものと同じ
         map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: 0)
@@ -383,13 +458,41 @@ class apachViewController: UIViewController {
         }else if Int(gcs.text!)! > 15 || Int(gcs.text!)! < 3{
             comment.text = "GCスコアを正しく入力してください"
         }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3 {
-            amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + Int(gcs.text!)!
+            amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
             
             totalScore.text = String(amount)
             comment.text = ""
         }
     
     }
+    
+//重複するデータの遷移
+    //Sofaの画面へ遷移
+    @IBAction func buttonToSofa(_ sender: UIButton) {
+        if gcs.text == ""{
+        }else{
+            appDelegate.valueOfGcs = Float(gcs.text!)!
+        }
+    }
+    
+    
+//下の5つのボタンで画面の遷移
+    @IBAction func tapButtonToSofa(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSofaFromA", sender: nil )
+    }
+    @IBAction func tapButtonToRespi(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRespiFromA", sender: nil )
+    }
+    @IBAction func tapButtonToN(_ sender: UIButton) {
+        performSegue(withIdentifier: "showNutriFromA", sender: nil )
+    }
+    @IBAction func tapButtonToD(_ sender: UIButton) {
+        performSegue(withIdentifier: "showDicFromA", sender: nil )
+    }
+    @IBAction func tapButtonToAbg(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAbgFromA", sender: nil )
+    }
+   
     
     
     override func didReceiveMemoryWarning() {

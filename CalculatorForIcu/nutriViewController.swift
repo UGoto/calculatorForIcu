@@ -49,10 +49,11 @@ class nutriViewController: UIViewController {
     
     //栄養アセスメントの結果ページへデータを遷移
     @IBAction func resultButton(_ sender: UIButton) {
-        if pwt.text == "" || ht.text == "" || age.text == "" || protein.text == "" || bun.text == "" || hrBun.text == "" || wt.text == "" {
+        if pwt.text == "" || ht.text == "" || age.text == ""{
             print("入力されていない項目があります")
-        }else{
+        
         //BEE男
+        }else{
         appDelegate.mof = 66 + (13.7 * Float(pwt.text!)!) + (5 * Float(ht.text!)!) - (6.8 * Float(age.text!)!)
         appDelegate.mof2 = appDelegate.mof * 1.2
         appDelegate.mof4 = appDelegate.mof * 1.4
@@ -69,53 +70,79 @@ class nutriViewController: UIViewController {
         appDelegate.fof0 = appDelegate.fof * 2.0
         
         //BMI
-        appDelegate.bmi = Float(wt.text!)! / (Float(ht.text!)! * Float(ht.text!)!)
-        
+        if wt.text == "" || ht.text == "" {
+            print("入力されていない項目があります")
+        }else{
+        appDelegate.bmi = Float(wt.text!)! / ((Float(ht.text!)!/100) * (Float(ht.text!)!/100))
+        }
         //体重減少率
+        if wt.text == "" || pwt.text == "" {
+            print("入力されていない項目があります")
+        }else{
         appDelegate.loseWt = (Float(wt.text!)!-Float(pwt.text!)!) / Float(wt.text!)! * 100
-        
+        }
         //エネルギー消費量（EE） vo2の値を呼吸アセスメントの結果から引っ張ってくる作業が必要
-            
+        if hrBun.text == "" {
+            print("入力されていない項目があります")
+        }else{
         appDelegate.ee = 3.94 + appDelegate.valueOfVo2 + 1.11 + appDelegate.valueOfVo2 - 2.17 * Float(hrBun.text!)!
-            
-        
+        }
         //Nバランス
+        if protein.text == "" || bun.text == "" {
+            print("入力されていない項目があります")
+        }else{
         appDelegate.nb = Float(protein.text!)!/6.25 - (Float(bun.text!)! * 1000 + 4 )
-        
+        }
         //投与窒素量
+        if protein.text == "" {
+                print("入力されていない項目があります")
+        }else{
         appDelegate.giveN = Float(protein.text!)! * 1000 / 6.25
-        
+        }
         //窒素排泄量
-        appDelegate.excreteN = Float(hrBun.text!)! * 1000 * 1.25
-        
+        if hrBun.text == ""  {
+                print("入力されていない項目があります")
+        }else{
+            appDelegate.excreteN = Float(hrBun.text!)! * 1000 * 1.25
+        }
         //窒素出納
         appDelegate.casherN = appDelegate.giveN - appDelegate.excreteN
-            
+        }
+    }
+    
+//重複するデータの遷移
+    //APCHEの画面へ遷移
+    @IBAction func buttonToApache(_ sender: UIButton) {
+        if age.text == "" {
+            print("入力されていない項目があります")
+        }else{
+        appDelegate.valueOfAge = Float(age.text!)!
         }
     }
     
     
     
-    
-    
+//結果ボタンで栄養アセスメント画面の結果へページ遷移
     @IBAction func tapButtonRofN(_ sender: UIButton) {
           performSegue(withIdentifier: "showRofN", sender: nil )
     }
-
+    
+//下の５つのボタンで次の画面へ遷移
+    @IBAction func tapButtonToRespi(_ sender: UIButton) {
+    }
+    @IBAction func tapButtonToAbg(_ sender: UIButton) {
+    }
+    @IBAction func tapButtonToSofa(_ sender: UIButton) {
+    }
+    @IBAction func tapButtonToDic(_ sender: UIButton) {
+    }
+    @IBAction func tapButtonToApa(_ sender: UIButton) {
+        performSegue(withIdentifier: "showApacheFromN", sender: nil )
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

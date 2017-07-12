@@ -40,21 +40,39 @@ class sofaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //呼吸アセスメントから値を引き受ける
-        if appDelegate.valueOfPao2/appDelegate.valueOfFio2 >= 400{
+        if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 400{
             pfSeg.selectedSegmentIndex = 0
             pfNumber = 0
-        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 400 && appDelegate.valueOfFio2 >= 300 {
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 400 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 300 {
             pfSeg.selectedSegmentIndex = 1
             pfNumber = 1
-        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 300 && appDelegate.valueOfFio2 >= 200 {
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 300 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 200 {
             pfSeg.selectedSegmentIndex = 2
             pfNumber = 2
-        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 200 && appDelegate.valueOfFio2 >= 100{
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 200 && appDelegate.valueOfPao2/appDelegate.valueOfFio2 >= 100{
             pfSeg.selectedSegmentIndex = 3
             pfNumber = 3
-        }else if appDelegate.valueOfPao2/appDelegate.valueOfFio2 < 100{
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 100{
             pfSeg.selectedSegmentIndex = 4
             pfNumber = 4
+        }
+        
+//Apacheから値を引き受ける
+        if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {
+            gcsSeg.selectedSegmentIndex = 0
+            gcsNumber = 0
+        }else if appDelegate.valueOfGcs < 15 && appDelegate.valueOfGcs >= 13 {
+            gcsSeg.selectedSegmentIndex = 1
+            gcsNumber = 1
+        }else if appDelegate.valueOfGcs < 13 && appDelegate.valueOfGcs >= 10 {
+            gcsSeg.selectedSegmentIndex = 2
+            gcsNumber = 2
+        }else if appDelegate.valueOfGcs < 10 && appDelegate.valueOfGcs >= 6 {
+            gcsSeg.selectedSegmentIndex = 3
+            gcsNumber = 3
+        }else if appDelegate.valueOfGcs < 6 || appDelegate.valueOfGcs >= 3 {
+            gcsSeg.selectedSegmentIndex = 4
+            gcsNumber = 4
         }
     }
     

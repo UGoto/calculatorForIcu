@@ -30,7 +30,7 @@ class resultNutriOfViewController: UIViewController {
     @IBOutlet weak var bmi: UITextField!
     @IBOutlet weak var loseWt: UITextField!
     @IBOutlet weak var energy: UITextField!
-    @IBOutlet weak var nb: UIView!
+    @IBOutlet weak var nb: UITextField!
     @IBOutlet weak var giveNi: UITextField!
     @IBOutlet weak var outNi: UITextField!
     @IBOutlet weak var inOutNi: UITextField!
@@ -59,8 +59,15 @@ class resultNutriOfViewController: UIViewController {
         fof8.text = String(appDelegate.fof8)
         fof0.text = String(appDelegate.fof0)
         
-        //
+        //栄養その他結果
         bmi.text = String(appDelegate.bmi)
+        loseWt.text = String(appDelegate.loseWt)
+        energy.text = String(appDelegate.ee)
+        nb.text = String(appDelegate.nb)
+        giveNi.text = String(appDelegate.giveN)
+        outNi.text = String(appDelegate.excreteN)
+        inOutNi.text = String(appDelegate.casherN)
+        
         
         
     }

@@ -35,24 +35,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="栄養アセスメント"/>
+                                <connections>
+                                    <segue destination="vLU-mW-cJe" kind="show" id="vj8-tD-IC1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcZ-zh-fWH">
                                 <rect key="frame" x="8" y="204" width="146" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="血液ガス分析"/>
+                                <connections>
+                                    <segue destination="AhE-Dq-gPh" kind="show" id="bm7-8B-tWm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OC-LX-eMO">
+                                <rect key="frame" x="168" y="204" width="146" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DIC"/>
+                                <connections>
+                                    <segue destination="Nb9-qM-uqs" kind="show" id="dSq-0d-fMF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-ib-8VE">
                                 <rect key="frame" x="8" y="311" width="146" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SOFA"/>
+                                <connections>
+                                    <segue destination="648-Zh-1U7" kind="show" id="CC7-Qv-UWE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm5-my-VFu">
                                 <rect key="frame" x="168" y="311" width="146" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="APACHE Ⅱ"/>
+                                <connections>
+                                    <segue destination="Pjb-wx-iMJ" kind="show" id="W30-T9-HjF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSc-hF-ArL">
                                 <rect key="frame" x="8" y="415" width="146" height="78"/>
@@ -63,11 +84,11 @@
                                     <segue destination="MLt-Zl-ynH" kind="show" id="Xxa-9B-c9y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OC-LX-eMO">
-                                <rect key="frame" x="168" y="204" width="146" height="78"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9Z-Eh-c3a">
+                                <rect key="frame" x="168" y="415" width="146" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80488913409999996" green="1" blue="0.98682362899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="DIC"/>
+                                <state key="normal" title="γ計算"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="117"/>
+            <point key="canvasLocation" x="212" y="115"/>
         </scene>
         <!--Respi View Controller-->
         <scene sceneID="C3O-Xc-vXd">
@@ -659,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbi-i3-J9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="116"/>
+            <point key="canvasLocation" x="1211" y="196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mq0-ll-z0X">
@@ -1336,6 +1357,7 @@
                                                         <connections>
                                                             <action selector="buttonToApache:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="YgT-dt-Ylf"/>
                                                             <action selector="tapButtonToApa:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="cDr-MQ-jJv"/>
+                                                            <segue destination="Pjb-wx-iMJ" kind="show" identifier="showApacheFromAbg" id="rIc-9E-XGZ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WQ-sM-y0t">
@@ -1776,6 +1798,7 @@
                                                         <state key="normal" title="呼吸アセスメント"/>
                                                         <connections>
                                                             <action selector="tapButtonToNvc:" destination="O55-Ad-wHK" eventType="touchUpInside" id="z5l-xN-IfB"/>
+                                                            <action selector="tapButtonToRespi:" destination="vLU-mW-cJe" eventType="touchUpInside" id="Xqr-Jv-K4N"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-wr-P4n">
@@ -1785,6 +1808,7 @@
                                                         <connections>
                                                             <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="BCf-bl-yIT"/>
                                                             <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="1tQ-tN-npu"/>
+                                                            <action selector="tapButtonToAbg:" destination="vLU-mW-cJe" eventType="touchUpInside" id="xRJ-jR-716"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-D4-2HB">
@@ -1793,17 +1817,25 @@
                                                         <state key="normal" title="SOFA"/>
                                                         <connections>
                                                             <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="cL3-ws-bh6"/>
+                                                            <action selector="tapButtonToSofa:" destination="vLU-mW-cJe" eventType="touchUpInside" id="OcK-Yz-6oQ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6z-dQ-ecJ">
                                                         <rect key="frame" x="229" y="73" width="62" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="APACH Ⅱ"/>
+                                                        <connections>
+                                                            <action selector="buttonToApache:" destination="vLU-mW-cJe" eventType="touchUpInside" id="RHi-ez-KCB"/>
+                                                            <action selector="tapButtonToApa:" destination="vLU-mW-cJe" eventType="touchUpInside" id="gAb-XY-9uo"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7me-aH-nm8">
                                                         <rect key="frame" x="145" y="73" width="30" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="DIC"/>
+                                                        <connections>
+                                                            <action selector="tapButtonToDic:" destination="vLU-mW-cJe" eventType="touchUpInside" id="O55-Um-CvR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.80579398840000005" green="0.98267695919999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1999,7 +2031,8 @@
                         <outlet property="protein" destination="lcS-oe-WSY" id="loV-MZ-27R"/>
                         <outlet property="pwt" destination="K2f-yg-ix0" id="oSI-J4-Eai"/>
                         <outlet property="wt" destination="tMr-S3-khW" id="sFk-xe-xhH"/>
-                        <segue destination="tWT-8P-rTu" kind="show" identifier="showRofN" id="q3A-po-X2m"/>
+                        <segue destination="tWT-8P-rTu" kind="show" identifier="showRofN" id="cCM-Gd-lKp"/>
+                        <segue destination="Pjb-wx-iMJ" kind="show" identifier="showApacheFromN" id="ltp-15-CLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAd-hN-bYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2560,7 +2593,7 @@
                         <outlet property="mof4" destination="gfC-Iw-INC" id="We8-vS-qPn"/>
                         <outlet property="mof6" destination="Sb1-lq-F5h" id="h83-Bl-WNV"/>
                         <outlet property="mof8" destination="iHU-9C-d3e" id="7U5-Ug-nEM"/>
-                        <outlet property="nb" destination="Jzz-4T-wCc" id="tIK-3P-3By"/>
+                        <outlet property="nb" destination="PWe-o6-fAH" id="p6a-HK-NxU"/>
                         <outlet property="outNi" destination="rKO-jj-Gu0" id="aZC-WS-xz6"/>
                     </connections>
                 </viewController>
@@ -2731,6 +2764,7 @@
                                                         <state key="normal" title="呼吸アセスメント"/>
                                                         <connections>
                                                             <action selector="tapButtonToNvc:" destination="O55-Ad-wHK" eventType="touchUpInside" id="9wi-Vn-7tf"/>
+                                                            <action selector="tapButtonToRespi:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="rfv-43-mUA"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-4I-PWy">
@@ -2740,6 +2774,7 @@
                                                         <connections>
                                                             <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="pKm-hN-xv6"/>
                                                             <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="1gJ-Hh-5Nu"/>
+                                                            <action selector="tapButtonToAbg:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="kzq-Bl-TPn"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaC-1X-eas">
@@ -2747,18 +2782,26 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="SOFA"/>
                                                         <connections>
+                                                            <action selector="buttonToSofa:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="WrF-Kk-r2s"/>
                                                             <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="WZE-Y4-CmH"/>
+                                                            <action selector="tapButtonToSofa:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="5RE-4m-9g3"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwf-gZ-84c">
                                                         <rect key="frame" x="145" y="77" width="30" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="DIC"/>
+                                                        <connections>
+                                                            <action selector="tapButtonToD:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="TVz-Po-cYs"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snP-Fu-E4b">
                                                         <rect key="frame" x="182" y="21" width="123" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="栄養アセスメント"/>
+                                                        <connections>
+                                                            <action selector="tapButtonToN:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="ZOK-a1-a1E"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.80579398840000005" green="0.98267695919999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3048,11 +3091,12 @@
                         <outlet property="temp" destination="92J-I8-Yda" id="iAP-1C-fqD"/>
                         <outlet property="totalScore" destination="EkX-NG-SMm" id="wg2-ox-06V"/>
                         <outlet property="wbc" destination="69K-Nm-2mu" id="0wC-Di-4ho"/>
+                        <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromA" id="qwJ-hy-gnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAk-cc-cqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5936.25" y="-2202.4647887323945"/>
+            <point key="canvasLocation" x="3999" y="-830"/>
         </scene>
         <!--Result Respi Of View Controller-->
         <scene sceneID="tjb-ux-kUm">
@@ -3642,7 +3686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMS-sm-Vmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2974" y="-2571"/>
+            <point key="canvasLocation" x="3077" y="-2624"/>
         </scene>
         <!--履歴-->
         <scene sceneID="Z1s-Ab-PiS">
@@ -4037,13 +4081,17 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="rrM-z0-j0m" secondAttribute="bottom" constant="-25" id="7QZ-vF-hGz"/>
                                     <constraint firstAttribute="bottom" secondItem="rrM-z0-j0m" secondAttribute="bottom" constant="-25" id="A6S-4s-LNN"/>
+                                    <constraint firstItem="6AY-c3-Ttd" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="top" id="BoI-Ne-g2C"/>
                                     <constraint firstItem="rrM-z0-j0m" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="EKz-Ia-L7K"/>
+                                    <constraint firstAttribute="bottom" secondItem="6AY-c3-Ttd" secondAttribute="bottom" constant="584" id="EQj-nN-EPB"/>
                                     <constraint firstAttribute="bottom" secondItem="6AY-c3-Ttd" secondAttribute="bottom" constant="648" id="Hih-nH-A9R"/>
                                     <constraint firstAttribute="trailing" secondItem="rrM-z0-j0m" secondAttribute="trailing" id="JGp-hc-bYT"/>
+                                    <constraint firstItem="6AY-c3-Ttd" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="Qlg-QY-L6y"/>
                                     <constraint firstItem="rrM-z0-j0m" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="YTR-Az-gKh"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="Z1I-EK-L3u"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="top" constant="-64" id="d7L-Ez-pL4"/>
                                     <constraint firstAttribute="trailing" secondItem="rrM-z0-j0m" secondAttribute="trailing" id="qyE-Zx-Bg3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6AY-c3-Ttd" secondAttribute="trailing" id="rOb-vm-a9f"/>
                                     <constraint firstAttribute="trailing" secondItem="6AY-c3-Ttd" secondAttribute="trailing" id="vtq-m5-dKb"/>
                                     <constraint firstItem="rrM-z0-j0m" firstAttribute="width" secondItem="Ue7-SP-nBV" secondAttribute="width" id="wQS-kk-nOC"/>
                                 </constraints>
@@ -4104,7 +4152,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sAv-CP-MmG"/>
-        <segue reference="Wo3-jj-M1g"/>
+        <segue reference="dSq-0d-fMF"/>
+        <segue reference="bm7-8B-tWm"/>
+        <segue reference="vj8-tD-IC1"/>
+        <segue reference="rIc-9E-XGZ"/>
+        <segue reference="qwJ-hy-gnt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -54,15 +54,17 @@ class abgViewController: UIViewController {
         paco2OfAbg.text = String(appDelegate.valueOfPaco2)
         }
     
+        
+    
     //結果の表示
         //AG計算
     @IBAction func resultButton(_ sender: UIButton) {
-        if naOfAbg.text == "" || kOfAbg.text == "" || clOfAbg.text == "" {
+        if naOfAbg.text == "" || hco3OfAbg.text == "" || clOfAbg.text == "" {
             print("数値が入力されていない")}
         let getNa:Double = Double(naOfAbg.text!)!
-        let getK:Double = Double(kOfAbg.text!)!
+        let getHCO3:Double = Double(hco3OfAbg.text!)!
         let getCl:Double = Double(clOfAbg.text!)!
-        ag.text = String(getNa - ( getK + getCl))
+        ag.text = String(getNa - ( getHCO3 + getCl))
         ag.textAlignment = NSTextAlignment.center
         
     
@@ -124,16 +126,37 @@ class abgViewController: UIViewController {
     
     //APACHEのページへ遷移（pH,PaO2,Na,K,HCO3）
     @IBAction func buttonToApache(_ sender: UIButton) {
-        appDelegate.valueOfPf = Float(phOfAbg.text!)!
-        appDelegate.valueOfPao2 = Float(pao2OfAbg.text!)!
-        appDelegate.valueOfNa = Float(naOfAbg.text!)!
-        appDelegate.valueOfK = Float(kOfAbg.text!)!
-        appDelegate.valueOfHco3 = Float(hco3OfAbg.text!)!
+        if phOfAbg.text == ""{
+        }else{
+            appDelegate.valueOfPf = Float(phOfAbg.text!)!
+        }
+        
+        if pao2OfAbg.text == ""{
+        }else{
+            appDelegate.valueOfPao2 = Float(pao2OfAbg.text!)!
+        }
+        
+        if naOfAbg.text == ""{
+        }else{
+            appDelegate.valueOfNa = Float(naOfAbg.text!)!
+        }
+        
+        if kOfAbg.text == ""{
+        }else{
+             appDelegate.valueOfK = Float(kOfAbg.text!)!
+        }
+        
+        if hco3OfAbg.text == ""{
+        }else{
+            appDelegate.valueOfHco3 = Float(hco3OfAbg.text!)!
+        }
+       
+        
     }
     
     
     
-//画面の遷移
+//下の5つのボタンで画面の遷移
     //呼吸アセスメントへ画面を遷移
     @IBAction func tapButtonToRespi(_ sender: UIButton) {
     }
@@ -153,6 +176,7 @@ class abgViewController: UIViewController {
 
     //APACHE2へ画面を遷移
     @IBAction func tapButtonToApa(_ sender: UIButton) {
+        performSegue(withIdentifier: "showApacheFromAbg", sender: nil )
     }
     
     

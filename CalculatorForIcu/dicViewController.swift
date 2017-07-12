@@ -50,7 +50,14 @@ class dicViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if appDelegate.valueOfrr > 20.0 || appDelegate.valueOfPaco2 < 32.0{
+            rrSeg.selectedSegmentIndex = 1
+            rrNumber = 1
+        }else{
+            rrSeg.selectedSegmentIndex = 0
+            rrNumber = 0
 
+    }
     }
     
 //セグメントの設定

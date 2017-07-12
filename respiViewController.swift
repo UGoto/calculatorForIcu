@@ -155,6 +155,7 @@ class respiViewController: UIViewController {
     //DICのページへ遷移（RR）
     @IBAction func buttonToDic(_ sender: UIButton) {
         appDelegate.valueOfrr = Float(rr.text!)!
+        appDelegate.valueOfPaco2 = Float(paco2.text!)!
         }
     
 
