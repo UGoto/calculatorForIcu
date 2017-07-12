@@ -680,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbi-i3-J9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="196"/>
+            <point key="canvasLocation" x="-3293" y="-1711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mq0-ll-z0X">
@@ -1073,7 +1073,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-B7-1Dj">
-                                <rect key="frame" x="0.0" y="64" width="320" height="687"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="780"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-cC-LaS">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
@@ -1308,26 +1308,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sl-dA-Zhr">
-                                                <rect key="frame" x="106" y="437" width="206" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sl-dA-Zhr">
+                                                <rect key="frame" x="106" y="404" width="206" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="bloodGasButton:" destination="AhE-Dq-gPh" eventType="editingDidEnd" id="HSy-kW-aa1"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2k-m8-pz7">
-                                                <rect key="frame" x="148" y="399" width="164" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="concomitantButton:" destination="AhE-Dq-gPh" eventType="editingDidEnd" id="YSV-wj-Drx"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1s-lZ-LpT">
@@ -1347,6 +1335,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="呼吸アセスメント"/>
                                                         <connections>
+                                                            <action selector="buttonToRespi:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="5hX-ME-MXI"/>
                                                             <action selector="tapButtonToRespi:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="D75-B3-W8B"/>
                                                         </connections>
                                                     </button>
@@ -1357,7 +1346,6 @@
                                                         <connections>
                                                             <action selector="buttonToApache:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="YgT-dt-Ylf"/>
                                                             <action selector="tapButtonToApa:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="cDr-MQ-jJv"/>
-                                                            <segue destination="Pjb-wx-iMJ" kind="show" identifier="showApacheFromAbg" id="rIc-9E-XGZ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WQ-sM-y0t">
@@ -1380,17 +1368,6 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.80579398840000005" green="0.98267695919999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-XN-agS">
-                                                <rect key="frame" x="106" y="474" width="206" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="agButton:" destination="AhE-Dq-gPh" eventType="editingDidEnd" id="rXo-Yx-lgl"/>
-                                                </connections>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWl-f5-peX">
                                                 <rect key="frame" x="35" y="399" width="49" height="41"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1400,6 +1377,16 @@
                                                     <action selector="resultButton:" destination="AhE-Dq-gPh" eventType="touchUpInside" id="rkT-Fc-kTP"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-XN-agS">
+                                                <rect key="frame" x="106" y="442" width="206" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="agButton:" destination="AhE-Dq-gPh" eventType="editingDidEnd" id="rXo-Yx-lgl"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1430,7 +1417,6 @@
                         <outlet property="ag" destination="oEJ-XN-agS" id="wSw-8O-2rh"/>
                         <outlet property="bloodGas" destination="4sl-dA-Zhr" id="oLc-nA-2ZO"/>
                         <outlet property="clOfAbg" destination="PA8-9Y-hNo" id="uZo-eC-cOw"/>
-                        <outlet property="concomitant" destination="J2k-m8-pz7" id="Tsg-Kp-R0C"/>
                         <outlet property="hco3OfAbg" destination="h5F-ls-sJR" id="9h5-XQ-aTn"/>
                         <outlet property="kOfAbg" destination="kLh-yR-cDg" id="TyE-gg-BfW"/>
                         <outlet property="naOfAbg" destination="8U9-Te-skB" id="x7i-ka-zYk"/>
@@ -1438,11 +1424,40 @@
                         <outlet property="pao2OfAbg" destination="dDQ-bb-wsh" id="37g-4p-3BP"/>
                         <outlet property="phOfAbg" destination="Gm8-LT-9tL" id="HNv-w8-m95"/>
                         <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromAbg" id="3vy-c8-F6Y"/>
+                        <segue destination="O55-Ad-wHK" kind="show" identifier="showRespiFromAbg" id="pDd-aC-zVn"/>
+                        <segue destination="vLU-mW-cJe" kind="show" identifier="showNFromAbg" id="eUv-EH-irn"/>
+                        <segue destination="Nb9-qM-uqs" kind="show" identifier="showDFromAbg" id="PqQ-fV-2pC"/>
+                        <segue destination="Pjb-wx-iMJ" kind="show" identifier="showApacheFromAbg" id="a4G-FA-gTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slC-aL-Vgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="1490"/>
+            <point key="canvasLocation" x="-1755" y="2290"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TFm-QO-zbc">
+            <objects>
+                <viewController id="RWw-Bw-54d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SWG-GC-MlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lR-uK-ofP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6DM-wh-9Ve">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-R3-Wlr">
+                                <rect key="frame" x="40" y="280" width="240" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfv-bI-JaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142.5" y="3670.7746478873241"/>
         </scene>
         <!--Dic View Controller-->
         <scene sceneID="Xco-5D-duY">
@@ -1457,7 +1472,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exB-Um-fGA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="737"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="830"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-mf-oT6">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="737"/>
@@ -1645,6 +1660,7 @@
                                                         <state key="normal" title="血液ガス分析"/>
                                                         <connections>
                                                             <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="Wkp-iC-tgz"/>
+                                                            <action selector="tapButtonToAbg:" destination="Nb9-qM-uqs" eventType="touchUpInside" id="96O-eD-skn"/>
                                                             <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="Htu-fA-apx"/>
                                                         </connections>
                                                     </button>
@@ -1657,6 +1673,7 @@
                                                 <state key="normal" title="呼吸アセスメント"/>
                                                 <connections>
                                                     <action selector="tapButtonToNvc:" destination="O55-Ad-wHK" eventType="touchUpInside" id="h2q-Vu-gbi"/>
+                                                    <action selector="tapButtonToRespi:" destination="Nb9-qM-uqs" eventType="touchUpInside" id="EhK-HY-uSK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zut-10-qe7">
@@ -1664,13 +1681,17 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="SOFA"/>
                                                 <connections>
-                                                    <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="8K5-IC-OwB"/>
+                                                    <action selector="buttonToSofa:" destination="Nb9-qM-uqs" eventType="touchUpInside" id="ks9-46-zcS"/>
+                                                    <action selector="tapButtonToSofa:" destination="Nb9-qM-uqs" eventType="touchUpInside" id="Aiz-E9-ZCk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWU-EI-Ecw">
                                                 <rect key="frame" x="218" y="675" width="62" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="APACH Ⅱ"/>
+                                                <connections>
+                                                    <action selector="tapButtonToApache:" destination="Nb9-qM-uqs" eventType="touchUpInside" id="ZRz-Y9-HIi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1708,11 +1729,15 @@
                         <outlet property="totalScore" destination="3jb-jZ-3N0" id="0O7-cv-1oH"/>
                         <outlet property="wbcSeg" destination="aV4-by-hbc" id="eqk-ei-NAM"/>
                         <segue destination="vLU-mW-cJe" kind="show" identifier="showNutri" id="RNH-lq-1yD"/>
+                        <segue destination="Pjb-wx-iMJ" kind="show" identifier="showAFromD" id="HVa-JS-wkB"/>
+                        <segue destination="O55-Ad-wHK" kind="show" identifier="showRespiFromD" id="qHD-IB-a9t"/>
+                        <segue destination="AhE-Dq-gPh" kind="show" identifier="showAbgFromD" id="USn-LQ-GPt"/>
+                        <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromD" id="c3D-Id-SKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qC-Mr-Ad2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269" y="1517"/>
+            <point key="canvasLocation" x="2254" y="2315"/>
         </scene>
         <!--Nutri View Controller-->
         <scene sceneID="058-QF-WHi">
@@ -1817,7 +1842,7 @@
                                                         <state key="normal" title="SOFA"/>
                                                         <connections>
                                                             <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="cL3-ws-bh6"/>
-                                                            <action selector="tapButtonToSofa:" destination="vLU-mW-cJe" eventType="touchUpInside" id="OcK-Yz-6oQ"/>
+                                                            <action selector="tapButtonToSofa:" destination="vLU-mW-cJe" eventType="touchUpInside" id="JE9-GO-PGt"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6z-dQ-ecJ">
@@ -2033,11 +2058,15 @@
                         <outlet property="wt" destination="tMr-S3-khW" id="sFk-xe-xhH"/>
                         <segue destination="tWT-8P-rTu" kind="show" identifier="showRofN" id="cCM-Gd-lKp"/>
                         <segue destination="Pjb-wx-iMJ" kind="show" identifier="showApacheFromN" id="ltp-15-CLK"/>
+                        <segue destination="O55-Ad-wHK" kind="show" identifier="showRespiFromN" id="0KI-mh-fWf"/>
+                        <segue destination="Nb9-qM-uqs" kind="show" identifier="showDFromN" id="ZmW-Ru-Pfc"/>
+                        <segue destination="AhE-Dq-gPh" kind="show" identifier="showAbgFromN" id="sOw-kq-P9Q"/>
+                        <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromN" id="PJx-MO-Gmk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAd-hN-bYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6799" y="65"/>
+            <point key="canvasLocation" x="5175" y="1705"/>
         </scene>
         <!--Result Nutri Of View Controller-->
         <scene sceneID="gPM-bq-qUx">
@@ -2052,7 +2081,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-Px-KCL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="987"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="1080"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-4T-wCc">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="987"/>
@@ -2599,7 +2628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLx-tu-AUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7693" y="64"/>
+            <point key="canvasLocation" x="6461" y="1705"/>
         </scene>
         <!--Apach View Controller-->
         <scene sceneID="zqT-sj-HRT">
@@ -2643,13 +2672,6 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="体温" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gx-jq-acW">
                                                 <rect key="frame" x="21" y="67" width="35" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="APACH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-Lc-Xxb">
-                                                <rect key="frame" x="132" y="8" width="56" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -2830,7 +2852,7 @@
                                                 </segments>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="92J-I8-Yda">
-                                                <rect key="frame" x="0.0" y="87" width="320" height="29"/>
+                                                <rect key="frame" x="0.0" y="87" width="321" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="≧41"/>
@@ -2987,6 +3009,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9c-hu-oMg">
+                                                <rect key="frame" x="132" y="1073" width="114" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                <connections>
+                                                    <action selector="gcsScore:" destination="Pjb-wx-iMJ" eventType="editingDidEndOnExit" id="ZHB-Bf-mQ2"/>
+                                                </connections>
+                                            </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-zj-dtG">
                                                 <rect key="frame" x="1" y="766" width="320" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3020,6 +3053,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-ol-ZSY">
+                                                <rect key="frame" x="222" y="1076" width="18" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="重篤な臓器機能不全または免疫機能不全の既往がある" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VgO-QC-6sw">
                                                 <rect key="frame" x="1" y="1189" width="320" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3027,19 +3067,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9c-hu-oMg">
-                                                <rect key="frame" x="132" y="1073" width="114" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                                <connections>
-                                                    <action selector="gcsScore:" destination="Pjb-wx-iMJ" eventType="editingDidEndOnExit" id="ZHB-Bf-mQ2"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-ol-ZSY">
-                                                <rect key="frame" x="222" y="1076" width="18" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="APACHE Ⅱ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-Lc-Xxb">
+                                                <rect key="frame" x="120" y="8" width="79" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -3091,12 +3120,16 @@
                         <outlet property="temp" destination="92J-I8-Yda" id="iAP-1C-fqD"/>
                         <outlet property="totalScore" destination="EkX-NG-SMm" id="wg2-ox-06V"/>
                         <outlet property="wbc" destination="69K-Nm-2mu" id="0wC-Di-4ho"/>
-                        <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromA" id="qwJ-hy-gnt"/>
+                        <segue destination="Nb9-qM-uqs" kind="show" identifier="showDicFromA" id="FLa-uV-by4"/>
+                        <segue destination="AhE-Dq-gPh" kind="show" identifier="showAbgFromA" id="PGm-LD-fvt"/>
+                        <segue destination="O55-Ad-wHK" kind="show" identifier="showRespiFromA" id="XKt-pS-hbG"/>
+                        <segue destination="vLU-mW-cJe" kind="show" identifier="showNutriFromA" id="9ng-X2-KLK"/>
+                        <segue destination="648-Zh-1U7" kind="show" identifier="showSofaFromA" id="SSB-gx-Xja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAk-cc-cqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3999" y="-830"/>
+            <point key="canvasLocation" x="5985" y="-1407"/>
         </scene>
         <!--Result Respi Of View Controller-->
         <scene sceneID="tjb-ux-kUm">
@@ -3111,7 +3144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-9D-uEn">
-                                <rect key="frame" x="0.0" y="64" width="320" height="587"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-M4-vre">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="587"/>
@@ -3404,7 +3437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1g-Nq-Wjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263" y="-736"/>
+            <point key="canvasLocation" x="-4363" y="-1741"/>
         </scene>
         <!--Sofa View Controller-->
         <scene sceneID="U7y-Yz-fw2">
@@ -3612,6 +3645,7 @@
                                                         <state key="normal" title="血液ガス分析"/>
                                                         <connections>
                                                             <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="nat-eS-LaG"/>
+                                                            <action selector="tapButtonToAbg:" destination="648-Zh-1U7" eventType="touchUpInside" id="Cax-qQ-U1t"/>
                                                             <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="mPf-Qp-PFB"/>
                                                         </connections>
                                                     </button>
@@ -3621,12 +3655,16 @@
                                                         <state key="normal" title="APACH Ⅱ"/>
                                                         <connections>
                                                             <action selector="buttonToApache:" destination="648-Zh-1U7" eventType="touchUpInside" id="9d2-kF-vQN"/>
+                                                            <action selector="tapButtonToApache:" destination="648-Zh-1U7" eventType="touchUpInside" id="gPf-P9-V6f"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-mg-tGJ">
                                                         <rect key="frame" x="149" y="81" width="30" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="DIC"/>
+                                                        <connections>
+                                                            <action selector="tapButtonToD:" destination="648-Zh-1U7" eventType="touchUpInside" id="mYd-48-404"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-2R-YOa">
                                                         <rect key="frame" x="22" y="18" width="123" height="30"/>
@@ -3634,6 +3672,7 @@
                                                         <state key="normal" title="呼吸アセスメント"/>
                                                         <connections>
                                                             <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="cKv-sr-rU0"/>
+                                                            <action selector="tapButtonToRespi:" destination="648-Zh-1U7" eventType="touchUpInside" id="5sH-jk-7L3"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1N-IB-WvU">
@@ -3641,6 +3680,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="栄養アセスメント"/>
                                                         <connections>
+                                                            <action selector="tapButtonToN:" destination="648-Zh-1U7" eventType="touchUpInside" id="yDb-Kx-aOG"/>
                                                             <action selector="tapButtonToNvc:" destination="O55-Ad-wHK" eventType="touchUpInside" id="CXp-c6-fN0"/>
                                                         </connections>
                                                     </button>
@@ -3682,11 +3722,16 @@
                         <outlet property="pfSeg" destination="RyK-pN-WOp" id="9k1-XI-kWc"/>
                         <outlet property="pltSeg" destination="AzI-Wh-52i" id="nVe-mC-JBT"/>
                         <outlet property="totalScore" destination="1cv-DS-UbX" id="uOT-74-Ibb"/>
+                        <segue destination="Pjb-wx-iMJ" kind="show" identifier="showAFromSofa" id="Uda-hX-3pn"/>
+                        <segue destination="O55-Ad-wHK" kind="show" identifier="showRespiFromSofa" id="udX-6l-kT8"/>
+                        <segue destination="AhE-Dq-gPh" kind="show" identifier="showAbgFromSofa" id="LIU-Xl-v4g"/>
+                        <segue destination="Nb9-qM-uqs" kind="show" identifier="showDFromSofa" id="e8i-uh-ZPg"/>
+                        <segue destination="vLU-mW-cJe" kind="show" identifier="showNFromSofa" id="bGu-YX-azk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMS-sm-Vmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077" y="-2624"/>
+            <point key="canvasLocation" x="1106" y="-3226"/>
         </scene>
         <!--履歴-->
         <scene sceneID="Z1s-Ab-PiS">
@@ -3722,7 +3767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IB6-zE-ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2280" y="916"/>
+            <point key="canvasLocation" x="-3857" y="988"/>
         </scene>
         <!--各種公式-->
         <scene sceneID="QNa-Un-uNZ">
@@ -3741,7 +3786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ao-jc-1RC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1461" y="916"/>
+            <point key="canvasLocation" x="-2981" y="988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7YT-Tw-vYK">
@@ -3760,7 +3805,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kq-x8-HJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1943" y="116"/>
+            <point key="canvasLocation" x="-3351" y="116"/>
         </scene>
         <!--Assess Deli View Controller-->
         <scene sceneID="BIs-Ep-qz3">
@@ -4129,7 +4174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyn-As-UCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="1689"/>
+            <point key="canvasLocation" x="-2980" y="2680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QDP-6c-nx6">
@@ -4148,14 +4193,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIq-4x-Iyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645" y="117"/>
+            <point key="canvasLocation" x="-1995" y="115"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dSq-0d-fMF"/>
-        <segue reference="bm7-8B-tWm"/>
-        <segue reference="vj8-tD-IC1"/>
-        <segue reference="rIc-9E-XGZ"/>
-        <segue reference="qwJ-hy-gnt"/>
+        <segue reference="PqQ-fV-2pC"/>
+        <segue reference="USn-LQ-GPt"/>
+        <segue reference="pDd-aC-zVn"/>
+        <segue reference="3vy-c8-F6Y"/>
+        <segue reference="eUv-EH-irn"/>
+        <segue reference="a4G-FA-gTS"/>
     </inferredMetricsTieBreakers>
 </document>

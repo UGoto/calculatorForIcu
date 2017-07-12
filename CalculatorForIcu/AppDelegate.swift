@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var valueOfK:Float = 0
     var valueOfGcs:Float = 0
     var valueOfCre:Float = 0
-    var valueOfPlt:Float = 0
+    var valueOfPlt:Int = 0
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

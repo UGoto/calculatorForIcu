@@ -17,7 +17,7 @@ class abgViewController: UIViewController {
     @IBOutlet weak var kOfAbg: UITextField!
     @IBOutlet weak var clOfAbg: UITextField!
     
-    @IBOutlet weak var concomitant: UITextField!
+//    @IBOutlet weak var concomitant: UITextField!
     @IBOutlet weak var bloodGas: UITextField!
     @IBOutlet weak var ag: UITextField!
 
@@ -64,7 +64,7 @@ class abgViewController: UIViewController {
         let getNa:Double = Double(naOfAbg.text!)!
         let getHCO3:Double = Double(hco3OfAbg.text!)!
         let getCl:Double = Double(clOfAbg.text!)!
-        ag.text = String(getNa - ( getHCO3 + getCl))
+        ag.text = "AG:" + String(getNa - ( getHCO3 + getCl))
         ag.textAlignment = NSTextAlignment.center
         
     
@@ -92,34 +92,36 @@ class abgViewController: UIViewController {
             }
         }
         
+        //AG開大の時、補正HCO3を計算。この時、ALBの値が必要
         
         
-        //代償されているかどうか
-        //        let getPh:Double = Double(ph.text!)!
-        let getPaco2:Double = Double(paco2OfAbg
-            .text!)!
-        let getHco3:Double = Double(hco3OfAbg
-            .text!)!
-        let concomiRespiOfAci = 1.2 * getHco3
-        let concomiRespiOfAl = 0.7 * getHco3
-        let concomiMetaboOfAci = 0.1 * getPaco2
-        let concomiMetaboOfAl = 0.2 * getPaco2
         
-        if (getPaco2 <= concomiRespiOfAci) {
-            concomitant.text = "代謝性アシドーシスの呼吸性代償"
-        }else if(getPaco2 <= concomiRespiOfAl){
-            concomitant.text = "代謝性アルカローシスの呼吸性代償"
-        }else if(getHco3 <= concomiMetaboOfAci){
-            concomitant.text = "呼吸性アシドーシスの代謝性代償"
-        }else if(getHco3 <= concomiMetaboOfAl){
-            concomitant.text = "呼吸性アルカローシスの代謝性代償"
-        }
+//        //代償されているかどうか
+//        //        let getPh:Double = Double(ph.text!)!
+//        let getPaco2:Double = Double(paco2OfAbg
+//            .text!)!
+//        let getHco3:Double = Double(hco3OfAbg
+//            .text!)!
+//        let concomiRespiOfAci = 1.2 * getHco3
+//        let concomiRespiOfAl = 0.7 * getHco3
+//        let concomiMetaboOfAci = 0.1 * getPaco2
+//        let concomiMetaboOfAl = 0.2 * getPaco2
+//        
+//        if (getPaco2 <= concomiRespiOfAci) {
+//            concomitant.text = "代謝性アシドーシスの呼吸性代償"
+//        }else if(getPaco2 <= concomiRespiOfAl){
+//            concomitant.text = "代謝性アルカローシスの呼吸性代償"
+//        }else if(getHco3 <= concomiMetaboOfAci){
+//            concomitant.text = "呼吸性アシドーシスの代謝性代償"
+//        }else if(getHco3 <= concomiMetaboOfAl){
+//            concomitant.text = "呼吸性アルカローシスの代謝性代償"
+//        }
         
     }
 
 
 //重複するデータの遷移
-    //Sofaのページへ遷移（PaO2）
+//    Sofaのページへ遷移（PaO2）
     @IBAction func buttonToSofa(_ sender: UIButton) {
         appDelegate.valueOfPao2 = Float(paco2OfAbg.text!)!
     }
@@ -154,15 +156,30 @@ class abgViewController: UIViewController {
         
     }
     
+    //呼吸アセスメントのページへ遷移（Pao2,PaO2)
+    @IBAction func buttonToRespi(_ sender: UIButton) {
+        if pao2OfAbg.text == ""{
+        }else{
+            appDelegate.valueOfPao2 = Float(pao2OfAbg.text!)!
+        }
+        if paco2OfAbg.text == ""{
+        }else{
+            appDelegate.valueOfPaco2 = Float(paco2OfAbg.text!)!
+        }
+    }
+    
+    
     
     
 //下の5つのボタンで画面の遷移
     //呼吸アセスメントへ画面を遷移
     @IBAction func tapButtonToRespi(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRespiFromAbg", sender: nil )
     }
     
     //栄養アセスメントへ画面を遷移
     @IBAction func tapButtonToNutri(_ sender: UIButton) {
+        performSegue(withIdentifier: "showNFromAbg", sender: nil )
     }
     
     //Sofaへ画面を遷移
@@ -172,12 +189,13 @@ class abgViewController: UIViewController {
     
     //DICへ画面を遷移
     @IBAction func tapButtonToDic(_ sender: UIButton) {
+        performSegue(withIdentifier: "showDFromAbg", sender: nil )
     }
 
     //APACHE2へ画面を遷移
     @IBAction func tapButtonToApa(_ sender: UIButton) {
         performSegue(withIdentifier: "showApacheFromAbg", sender: nil )
-    }
+           }
     
     
 

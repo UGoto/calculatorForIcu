@@ -34,30 +34,34 @@ class dicViewController: UIViewController {
     var ptNumber:Int = 0
     var fdpNumber:Int = 0
 
-    
-//画面の遷移
-    //呼吸アセスメントへ画面の遷移
-    
-    //栄養アセスメントへ画面の遷移
-    @IBAction func tapButtonNutri(_ sender: UIButton) { performSegue(withIdentifier: "showNutri", sender: nil )
-    //血液ガスアセスメントへ画面の遷移
-    
-    //SOFAへ画面の遷移
-        
-    //APACHEⅡへ画面の遷移
-    
-        
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        if appDelegate.valueOfrr > 20.0 || appDelegate.valueOfPaco2 < 32.0{
-            rrSeg.selectedSegmentIndex = 1
-            rrNumber = 1
-        }else{
+        //RR
+        if appDelegate.valueOfrr == 0{
             rrSeg.selectedSegmentIndex = 0
-            rrNumber = 0
-
-    }
+        }else if appDelegate.valueOfrr >= 50 {
+            rrSeg.selectedSegmentIndex = 0
+                rrNumber = 4
+        }else if appDelegate.valueOfrr <= 49 && appDelegate.valueOfrr >= 35 {
+            rrSeg.selectedSegmentIndex = 1
+                rrNumber = 3
+        }else if appDelegate.valueOfrr <= 34 && appDelegate.valueOfrr >= 25 {
+            rrSeg.selectedSegmentIndex = 2
+                rrNumber = 1
+        }else if appDelegate.valueOfrr <= 24  && appDelegate.valueOfrr >= 12 {
+            rrSeg.selectedSegmentIndex = 3
+                rrNumber = 0
+        }else if appDelegate.valueOfrr <= 11 && appDelegate.valueOfrr >= 10 {
+            rrSeg.selectedSegmentIndex = 4
+                rrNumber = 1
+        }else if appDelegate.valueOfrr <= 9 && appDelegate.valueOfrr >= 6 {
+            rrSeg.selectedSegmentIndex = 5
+                rrNumber = 2
+        }else if appDelegate.valueOfrr <= 5 {
+            rrSeg.selectedSegmentIndex = 6
+                rrNumber = 4
+        }
     }
     
 //セグメントの設定
@@ -158,6 +162,44 @@ class dicViewController: UIViewController {
             totalScore.text = "DICでない"
         }
     }
+
+
+//重複するデータの遷移
+//    Sofaの画面へ遷移
+    @IBAction func buttonToSofa(_ sender: UIButton) {
+        appDelegate.valueOfPlt = Int(pltSeg.selectedSegmentIndex)
+    }
+
+   
+//下の5つのボタンで画面の遷移
+    //呼吸アセスメントへ画面の遷移
+    @IBAction func tapButtonToRespi(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRespiFromD", sender: nil )
+    }
+    
+    //栄養アセスメントへ画面の遷移
+    @IBAction func tapButtonNutri(_ sender: UIButton) { performSegue(withIdentifier: "showNutri", sender: nil )
+    }
+    //血液ガスアセスメントへ画面の遷移
+    @IBAction func tapButtonToAbg(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAbgFromD", sender: nil )
+    }
+        
+    //SOFAへ画面の遷移
+    @IBAction func tapButtonToSofa(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSofaFromD", sender: nil )
+    }
+    
+    //APACHEⅡへ画面の遷移
+    @IBAction func tapButtonToApache(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAFromD", sender: nil )
+    }
+    
+    
+
+ 
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

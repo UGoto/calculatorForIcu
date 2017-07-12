@@ -65,6 +65,8 @@ class respiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pao2.text = String(appDelegate.valueOfPao2)
+        paco2.text = String(appDelegate.valueOfPaco2)
     }
   
 //呼吸アセスメントの結果ページへデータを遷移
@@ -123,29 +125,27 @@ class respiViewController: UIViewController {
     //血液ガス分析のページへ遷移(PaO2,PaCo2)
     @IBAction func buttonToAbg(_ sender: UIButton) {
         if pao2.text == "" || paco2.text == ""{
-           print("未入力項目があります")
         }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
         appDelegate.valueOfPaco2 = Float(paco2.text!)!
         }
         }
     
-    //ApacheⅡのページへ遷移(PaO2,RR)
+    //ApacheⅡのページへ遷移(PaO2,PaCO2,RR)
     @IBAction func buttonToApache(_ sender: UIButton) {
-        if pao2.text == ""{
-            print("未入力項目があります")
+        if pao2.text == "" {
         }else if rr.text == ""{
-            print("未入力も項目があります")
+        }else if paco2.text == "" {
         }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
+        appDelegate.valueOfPaco2 = Float(paco2.text!)!
         appDelegate.valueOfrr = Float(rr.text!)!
         }
         }
     
-    //SOFAのページへ遷移（PaO2）
+    //SOFAのページへ遷移（PaO2,fio2）
     @IBAction func buttonToSofa(_ sender: UIButton) {
-        if pao2.text == "" || fio2.text == ""{
-            print("未入力項目があります")
+        if pao2.text == "" || fio2.text == "" {
         }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
         appDelegate.valueOfFio2 = Float(fio2.text!)!
@@ -154,9 +154,13 @@ class respiViewController: UIViewController {
     
     //DICのページへ遷移（RR）
     @IBAction func buttonToDic(_ sender: UIButton) {
+        if rr.text == "" {
+        }else if paco2.text == "" {
+        }else{
         appDelegate.valueOfrr = Float(rr.text!)!
         appDelegate.valueOfPaco2 = Float(paco2.text!)!
         }
+    }
     
 
 

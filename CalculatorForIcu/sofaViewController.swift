@@ -39,8 +39,12 @@ class sofaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//呼吸アセスメントから値を引き受ける
-        if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 400{
+//AppDelegateから値を引き受ける
+        //P/F
+        if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfFio2 == 0{
+            pfSeg.selectedSegmentIndex = 0
+            pfNumber = 0
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 400{
             pfSeg.selectedSegmentIndex = 0
             pfNumber = 0
         }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 400 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 300 {
@@ -57,7 +61,22 @@ class sofaViewController: UIViewController {
             pfNumber = 4
         }
         
-//Apacheから値を引き受ける
+        //A-aDo2
+        if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 500 || (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 == 0 {
+            pfSeg.selectedSegmentIndex = 0
+            pfNumber = 4
+        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 500 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 350 {
+            pfSeg.selectedSegmentIndex = 1
+            pfNumber = 3
+        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 350 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 200  {
+            pfSeg.selectedSegmentIndex = 2
+            pfNumber = 2
+        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 200 {
+            pfSeg.selectedSegmentIndex = 3
+            pfNumber = 0
+        }
+        
+        //GCS
         if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {
             gcsSeg.selectedSegmentIndex = 0
             gcsNumber = 0
@@ -74,6 +93,7 @@ class sofaViewController: UIViewController {
             gcsSeg.selectedSegmentIndex = 4
             gcsNumber = 4
         }
+        
     }
     
 
@@ -187,16 +207,33 @@ class sofaViewController: UIViewController {
         totalScore.text = String(amount)
     }
     
-//画面の遷移
-    //APACHEへ画面の遷移（GCS,クレアチニン）
+//値の遷移
+    //APACHEへ画面の遷移（GCS）
     @IBAction func buttonToApache(_ sender: UIButton) {
         appDelegate.valueOfGcs = Float(gcsSeg.selectedSegmentIndex)
         appDelegate.valueOfCre = Float(creSeg.selectedSegmentIndex)
     }
     
     
-    
+//下の5つのボタンで画面の遷移
+    @IBAction func tapButtonToApache(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAFromSofa", sender: nil )
+    }
 
+    @IBAction func tapButtonToRespi(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRespiFromSofa", sender: nil )
+    }
+    
+    @IBAction func tapButtonToAbg(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAbgFromSofa", sender: nil )
+    }
+    @IBAction func tapButtonToD(_ sender: UIButton) {
+        performSegue(withIdentifier: "showDFromSofa", sender: nil )
+    }
+    
+    @IBAction func tapButtonToN(_ sender: UIButton) {
+        performSegue(withIdentifier: "showNFromSofa", sender: nil )
+    }
 
     
     

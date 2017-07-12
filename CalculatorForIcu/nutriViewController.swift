@@ -129,16 +129,23 @@ class nutriViewController: UIViewController {
     
 //下の５つのボタンで次の画面へ遷移
     @IBAction func tapButtonToRespi(_ sender: UIButton) {
+        performSegue(withIdentifier: "showRespiFromN", sender: nil )
     }
     @IBAction func tapButtonToAbg(_ sender: UIButton) {
+          performSegue(withIdentifier: "showAbgFromN", sender: nil )
     }
+  
     @IBAction func tapButtonToSofa(_ sender: UIButton) {
+          performSegue(withIdentifier: "showSofaFromN", sender: nil )
     }
+    
     @IBAction func tapButtonToDic(_ sender: UIButton) {
+          performSegue(withIdentifier: "showDFromN", sender: nil )
     }
     @IBAction func tapButtonToApa(_ sender: UIButton) {
         performSegue(withIdentifier: "showApacheFromN", sender: nil )
     }
+    
     
     
     override func didReceiveMemoryWarning() {

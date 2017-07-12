@@ -67,7 +67,25 @@ class apachViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //呼吸アセスメントから値を引き継いで、その値が入るセグメントを選択する
+    //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
+        //A-aDO2
+        if  appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
+            aaDo2.selectedSegmentIndex = 0
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 500 {
+            aaDo2.selectedSegmentIndex = 0
+            aaDo2Number = 4
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 350 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 500{
+            aaDo2.selectedSegmentIndex = 1
+            aaDo2Number = 3
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 200 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 350 {
+            po2.selectedSegmentIndex = 2
+            po2Number = 2
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 {
+            aaDo2.selectedSegmentIndex = 3
+            aaDo2Number = 0
+        }
+        
+        
         //PaO2
         if  appDelegate.valueOfPao2 == 0 {
             po2.selectedSegmentIndex = 0
@@ -111,8 +129,7 @@ class apachViewController: UIViewController {
             rrNumber = 4
         }
         
-        
-    //栄養アセスメントから値を受け取る(age)
+        //Age)
         if appDelegate.valueOfAge <= 44{
             age.selectedSegmentIndex = 0
             ageNumber = 0
@@ -130,7 +147,7 @@ class apachViewController: UIViewController {
             ageNumber = 6
         }
     
-    //ABGから値を受け取る（ph,PaO2,HCO3,Na,K,）
+        //Ph
         if appDelegate.valueOfPh == 0{
             ph.selectedSegmentIndex = 0
             phNumber = 4
@@ -157,6 +174,7 @@ class apachViewController: UIViewController {
             phNumber = 4
         }
         
+        //HCO3
         if appDelegate.valueOfHco3 == 0 || appDelegate.valueOfHco3 >= 52 {
             hco3.selectedSegmentIndex = 0
             hco3Number = 4
@@ -167,20 +185,92 @@ class apachViewController: UIViewController {
             hco3.selectedSegmentIndex = 2
             hco3Number = 1
         }else if appDelegate.valueOfHco3 < 32 && appDelegate.valueOfHco3 >= 22 {
-            hco3.selectedSegmentIndex = 4
+            hco3.selectedSegmentIndex = 3
             hco3Number = 0
         }else if appDelegate.valueOfHco3 < 22 && appDelegate.valueOfHco3 >= 18 {
-            hco3.selectedSegmentIndex = 5
+            hco3.selectedSegmentIndex = 4
             hco3Number = 2
         }else if appDelegate.valueOfHco3 < 18 && appDelegate.valueOfHco3 >= 15 {
-            hco3.selectedSegmentIndex = 6
+            hco3.selectedSegmentIndex = 5
             hco3Number = 3
         }else if appDelegate.valueOfHco3 < 15 {
-            hco3.selectedSegmentIndex = 7
+            hco3.selectedSegmentIndex = 6
             hco3Number = 4
         }
-            
-    //DICから値を受け取る（HR,RR）
+        
+        //Na
+        if appDelegate.valueOfNa == 0 || appDelegate.valueOfNa >= 180 {
+            na.selectedSegmentIndex = 0
+            naNumber = 4
+        }else if appDelegate.valueOfNa < 180  && appDelegate.valueOfNa >= 160 {
+            na.selectedSegmentIndex = 1
+            naNumber = 3
+        }else if appDelegate.valueOfNa < 160 && appDelegate.valueOfNa >= 155{
+            na.selectedSegmentIndex = 2
+            naNumber = 2
+        }else if appDelegate.valueOfNa < 155 && appDelegate.valueOfNa >= 150 {
+            na.selectedSegmentIndex = 3
+            naNumber = 1
+        }else if appDelegate.valueOfNa < 150 && appDelegate.valueOfNa >= 130 {
+            na.selectedSegmentIndex = 4
+            naNumber = 0
+        }else if appDelegate.valueOfNa < 130 && appDelegate.valueOfNa >= 120 {
+            na.selectedSegmentIndex = 5
+            naNumber = 2
+        }else if appDelegate.valueOfNa <= 119 {
+            na.selectedSegmentIndex = 6
+            naNumber = 4
+        }
+        
+        //K
+        if appDelegate.valueOfK == 0 || appDelegate.valueOfK >= 7 {
+            k.selectedSegmentIndex = 0
+            naNumber = 4
+        }else if appDelegate.valueOfK < 7  && appDelegate.valueOfK >= 6.0 {
+            k.selectedSegmentIndex = 1
+            kNumber = 3
+        }else if appDelegate.valueOfK < 6.0 && appDelegate.valueOfK >= 5.5{
+            k.selectedSegmentIndex = 2
+            kNumber = 1
+        }else if appDelegate.valueOfK < 5.5 && appDelegate.valueOfK >= 3.5 {
+            k.selectedSegmentIndex = 3
+            kNumber = 0
+        }else if appDelegate.valueOfK < 3.5 && appDelegate.valueOfK >= 3.0 {
+            k.selectedSegmentIndex = 4
+            kNumber = 1
+        }else if appDelegate.valueOfK < 3.0 && appDelegate.valueOfK >= 2.5 {
+            k.selectedSegmentIndex = 5
+            kNumber = 2
+        }else if appDelegate.valueOfK < 2.5  {
+            k.selectedSegmentIndex = 6
+            kNumber = 4
+        }
+        
+        //HR
+        if appDelegate.valueOfHr == 0 || appDelegate.valueOfHr >= 180 {
+            hr.selectedSegmentIndex = 0
+            hrNumber = 4
+        }else if appDelegate.valueOfHr < 180  && appDelegate.valueOfHr >= 140 {
+            hr.selectedSegmentIndex = 1
+            hrNumber = 3
+        }else if appDelegate.valueOfHr < 140 && appDelegate.valueOfHr >= 110{
+            hr.selectedSegmentIndex = 2
+            hrNumber = 2
+        }else if appDelegate.valueOfHr < 110 && appDelegate.valueOfHr >= 70 {
+            hr.selectedSegmentIndex = 3
+            hrNumber = 0
+        }else if appDelegate.valueOfHr < 70 && appDelegate.valueOfHr >= 55 {
+            hr.selectedSegmentIndex = 4
+            hrNumber = 2
+        }else if appDelegate.valueOfHr < 55 && appDelegate.valueOfHr >= 40 {
+            hr.selectedSegmentIndex = 5
+            hrNumber = 3
+        }else if appDelegate.valueOfHr < 40{
+            hr.selectedSegmentIndex = 6
+            hrNumber = 4
+        }
+        
+        
 
     
     
@@ -474,6 +564,7 @@ class apachViewController: UIViewController {
             appDelegate.valueOfGcs = Float(gcs.text!)!
         }
     }
+
     
     
 //下の5つのボタンで画面の遷移
