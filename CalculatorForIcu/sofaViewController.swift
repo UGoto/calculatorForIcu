@@ -53,7 +53,7 @@ class sofaViewController: UIViewController {
         }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 300 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 200 {
             pfSeg.selectedSegmentIndex = 2
             pfNumber = 2
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 200 && appDelegate.valueOfPao2/appDelegate.valueOfFio2 >= 100{
+        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 200 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 100{
             pfSeg.selectedSegmentIndex = 3
             pfNumber = 3
         }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 100{

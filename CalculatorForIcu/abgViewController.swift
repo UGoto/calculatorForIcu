@@ -8,7 +8,7 @@
 
 import UIKit
 
-class abgViewController: UIViewController {
+class abgViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var phOfAbg: UITextField!
     @IBOutlet weak var paco2OfAbg: UITextField!
     @IBOutlet weak var pao2OfAbg: UITextField!
@@ -60,13 +60,13 @@ class abgViewController: UIViewController {
         //AG計算
     @IBAction func resultButton(_ sender: UIButton) {
         if naOfAbg.text == "" || hco3OfAbg.text == "" || clOfAbg.text == "" {
-            print("数値が入力されていない")}
+        }else{
         let getNa:Double = Double(naOfAbg.text!)!
         let getHCO3:Double = Double(hco3OfAbg.text!)!
         let getCl:Double = Double(clOfAbg.text!)!
         ag.text = "AG:" + String(getNa - ( getHCO3 + getCl))
         ag.textAlignment = NSTextAlignment.center
-        
+        }
     
         //血液ガス計算
         if phOfAbg.text == "" || paco2OfAbg.text == "" || hco3OfAbg.text == ""{
@@ -197,7 +197,20 @@ class abgViewController: UIViewController {
         performSegue(withIdentifier: "showApacheFromAbg", sender: nil )
            }
     
+
+//テキストフィールド入力開始時に起動
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        performSegue(withIdentifier: "showTenkey", sender: nil )
+        
+        
+            return false
+    }
     
+    
+        
+        
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,6 +14,7 @@
 		BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6D1F0348F2008997F1 /* formulaViewController.swift */; };
 		BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */; };
 		BA8ABCF31F0B6783001A13F3 /* sofaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */; };
+		BA9E5F0C1F17452E00CBEAD2 /* tenKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9E5F0B1F17452E00CBEAD2 /* tenKeyViewController.swift */; };
 		BAC50A341F0B0452004C183F /* abgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC50A331F0B0452004C183F /* abgViewController.swift */; };
 		BAC50A361F0B053E004C183F /* respiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC50A351F0B053E004C183F /* respiViewController.swift */; };
 		BAE88B7E1EF5EB6E001D0557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88B7D1EF5EB6E001D0557 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		BA592A6D1F0348F2008997F1 /* formulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formulaViewController.swift; sourceTree = "<group>"; };
 		BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nutriViewController.swift; sourceTree = "<group>"; };
 		BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sofaViewController.swift; sourceTree = "<group>"; };
+		BA9E5F0B1F17452E00CBEAD2 /* tenKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tenKeyViewController.swift; sourceTree = "<group>"; };
 		BAC50A331F0B0452004C183F /* abgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = abgViewController.swift; sourceTree = "<group>"; };
 		BAC50A351F0B053E004C183F /* respiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = respiViewController.swift; path = ../respiViewController.swift; sourceTree = "<group>"; };
 		BAE88B7A1EF5EB6E001D0557 /* CalculatorForIcu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorForIcu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */,
 				BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */,
 				BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */,
+				BA9E5F0B1F17452E00CBEAD2 /* tenKeyViewController.swift */,
 				BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */,
 				BA592A6D1F0348F2008997F1 /* formulaViewController.swift */,
 				BA592A6B1F0348B1008997F1 /* historyViewController.swift */,
@@ -229,6 +232,7 @@
 				TargetAttributes = {
 					BAE88B791EF5EB6E001D0557 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3NDT2CQJNV;
 						ProvisioningStyle = Automatic;
 					};
 					BAE88B8D1EF5EB6F001D0557 = {
@@ -303,6 +307,7 @@
 				BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */,
 				BAC50A341F0B0452004C183F /* abgViewController.swift in Sources */,
 				BA49288E1EF678CA009B8988 /* AssessDeliViewController.swift in Sources */,
+				BA9E5F0C1F17452E00CBEAD2 /* tenKeyViewController.swift in Sources */,
 				BAE88BAC1EF5F010001D0557 /* PtInfoViewController.swift in Sources */,
 				BAFC96D61F0BCF6900B5C714 /* dicViewController.swift in Sources */,
 				BA592A6C1F0348B1008997F1 /* historyViewController.swift in Sources */,
@@ -462,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3NDT2CQJNV;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yujiyamamoto.CalculatorForIcu;
@@ -474,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3NDT2CQJNV;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yujiyamamoto.CalculatorForIcu;
