@@ -148,9 +148,11 @@ class apachViewController: UIViewController {
         }
     
         //Ph
-        if appDelegate.valueOfPh == 0{
+        if  appDelegate.valueOfPh == 0.0{
             ph.selectedSegmentIndex = 0
             phNumber = 4
+            print(appDelegate.valueOfPf)
+            print(ph.selectedSegmentIndex)
         }else if appDelegate.valueOfPh > 7.7 {
             ph.selectedSegmentIndex = 0
             phNumber = 4
@@ -172,6 +174,7 @@ class apachViewController: UIViewController {
         }else if appDelegate.valueOfPh < 7.15{
             ph.selectedSegmentIndex = 6
             phNumber = 4
+            
         }
         
         //HCO3

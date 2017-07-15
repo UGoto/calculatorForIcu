@@ -46,12 +46,7 @@ class abgViewController: UIViewController,UITextFieldDelegate{
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
-    
-    
-    //呼吸アセスメントのページからデータを受け取る
         super.viewDidLoad()
-        pao2OfAbg.text = String(appDelegate.valueOfPao2)
-        paco2OfAbg.text = String(appDelegate.valueOfPaco2)
         }
     
         
@@ -123,14 +118,19 @@ class abgViewController: UIViewController,UITextFieldDelegate{
 //重複するデータの遷移
 //    Sofaのページへ遷移（PaO2）
     @IBAction func buttonToSofa(_ sender: UIButton) {
-        appDelegate.valueOfPao2 = Float(paco2OfAbg.text!)!
+        if pao2OfAbg.text == ""{
+        }else{
+            appDelegate.valueOfPao2 = Float(pao2OfAbg.text!)!
+        }
     }
     
     //APACHEのページへ遷移（pH,PaO2,Na,K,HCO3）
     @IBAction func buttonToApache(_ sender: UIButton) {
         if phOfAbg.text == ""{
         }else{
-            appDelegate.valueOfPf = Float(phOfAbg.text!)!
+            appDelegate.valueOfPh = Float(phOfAbg.text!)!
+            print(phOfAbg.text)
+            print(appDelegate.valueOfPh)
         }
         
         if pao2OfAbg.text == ""{

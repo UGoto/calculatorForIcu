@@ -16,8 +16,8 @@ class tenKeyViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var tenkeyView: UIView!
     
     
-    //Tenkeyを隠すためのボタン
-    let closeBtn:UIButton = UIButton(type: .system)
+//    //Tenkeyを隠すためのボタン
+//    let closeBtn:UIButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,27 +25,53 @@ class tenKeyViewController: UIViewController,UITextFieldDelegate {
     
     
 //Tenkey
-    @IBAction func tapZero(_ sender: UIButton) {
+    //pH
+    @IBAction func tapPh(_ sender: UIButton) {
         let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
         if performingMath == true {
             fv.phOfAbg.text = String(sender.tag)
             performingMath = false
         }else{
             fv.phOfAbg.text = fv.phOfAbg.text! + String(sender.tag)
-
         }
-    
     }
     
     @IBAction func button(_ sender: UIButton) {
         let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
         if sender.tag == 11{
+            fv.phOfAbg.text = ""
         }
         if sender.tag == 10 {
             fv.phOfAbg.text = fv.phOfAbg.text! + "."
         }
         }
-
+    
+    //paco2
+    @IBAction func tapPaco2(_ sender: UIButton) {
+        let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
+        if performingMath == true {
+            fv.paco2OfAbg.text = String(sender.tag)
+            performingMath = false
+        }else{
+            fv.paco2OfAbg.text = fv.paco2OfAbg.text! + String(sender.tag)
+        }
+    }
+    
+    @IBAction func buttonPaco2(_ sender: UIButton) {
+        let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
+        if sender.tag == 11{
+            fv.paco2OfAbg.text = ""
+        }
+        if sender.tag == 10 {
+            fv.paco2OfAbg.text = fv.paco2OfAbg.text! + "."
+        }
+    }
+    
+    //pao2
+    //hco3
+    //na
+    //k
+    //cl
     
 
 
@@ -95,7 +121,7 @@ class tenKeyViewController: UIViewController,UITextFieldDelegate {
 //        fv.phOfAbg.text = ""
 //    }
 
-//閉じるボタン
+//Enterボタン
     @IBAction func closeButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

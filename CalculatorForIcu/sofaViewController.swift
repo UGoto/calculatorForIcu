@@ -44,37 +44,38 @@ class sofaViewController: UIViewController {
         if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfFio2 == 0{
             pfSeg.selectedSegmentIndex = 0
             pfNumber = 0
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 400{
+            print(pfSeg.selectedSegmentIndex)
+        }else if appDelegate.valueOfPf >= 400{
             pfSeg.selectedSegmentIndex = 0
             pfNumber = 0
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 400 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 300 {
+        }else if appDelegate.valueOfPf < 400 && appDelegate.valueOfPf >= 300{
             pfSeg.selectedSegmentIndex = 1
             pfNumber = 1
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 300 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 200 {
+        }else if appDelegate.valueOfPf < 300 && appDelegate.valueOfPf >= 200{
             pfSeg.selectedSegmentIndex = 2
             pfNumber = 2
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 200 && appDelegate.valueOfPao2 / appDelegate.valueOfFio2 >= 100{
+        }else if appDelegate.valueOfPf < 200 && appDelegate.valueOfPf >= 100{
             pfSeg.selectedSegmentIndex = 3
             pfNumber = 3
-        }else if appDelegate.valueOfPao2 / appDelegate.valueOfFio2 < 100{
+        }else if appDelegate.valueOfPf < 100 {
             pfSeg.selectedSegmentIndex = 4
             pfNumber = 4
         }
         
-        //A-aDo2
-        if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 500 || (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 == 0 {
-            pfSeg.selectedSegmentIndex = 0
-            pfNumber = 4
-        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 500 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 350 {
-            pfSeg.selectedSegmentIndex = 1
-            pfNumber = 3
-        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 350 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 200  {
-            pfSeg.selectedSegmentIndex = 2
-            pfNumber = 2
-        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 200 {
-            pfSeg.selectedSegmentIndex = 3
-            pfNumber = 0
-        }
+//        A-aDo2
+//        if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 500 || (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 == 0 {
+//            pfSeg.selectedSegmentIndex = 0
+//            pfNumber = 4
+//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 500 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 350 {
+//            pfSeg.selectedSegmentIndex = 1
+//            pfNumber = 3
+//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 350 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 200  {
+//            pfSeg.selectedSegmentIndex = 2
+//            pfNumber = 2
+//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 200 {
+//            pfSeg.selectedSegmentIndex = 3
+//            pfNumber = 0
+//        }
         
         //GCS
         if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {

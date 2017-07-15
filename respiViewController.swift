@@ -65,8 +65,8 @@ class respiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pao2.text = String(appDelegate.valueOfPao2)
-        paco2.text = String(appDelegate.valueOfPaco2)
+//        pao2.text = String(appDelegate.valueOfPao2)
+//        paco2.text = String(appDelegate.valueOfPaco2)
     }
   
 //呼吸アセスメントの結果ページへデータを遷移
