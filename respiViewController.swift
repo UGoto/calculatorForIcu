@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class respiViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class respiViewController: UIViewController {
     @IBOutlet weak var cvo2: UITextField!
     @IBOutlet weak var pressure: UITextField!
     @IBOutlet weak var vaporPressure: UITextField!
+    @IBOutlet weak var resultBtn: UIButton!
     
     
     
@@ -65,8 +67,18 @@ class respiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        pao2.text = String(appDelegate.valueOfPao2)
-//        paco2.text = String(appDelegate.valueOfPaco2)
+        //結果ボタンのデザイン　円形
+        resultBtn.layer.cornerRadius = 30.0
+        
+        //各テキストの初期値に０が入らないようにする
+        if appDelegate.valueOfPao2 == 0{
+            pao2.text = ""
+        }else if appDelegate.valueOfPaco2 == 0{
+            paco2.text = ""
+        }else{
+        pao2.text = String(appDelegate.valueOfPao2)
+        paco2.text = String(appDelegate.valueOfPaco2)
+    }
     }
   
 //呼吸アセスメントの結果ページへデータを遷移
@@ -78,7 +90,7 @@ class respiViewController: UIViewController {
         if tv.text == "" || deadSpace.text == "" || rr.text == ""{
             print("入力されていない項目があります")
         }else{
-          appDelegate.valueOfTvv = (Int(tv.text!)! - Int(deadSpace.text!)!) * Int(rr.text!)!
+          appDelegate.valueOfTvv = (Float(tv.text!)! - Float(deadSpace.text!)!) * Float(rr.text!)!
         }
         
         //A-aDo2の値
@@ -115,6 +127,37 @@ class respiViewController: UIViewController {
         appDelegate.valueOfOer = appDelegate.valueOfVo2 / appDelegate.valueOfDo2 * 100
         
         }
+        
+//    //Resultボタンが押された時、呼吸アセスメントのデータをCoreDateにCreateする
+//        //AppDelegateのインスタンスを用意しておく
+////        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//        
+//        //エンティティを操作するためのオブジェクトを作成する
+//        let viewContext = appDelegate.persistentContainer.viewContext
+//        
+//        //Todoエンティティオブジェクトを作成する。”Todo”のところはmodeldのファイルの名前と同じ名前
+//        let History = NSEntityDescription.entity(forEntityName: "History", in: viewContext)
+//        
+//        //Todoエンティティにレコード（行情報）を挿入するためのオブジェクトを作成する。 1行文のからの行を作っておく
+//        let newRecord = NSManagedObject(entity: History!, insertInto: viewContext)
+//        
+//        //追加したいdata(textTitleに入力された文字）のセット
+//        //Data()：現在日時がセットできる
+//        newRecord.setValue(tv.text, forKey: "tv")
+//        newRecord.setValue(Date(), forKey: "saveData")
+//        
+//        //ここまでは値を保存するまでの準備。下の作業をして初めてデータが保存される
+//        
+//        appDelegate.resultList.append(tv.text!)
+//        appDelegate.historyTableView.reloadData()
+//        
+//        //レコード（行）の即時保存
+//        do{
+//            try viewContext.save()
+//        }catch{
+//            
+//        }
+
     }
     
 

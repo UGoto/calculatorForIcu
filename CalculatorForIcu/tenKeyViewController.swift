@@ -8,12 +8,14 @@
 
 import UIKit
 
-class tenKeyViewController: UIViewController,UITextFieldDelegate {
+class tenKeyViewController: UIViewController ,UITextFieldDelegate{
     var previousNumber:Double = 0;
     var performingMath = false
     var operation:Double = 0;
     
     @IBOutlet weak var tenkeyView: UIView!
+    
+    var selectedName = ""
     
     
 //    //Tenkeyを隠すためのボタン
@@ -28,12 +30,20 @@ class tenKeyViewController: UIViewController,UITextFieldDelegate {
     //pH
     @IBAction func tapPh(_ sender: UIButton) {
         let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
-        if performingMath == true {
-            fv.phOfAbg.text = String(sender.tag)
-            performingMath = false
-        }else{
-            fv.phOfAbg.text = fv.phOfAbg.text! + String(sender.tag)
-        }
+            if performingMath == true {
+                fv.phOfAbg.text = String(sender.tag)
+                performingMath = false
+            }else{
+                fv.phOfAbg.text = fv.phOfAbg.text! + String(sender.tag)
+            }
+            
+                    
+//        if performingMath == true {
+//            fv.phOfAbg.text = String(sender.tag)
+//            performingMath = false
+//        }else{
+//            fv.phOfAbg.text = fv.phOfAbg.text! + String(sender.tag)
+//        }
     }
     
     @IBAction func button(_ sender: UIButton) {
@@ -56,7 +66,7 @@ class tenKeyViewController: UIViewController,UITextFieldDelegate {
             fv.paco2OfAbg.text = fv.paco2OfAbg.text! + String(sender.tag)
         }
     }
-    
+
     @IBAction func buttonPaco2(_ sender: UIButton) {
         let fv = self.presentingViewController?.childViewControllers[1] as! abgViewController
         if sender.tag == 11{

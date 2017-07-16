@@ -43,6 +43,7 @@ class resultNutriOfViewController: UIViewController {
     //栄養ページからデータを受け取る
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //BEE男性の値を出力
         mof.text = String(appDelegate.mof)
         mof2.text = String(appDelegate.mof2)

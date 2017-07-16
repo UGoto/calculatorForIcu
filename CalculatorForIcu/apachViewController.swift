@@ -539,8 +539,21 @@ class apachViewController: UIViewController {
         }else if afterope.selectedSegmentIndex == 1{
             afteropeNumber = 2
         }
-        
     }
+    
+    
+//慢性病態ポイント(
+    @IBAction func chronicButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "慢性病態ポイント", message: "（1）肝：生検にて確認された肝硬変、門脈圧亢進症および門脈圧亢進による上部消化管出血の既往、または肝不全・肝性脳症・肝性昏睡のあること。\n（2）心血管系：NYHA クラス IV    \n（3）呼吸器：慢性拘束性・閉塞性または血管疾患で重度の運動障害（階段を上がれない、家事ができないなど)があること。慢性低酸素血症、高炭酸ガス血症、二次性多血症、慢性肺高血圧（>40mmHg）。または人工呼吸器離脱不能例\n（4）免疫不全：感染への抵抗力を抑制する治療（免疫抑制剤、癌化学療法、放射線照射、長期または現在の大量のステロイド投与など）を受けている者、または感染への抵抗力を著明に減じる疾患（白血病、リンパ腫またはAIDSなど）に罹患している者。", preferredStyle:  .alert)
+      
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+    
     
     
     

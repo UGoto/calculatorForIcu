@@ -21,6 +21,7 @@ class AssessDeliViewController: UIViewController {
     @IBOutlet weak var cam4b: UISegmentedControl!
     
     //結果の出力　label
+    @IBOutlet weak var result1Btn: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
     //合計点数の変数を作成
@@ -45,6 +46,7 @@ class AssessDeliViewController: UIViewController {
     @IBOutlet weak var icd8: UISegmentedControl!
     
     //結果の出力　Label
+    @IBOutlet weak var result2Btn: UIButton!
     @IBOutlet weak var resultLabel2: UILabel!
     
     //合計点数の変数を作成
@@ -62,7 +64,8 @@ class AssessDeliViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            result1Btn.layer.cornerRadius = 30.0
+            result2Btn.layer.cornerRadius = 30.0
 //            print("前の画面から選択された行:\(sIndex)")
 
         

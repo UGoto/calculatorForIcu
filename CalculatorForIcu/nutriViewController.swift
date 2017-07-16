@@ -17,7 +17,7 @@ class nutriViewController: UIViewController {
     @IBOutlet weak var bun: UITextField!
     @IBOutlet weak var hrBun: UITextField!
     @IBOutlet weak var wt: UITextField!
-
+    @IBOutlet weak var resultBtn: UIButton!
     
     //Return押したら閉じる
     @IBAction func tapButtonHt(_ sender: UITextField) {
@@ -43,6 +43,7 @@ class nutriViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultBtn.layer.cornerRadius = 30.0
 
         
     }

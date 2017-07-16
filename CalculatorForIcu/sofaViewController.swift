@@ -18,6 +18,7 @@ class sofaViewController: UIViewController {
     @IBOutlet weak var creSeg: UISegmentedControl!
     @IBOutlet weak var hrSeg: UISegmentedControl!
     
+    @IBOutlet weak var resultBtn: UIButton!
     @IBOutlet weak var totalScore: UITextField!
     
     
@@ -39,7 +40,10 @@ class sofaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//AppDelegateから値を引き受ける
+        //結果ボタンのデザイン
+            resultBtn.layer.cornerRadius = 30.0
+        
+    //AppDelegateから値を引き受ける
         //P/F
         if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfFio2 == 0{
             pfSeg.selectedSegmentIndex = 0
@@ -61,21 +65,6 @@ class sofaViewController: UIViewController {
             pfSeg.selectedSegmentIndex = 4
             pfNumber = 4
         }
-        
-//        A-aDo2
-//        if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 500 || (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 == 0 {
-//            pfSeg.selectedSegmentIndex = 0
-//            pfNumber = 4
-//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 500 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 350 {
-//            pfSeg.selectedSegmentIndex = 1
-//            pfNumber = 3
-//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 350 && (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 >= 200  {
-//            pfSeg.selectedSegmentIndex = 2
-//            pfNumber = 2
-//        }else if (150 - (appDelegate.valueOfPaco2) / 0.8 ) - appDelegate.valueOfPao2 < 200 {
-//            pfSeg.selectedSegmentIndex = 3
-//            pfNumber = 0
-//        }
         
         //GCS
         if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {

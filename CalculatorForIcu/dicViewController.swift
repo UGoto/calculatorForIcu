@@ -16,6 +16,7 @@ class dicViewController: UIViewController {
     @IBOutlet weak var pltSeg: UISegmentedControl!
     @IBOutlet weak var ptSeg: UISegmentedControl!
     @IBOutlet weak var fdpSeg: UISegmentedControl!
+    @IBOutlet weak var resultBtn: UIButton!
     
     @IBOutlet weak var totalScore: UITextField!
     
@@ -37,6 +38,8 @@ class dicViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //結果ボタンのデザイン
+        resultBtn.layer.cornerRadius = 40.0
         //RR
         if appDelegate.valueOfrr == 0{
             rrSeg.selectedSegmentIndex = 0

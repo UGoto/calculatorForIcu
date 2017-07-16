@@ -20,8 +20,9 @@ class abgViewController: UIViewController,UITextFieldDelegate{
 //    @IBOutlet weak var concomitant: UITextField!
     @IBOutlet weak var bloodGas: UITextField!
     @IBOutlet weak var ag: UITextField!
-
-
+    
+    var selectedTextName = ""
+    
     
     
    //Returnキーが押されたら閉じる
@@ -47,9 +48,16 @@ class abgViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if appDelegate.valueOfPao2 == 0{
+            pao2OfAbg.text = ""
+        }else if appDelegate.valueOfPaco2 == 0{
+            paco2OfAbg.text = ""
+        }else{
+        pao2OfAbg.text = String(appDelegate.valueOfPao2)
+        paco2OfAbg.text = String(appDelegate.valueOfPaco2)
         }
+    }
     
-        
     
     //結果の表示
         //AG計算
@@ -199,12 +207,27 @@ class abgViewController: UIViewController,UITextFieldDelegate{
     
 
 //テキストフィールド入力開始時に起動
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        performSegue(withIdentifier: "showTenkey", sender: nil )
-        
-        
-            return false
-    }
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//        switch textField.tag {
+//        case 1:
+//            selectedTextName = "phOfAbg"
+//        case 2:
+//            selectedTextName = "pco2OfAbg"
+//        default:
+//            print("error")
+//        }
+//
+//        performSegue(withIdentifier: "showTenkey", sender: nil )
+//            return false
+//    }
+    
+//tenKeyViewContollerへ遷移
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var tkView = segue.destination as! tenKeyViewController
+//        
+//        tkView.selectedName = selectedTextName
+//        
+//    }
     
     
         
