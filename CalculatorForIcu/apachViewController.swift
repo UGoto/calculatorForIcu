@@ -28,6 +28,7 @@ class apachViewController: UIViewController {
     @IBOutlet weak var ope: UISegmentedControl!
     @IBOutlet weak var afterope: UISegmentedControl!
     
+ 
     //GCSのスコア
     @IBOutlet weak var gcs: UITextField!
     
@@ -37,8 +38,8 @@ class apachViewController: UIViewController {
     
     
     //結果ボタンのtext
-    @IBOutlet weak var totalScore: UITextField!
     @IBOutlet weak var comment: UITextField!
+    @IBOutlet weak var total: UILabel!
     
     
     //合計点数の変数を作成
@@ -62,11 +63,14 @@ class apachViewController: UIViewController {
     var opeNumber:Int = 0
     var afteropeNumber:Int = 0
 
+    @IBOutlet weak var resultBtn: UIButton!
     //appDelegateのインスタンスの作成
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultBtn.layer.cornerRadius = 20.0
+
     //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
         //A-aDO2
         if  appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
@@ -85,6 +89,7 @@ class apachViewController: UIViewController {
             aaDo2Number = 0
         }
         
+
         
         //PaO2
         if  appDelegate.valueOfPao2 == 0 {
@@ -278,26 +283,26 @@ class apachViewController: UIViewController {
     
     
     
-        //セグメントの設定　Systemは普段edit画面で使っているものと同じ
-        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: 0)
+//        //セグメントの設定　Systemは普段edit画面で使っているものと同じ
+//        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: 0)
     }
     
     
     //セグメントをタップした時TextColorを白、タップされていない時青色にするif文
-    @IBAction func map(_ sender: UISegmentedControl) {
-//        //selectedIndex = 白　それ以外を青　でif文にするø
-//        if pfSeg.selectedSegmentIndex == 0{
-//            pfNumber = 0
-//        if sender.isMomentary == true{
-//            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,)
-//        }else{
-//            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
-//
-//        }
-        
-        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: sender.selectedSegmentIndex)
-    }
-    
+//    @IBAction func map(_ sender: UISegmentedControl) {
+////        //selectedIndex = 白　それ以外を青　でif文にするø
+////        if pfSeg.selectedSegmentIndex == 0{
+////            pfNumber = 0
+////        if sender.isMomentary == true{
+////            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,)
+////        }else{
+////            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
+////
+////        }
+//        
+//        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: sender.selectedSegmentIndex)
+//    }
+//    
 
    
     @IBAction func tempSeg(_ sender: UISegmentedControl) {
@@ -566,7 +571,7 @@ class apachViewController: UIViewController {
         }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3 {
             amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
             
-            totalScore.text = String(amount)
+            total.text = String(amount)
             comment.text = ""
         }
     
@@ -610,28 +615,29 @@ class apachViewController: UIViewController {
 
 }
 
-//セグメントのための拡張機能　セグメントを２段にする
-extension UISegmentedControl {
-    func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor,selectedIndex:Int){
-        for index in 0...self.numberOfSegments - 1 {
-            
-            var setIndex = self.numberOfSegments - 1 - index
-            let label = UILabel(frame: CGRect(x:0,y:0,width:self.frame.width/CGFloat(self.numberOfSegments),height:self.frame.height))
-            label.font = UIFont(name: fontName, size: fontSize)
-            if selectedIndex == setIndex{
-                label.textColor = UIColor.white
-            
-            }else{
-                label.textColor = textColor
-
-            }
-            label.text = self.titleForSegment(at: setIndex)
-            label.numberOfLines = 0
-            label.textAlignment = .center
-            label.adjustsFontSizeToFitWidth = true
-            
-            self.setTitle("", forSegmentAt: setIndex)
-            self.subviews[index].addSubview(label)
-        }
-    }
-}
+////セグメントのための拡張機能　セグメントを２段にする
+//extension UISegmentedControl {
+//    func makeMultiline(withFontName fontName: String, fontSize: CGFloat, textColor: UIColor,selectedIndex:Int){
+//        for index in 0...self.numberOfSegments - 1 {
+//            
+//            var setIndex = self.numberOfSegments - 1 - index
+//            
+//            let label = UILabel(frame: CGRect(x:0,y:0,width:self.frame.width/CGFloat(self.numberOfSegments),height:self.frame.height))
+//            label.font = UIFont(name: fontName, size: fontSize)
+//            if selectedIndex == self.selectedSegmentIndex{
+//                label.textColor = UIColor.white
+//            
+//            }else{
+//                label.textColor = self.tintColor
+//
+//            }
+//            label.text = self.titleForSegment(at: setIndex)
+//            label.numberOfLines = 0
+//            label.textAlignment = .center
+//            label.adjustsFontSizeToFitWidth = true
+//            
+//            self.setTitle("", forSegmentAt: setIndex)
+//            self.subviews[index].addSubview(label)
+//        }
+//    }
+//}

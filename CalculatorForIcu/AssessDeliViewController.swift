@@ -64,8 +64,8 @@ class AssessDeliViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            result1Btn.layer.cornerRadius = 30.0
-            result2Btn.layer.cornerRadius = 30.0
+            result1Btn.layer.cornerRadius = 20.0
+            result2Btn.layer.cornerRadius = 20.0
 //            print("前の画面から選択された行:\(sIndex)")
 
         

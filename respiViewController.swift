@@ -68,7 +68,7 @@ class respiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //結果ボタンのデザイン　円形
-        resultBtn.layer.cornerRadius = 30.0
+        resultBtn.layer.cornerRadius = 20.0
         
         //各テキストの初期値に０が入らないようにする
         if appDelegate.valueOfPao2 == 0{
@@ -94,10 +94,20 @@ class respiViewController: UIViewController {
         }
         
         //A-aDo2の値
-        if fio2.text == "" || paco2.text == "" || pao2.text == "" || breathe.text == ""{
+        if  paco2.text == "" || pao2.text == "" {
             print("入力されていない項目があります")
+        }else if breathe.text == "" && vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
+            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+        }else if vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
+            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+        }else if vaporPressure.text == "" || pressure.text == "" && breathe.text == "" {
+            appDelegate.valueOfAaDo2 = (713 * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+        }else if breathe.text == "" {
+            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+        }else if fio2.text == ""{
+            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * 0.21 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
         }else{
-        appDelegate.valueOfAaDo2 = (Float(fio2.text!)! * 715 - Float(paco2.text!)! / Float(breathe.text!)!) - Float(pao2.text!)!
+            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
         }
         
         //P/F値

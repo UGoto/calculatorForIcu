@@ -43,7 +43,7 @@ class nutriViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultBtn.layer.cornerRadius = 30.0
+        resultBtn.layer.cornerRadius = 20.0
 
         
     }
@@ -55,7 +55,7 @@ class nutriViewController: UIViewController {
         
         //BEE男
         }else{
-        appDelegate.mof = 66 + (13.7 * Float(pwt.text!)!) + (5 * Float(ht.text!)!) - (6.8 * Float(age.text!)!)
+        appDelegate.mof = 66.47 + (13.75 * Float(pwt.text!)!) + (5.0 * Float(ht.text!)!) - (6.76 * Float(age.text!)!)
         appDelegate.mof2 = appDelegate.mof * 1.2
         appDelegate.mof4 = appDelegate.mof * 1.4
         appDelegate.mof6 = appDelegate.mof * 1.6
@@ -63,7 +63,7 @@ class nutriViewController: UIViewController {
         appDelegate.mof0 = appDelegate.mof * 2.0
         
         //BEE女
-        appDelegate.fof = 65.5 + (9.6 * Float(pwt.text!)!) + (4.7 * Float(ht.text!)!) - (4.7 * Float(age.text!)!)
+        appDelegate.fof = 655.1 + (9.56 * Float(pwt.text!)!) + (1.85 * Float(ht.text!)!) - (4.68 * Float(age.text!)!)
         appDelegate.fof2 = appDelegate.fof * 1.2
         appDelegate.fof4 = appDelegate.fof * 1.4
         appDelegate.fof6 = appDelegate.fof * 1.6

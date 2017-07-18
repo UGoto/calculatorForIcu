@@ -16,6 +16,7 @@ class abgViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var naOfAbg: UITextField!
     @IBOutlet weak var kOfAbg: UITextField!
     @IBOutlet weak var clOfAbg: UITextField!
+    @IBOutlet weak var resultBtn: UIButton!
     
 //    @IBOutlet weak var concomitant: UITextField!
     @IBOutlet weak var bloodGas: UITextField!
@@ -48,6 +49,8 @@ class abgViewController: UIViewController,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultBtn.layer.cornerRadius = 20.0
+
         if appDelegate.valueOfPao2 == 0{
             pao2OfAbg.text = ""
         }else if appDelegate.valueOfPaco2 == 0{

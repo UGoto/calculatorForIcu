@@ -31,6 +31,7 @@
 		BAE88BAC1EF5F010001D0557 /* PtInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */; };
 		BAFC96D61F0BCF6900B5C714 /* dicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */; };
 		BAFC96D81F0CAB0400B5C714 /* apachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */; };
+		BAFFBC311F1C83BA00810C03 /* GanmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFBC301F1C83BA00810C03 /* GanmaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PtInfoViewController.swift; sourceTree = "<group>"; };
 		BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dicViewController.swift; sourceTree = "<group>"; };
 		BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apachViewController.swift; sourceTree = "<group>"; };
+		BAFFBC301F1C83BA00810C03 /* GanmaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GanmaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */,
 				BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */,
 				BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */,
+				BAFFBC301F1C83BA00810C03 /* GanmaViewController.swift */,
 				BAE88BAB1EF5F010001D0557 /* PtInfoViewController.swift */,
 				BA9E5F0B1F17452E00CBEAD2 /* tenKeyViewController.swift */,
 				BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */,
@@ -330,6 +333,7 @@
 				BA8ABCF31F0B6783001A13F3 /* sofaViewController.swift in Sources */,
 				BAC50A361F0B053E004C183F /* respiViewController.swift in Sources */,
 				BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */,
+				BAFFBC311F1C83BA00810C03 /* GanmaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +486,6 @@
 		BAE88BA31EF5EB6F001D0557 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3NDT2CQJNV;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -495,7 +498,6 @@
 		BAE88BA41EF5EB6F001D0557 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3NDT2CQJNV;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

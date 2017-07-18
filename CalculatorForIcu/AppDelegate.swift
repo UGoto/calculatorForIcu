@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var valueOfDo2:Float = 0
     var valueOfVo2:Float = 0
     var valueOfOer:Float = 0
+    var valueOfPres:Float = 0
+    var valueOfVapor:Float = 0
     
     //栄養アセスメント
     var mof:Float = 0

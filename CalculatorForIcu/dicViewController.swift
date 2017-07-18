@@ -39,7 +39,7 @@ class dicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //結果ボタンのデザイン
-        resultBtn.layer.cornerRadius = 40.0
+        resultBtn.layer.cornerRadius = 20.0
         //RR
         if appDelegate.valueOfrr == 0{
             rrSeg.selectedSegmentIndex = 0

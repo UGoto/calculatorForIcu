@@ -19,7 +19,7 @@ class sofaViewController: UIViewController {
     @IBOutlet weak var hrSeg: UISegmentedControl!
     
     @IBOutlet weak var resultBtn: UIButton!
-    @IBOutlet weak var totalScore: UITextField!
+    @IBOutlet weak var total: UILabel!
     
     
     //appDelegateのインスタンスを作成
@@ -41,7 +41,7 @@ class sofaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //結果ボタンのデザイン
-            resultBtn.layer.cornerRadius = 30.0
+            resultBtn.layer.cornerRadius = 20.0
         
     //AppDelegateから値を引き受ける
         //P/F
@@ -194,7 +194,8 @@ class sofaViewController: UIViewController {
 //結果buttonが押された時、totalに合計点が出力される
     @IBAction func totalScoreButton(_ sender: UIButton) {
         amount = pfNumber + pltNumber + bilNumber + mapNumber + gcsNumber + creNumber + hrNumber
-        totalScore.text = String(amount)
+//        totalScore.text = String(amount)
+        total.text = String(amount)
     }
     
 //値の遷移
