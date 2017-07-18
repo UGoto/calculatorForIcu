@@ -605,17 +605,6 @@
                                                             <action selector="tapButtonSofa:" destination="O55-Ad-wHK" eventType="touchUpInside" id="56A-f3-Fmn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxK-so-xZq">
-                                                        <rect key="frame" x="157" y="0.0" width="160" height="64"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="0.70750879690000001" blue="0.71080022070000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <state key="normal" title="血液ガス分析"/>
-                                                        <connections>
-                                                            <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="T1b-CN-xXe"/>
-                                                            <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="KtL-u1-4cj"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-Jj-Cf7">
                                                         <rect key="frame" x="107" y="63" width="106" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -636,6 +625,17 @@
                                                         <connections>
                                                             <action selector="buttonToApache:" destination="O55-Ad-wHK" eventType="touchUpInside" id="gZf-Ai-yqR"/>
                                                             <action selector="tapbuttonApach:" destination="O55-Ad-wHK" eventType="touchUpInside" id="YFh-7B-Hmc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxK-so-xZq">
+                                                        <rect key="frame" x="160" y="0.0" width="160" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="1" green="0.70750879690000001" blue="0.71080022070000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="血液ガス分析"/>
+                                                        <connections>
+                                                            <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="T1b-CN-xXe"/>
+                                                            <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="KtL-u1-4cj"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2929,7 +2929,7 @@
                                                     <segment title="&lt;50"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="map:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="Wod-Ij-z6X"/>
+                                                    <action selector="mapSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="kTg-Sy-Bbv"/>
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="平均血圧(mmHg)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-3j-EDa">
@@ -2972,6 +2972,9 @@
                                                     <segment title="≧40"/>
                                                     <segment title="&lt;40"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="hrSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="moa-X1-UAR"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pXJ-dN-kKb">
                                                 <rect key="frame" x="-1" y="303" width="322" height="29"/>
@@ -2985,9 +2988,12 @@
                                                     <segment title="6-9"/>
                                                     <segment title="&lt;6"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="rrSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="77p-wi-9oM"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A-aDO2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-he-aLu">
-                                                <rect key="frame" x="21" y="355" width="62" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A-aDO2 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-he-aLu">
+                                                <rect key="frame" x="21" y="355" width="67" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -3002,6 +3008,9 @@
                                                     <segment title="200-349"/>
                                                     <segment title="&lt;200"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="aaDo2Seg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="Rde-Gu-VEQ"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PaO2(mmHg)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-WD-j6i">
                                                 <rect key="frame" x="21" y="506" width="104" height="21"/>
@@ -3118,6 +3127,9 @@
                                                     <segment title="≧7.15"/>
                                                     <segment title="&lt;7.15"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="phSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="g7k-9Y-72i"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AN4-Jl-8Di">
                                                 <rect key="frame" x="0.0" y="526" width="321" height="29"/>
@@ -3128,6 +3140,9 @@
                                                     <segment title="55-60"/>
                                                     <segment title="&lt;55"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="pao2Seg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="Rpp-Pj-wJf"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="92J-I8-Yda">
                                                 <rect key="frame" x="-1" y="87" width="322" height="29"/>
@@ -3158,6 +3173,9 @@
                                                     <segment title="≧120"/>
                                                     <segment title="&lt;120"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="naSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="44Z-NA-1qA"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7iz-FW-Zs8">
                                                 <rect key="frame" x="-1" y="683" width="320" height="29"/>
@@ -3171,6 +3189,9 @@
                                                     <segment title="≧2.5"/>
                                                     <segment title="&lt;2.5"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="kSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="pP1-b1-8y6"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dmV-OQ-Qob">
                                                 <rect key="frame" x="1" y="845" width="320" height="29"/>
@@ -3183,6 +3204,9 @@
                                                     <segment title="≧20"/>
                                                     <segment title="&lt;20"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="htSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="Dh5-zr-FJy"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="年齢(歳)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byv-mM-Dvg">
                                                 <rect key="frame" x="21" y="1119" width="64" height="21"/>
@@ -3212,6 +3236,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-uf-8dH">
+                                                <rect key="frame" x="-1" y="1025" width="322" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="≧52"/>
+                                                    <segment title="≧41"/>
+                                                    <segment title="≧32"/>
+                                                    <segment title="≧22"/>
+                                                    <segment title="≧18"/>
+                                                    <segment title="≧15"/>
+                                                    <segment title="&lt;15"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="hco3:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="CH0-xX-6ph"/>
+                                                </connections>
+                                            </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="白血球（×1000）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n3-RB-8zi">
                                                 <rect key="frame" x="21" y="913" width="136" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3230,6 +3270,9 @@
                                                     <segment title="≧1"/>
                                                     <segment title="&lt;1"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="wbcSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="1pA-Sh-OZO"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DiD-Jj-lhQ">
                                                 <rect key="frame" x="1" y="1141" width="320" height="29"/>
@@ -3241,6 +3284,9 @@
                                                     <segment title="65-74"/>
                                                     <segment title="≧75"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="ageSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="pI9-fO-DLX"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-zq-Ufl">
                                                 <rect key="frame" x="198" y="1252" width="109" height="29"/>
@@ -3249,6 +3295,9 @@
                                                     <segment title="いいえ"/>
                                                     <segment title="はい"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="opeSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="hzy-Gl-rYA"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gFv-JI-MRG">
                                                 <rect key="frame" x="200" y="1296" width="109" height="29"/>
@@ -3257,6 +3306,9 @@
                                                     <segment title="いいえ"/>
                                                     <segment title="はい"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="afteropeSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="LR4-U0-1eE"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GCS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-pm-qH9">
                                                 <rect key="frame" x="14" y="1076" width="35" height="21"/>
@@ -3286,6 +3338,9 @@
                                                     <segment title="0.6-1.4"/>
                                                     <segment title="&lt;0.6"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="creSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="g9U-3t-32G"/>
+                                                </connections>
                                             </segmentedControl>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux2-pc-oNx">
                                                 <rect key="frame" x="29" y="1377" width="242" height="30"/>
@@ -3325,7 +3380,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d24-XS-HGa">
                                                 <rect key="frame" x="157" y="1177" width="31" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="詳細"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="chronicButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="Ui3-fP-2IA"/>
                                                 </connections>
@@ -3365,19 +3422,110 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c3k-uf-8dH">
-                                                <rect key="frame" x="-1" y="1025" width="322" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(FiO2≧0.5のとき選択)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-Jh-L6U">
+                                                <rect key="frame" x="86" y="355" width="172" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="≧52"/>
-                                                    <segment title="≧41"/>
-                                                    <segment title="≧32"/>
-                                                    <segment title="≧22"/>
-                                                    <segment title="≧18"/>
-                                                    <segment title="≧15"/>
-                                                    <segment title="&lt;15"/>
-                                                </segments>
-                                            </segmentedControl>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(FiO2&lt;0.5のとき選択)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81A-9P-CBu">
+                                                <rect key="frame" x="132" y="506" width="169" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDn-31-Dnw">
+                                                <rect key="frame" x="93" y="62" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tempButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="8sQ-ia-1HG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-0M-VgV">
+                                                <rect key="frame" x="159" y="132" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mapButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="z2M-V0-PN5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jss-IT-Ws4">
+                                                <rect key="frame" x="132" y="204" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hrButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="eU8-N0-Ikc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQh-Fu-lDj">
+                                                <rect key="frame" x="52" y="423" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="phButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="Otn-z0-Cd8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxP-bs-V88">
+                                                <rect key="frame" x="144" y="573" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="naButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="wsK-0U-dtW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddd-oy-7rc">
+                                                <rect key="frame" x="132" y="659" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="kButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="EZz-rW-mSf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-lk-063">
+                                                <rect key="frame" x="191" y="820" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="htButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="0BA-gX-p5x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFt-Wt-S9X">
+                                                <rect key="frame" x="152" y="908" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="wbcButton:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="Ha7-dm-dFc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPA-0h-tmq">
+                                                <rect key="frame" x="174" y="999" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hco3Button:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="eQu-mh-phC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -3822,13 +3970,13 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hqv-e6-LGi">
-                                                <rect key="frame" x="1" y="255" width="319" height="29"/>
+                                                <rect key="frame" x="-19" y="255" width="339" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="≧70"/>
                                                     <segment title="&lt;70"/>
-                                                    <segment title="DOA&lt;5γ"/>
-                                                    <segment title="DOA 1〜15"/>
+                                                    <segment title="DOA≦5γ"/>
+                                                    <segment title="DOA &lt;5γ"/>
                                                     <segment title="DOA&gt;15γ"/>
                                                 </segments>
                                                 <connections>
@@ -4011,6 +4159,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTK-ul-uXn">
+                                                <rect key="frame" x="213" y="227" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mapDetail:" destination="648-Zh-1U7" eventType="touchUpInside" id="uK5-42-AMq"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -4280,7 +4438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8E-gI-Q1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5780.625" y="960.21126760563379"/>
+            <point key="canvasLocation" x="-5794" y="988"/>
         </scene>
         <!--アプリについて-->
         <scene sceneID="Z1s-Ab-PiS">
@@ -4319,12 +4477,11 @@
                     <tabBarItem key="tabBarItem" title="アプリについて" id="yNT-Ec-aoC"/>
                     <connections>
                         <outlet property="historyTableView" destination="GJh-DG-dDR" id="jOr-cR-JGc"/>
-                        <segue destination="ueM-BW-4WA" kind="showDetail" identifier="showDetail" id="pVa-jy-k8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IB6-zE-ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4826.25" y="987.67605633802816"/>
+            <point key="canvasLocation" x="-5063" y="988"/>
         </scene>
         <!--各種公式-->
         <scene sceneID="QNa-Un-uNZ">
@@ -5029,11 +5186,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FLa-uV-by4"/>
-        <segue reference="Uda-hX-3pn"/>
+        <segue reference="e8i-uh-ZPg"/>
         <segue reference="SSB-gx-Xja"/>
-        <segue reference="XKt-pS-hbG"/>
-        <segue reference="PGm-LD-fvt"/>
-        <segue reference="9ng-X2-KLK"/>
+        <segue reference="Uda-hX-3pn"/>
+        <segue reference="bGu-YX-azk"/>
+        <segue reference="udX-6l-kT8"/>
+        <segue reference="LIU-Xl-v4g"/>
     </inferredMetricsTieBreakers>
 </document>

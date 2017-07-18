@@ -189,6 +189,19 @@ class sofaViewController: UIViewController {
             hrNumber = 4
         }
     }
+
+//平均動脈圧の詳細
+    @IBAction func mapDetail(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "平均動脈圧", message: "0点 : なし7\n1点: <70mmHg\n2点: ドパミン ≦ 5γ or ドブタミン投与\n3点: ドパミン > 5γ or エピネフリン ≦ 0.1γ or ノルアドレナリン ≦ 0.1γ\n4点: ドパミン > 15γ or エピネフリン > 0.1γ or ノルアドレナリン > 0.1γ", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+}
+
     
     
 //結果buttonが押された時、totalに合計点が出力される

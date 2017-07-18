@@ -75,16 +75,16 @@ class apachViewController: UIViewController {
         //A-aDO2
         if  appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
             aaDo2.selectedSegmentIndex = 0
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 500 {
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 500 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 0
             aaDo2Number = 4
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 350 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 500{
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 350 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 500 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 1
             aaDo2Number = 3
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 200 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 350 {
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 200 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 350 && appDelegate.valueOfFio2 >= 0.5{
             po2.selectedSegmentIndex = 2
             po2Number = 2
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 {
+        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 3
             aaDo2Number = 0
         }
@@ -94,16 +94,16 @@ class apachViewController: UIViewController {
         //PaO2
         if  appDelegate.valueOfPao2 == 0 {
             po2.selectedSegmentIndex = 0
-        }else if appDelegate.valueOfPao2 > 70.0 {
+        }else if appDelegate.valueOfPao2 > 70.0 && appDelegate.valueOfFio2 < 0.5{
             po2.selectedSegmentIndex = 0
             po2Number = 0
-        }else if appDelegate.valueOfPao2 <= 70.0 && appDelegate.valueOfPao2 > 60.0 {
+        }else if appDelegate.valueOfPao2 <= 70.0 && appDelegate.valueOfPao2 > 60.0 && appDelegate.valueOfFio2 < 0.5{
             po2.selectedSegmentIndex = 1
             po2Number = 1
-        }else if appDelegate.valueOfPao2 <= 60.0 && appDelegate.valueOfPao2 >= 55.0 {
+        }else if appDelegate.valueOfPao2 <= 60.0 && appDelegate.valueOfPao2 >= 55.0 && appDelegate.valueOfFio2 < 0.5{
             po2.selectedSegmentIndex = 2
             po2Number = 3
-        }else if appDelegate.valueOfPao2 < 55.0 {
+        }else if appDelegate.valueOfPao2 < 55.0 && appDelegate.valueOfFio2 < 0.5{
             po2.selectedSegmentIndex = 3
             po2Number = 4
         }
@@ -304,9 +304,8 @@ class apachViewController: UIViewController {
 //    }
 //    
 
-   
+    //体温のセグメントの設定
     @IBAction func tempSeg(_ sender: UISegmentedControl) {
-         //体温のセグメントの設定
         if temp.selectedSegmentIndex == 0{
             temNumber = 4
         }else if temp.selectedSegmentIndex == 1{
@@ -324,8 +323,11 @@ class apachViewController: UIViewController {
         }else if temp.selectedSegmentIndex == 7{
             temNumber = 4
         }
-        
-        //平均血圧のセグメントの設定
+    }
+    
+    //平均血圧のセグメントの設定
+    @IBAction func mapSeg(_ sender: UISegmentedControl)
+        {
         if map.selectedSegmentIndex == 0{
             mapNumber = 4
         }else if map.selectedSegmentIndex == 1{
@@ -339,8 +341,10 @@ class apachViewController: UIViewController {
         }else if map.selectedSegmentIndex == 5{
             mapNumber = 4
         }
-        
-         //心拍数のセグメントの設定
+    }
+    
+      //心拍数のセグメントの設定
+    @IBAction func hrSeg(_ sender: UISegmentedControl) {
         if hr.selectedSegmentIndex == 0{
             hrNumber = 4
         }else if hr.selectedSegmentIndex == 1{
@@ -356,9 +360,10 @@ class apachViewController: UIViewController {
         }else if hr.selectedSegmentIndex == 6{
             hrNumber = 4
         }
-        
-        
-        //呼吸数のセグメントの設定
+    }
+    
+    //呼吸数のセグメントの設定
+    @IBAction func rrSeg(_ sender: UISegmentedControl) {
         if rr.selectedSegmentIndex == 0{
             rrNumber = 4
         }else if rr.selectedSegmentIndex == 1{
@@ -374,9 +379,10 @@ class apachViewController: UIViewController {
         }else if rr.selectedSegmentIndex == 6{
             rrNumber = 4
         }
-        
-        
-        //A-aDo2のセグメントの設定
+    }
+    
+    //A-aDo2のセグメントの設定
+    @IBAction func aaDo2Seg(_ sender: UISegmentedControl) {
         if aaDo2.selectedSegmentIndex == 0{
             aaDo2Number = 4
         }else if aaDo2.selectedSegmentIndex == 1{
@@ -386,8 +392,10 @@ class apachViewController: UIViewController {
         }else if rr.selectedSegmentIndex == 3{
             aaDo2Number = 0
         }
-        
-        //PaO2のセグメント設定
+    }
+    
+    //PaO2のセグメント設定
+    @IBAction func pao2Seg(_ sender: UISegmentedControl) {
         if po2.selectedSegmentIndex == 0{
             po2Number = 0
         }else if po2.selectedSegmentIndex == 1{
@@ -397,9 +405,10 @@ class apachViewController: UIViewController {
         }else if po2.selectedSegmentIndex == 3{
             po2Number = 4
         }
-        
-        
-        //Phのセグメント設定
+    }
+    
+    //Phのセグメント設定
+    @IBAction func phSeg(_ sender: UISegmentedControl) {
         if ph.selectedSegmentIndex == 0{
             phNumber = 4
         }else if ph.selectedSegmentIndex == 1{
@@ -415,9 +424,10 @@ class apachViewController: UIViewController {
         }else if ph.selectedSegmentIndex == 6{
             phNumber = 4
         }
-        
-        
-        //血清Naのセグメント設定
+    }
+    
+    //血清Naのセグメント設定
+    @IBAction func naSeg(_ sender: UISegmentedControl) {
         if na.selectedSegmentIndex == 0{
             naNumber = 4
         }else if na.selectedSegmentIndex == 1{
@@ -433,9 +443,10 @@ class apachViewController: UIViewController {
         }else if na.selectedSegmentIndex == 6{
             naNumber = 4
         }
-        
-        
-        //血清Kのセグメント設定
+    }
+    
+    //血清Kのセグメント設定
+    @IBAction func kSeg(_ sender: UISegmentedControl) {
         if k.selectedSegmentIndex == 0{
             kNumber = 4
         }else if k.selectedSegmentIndex == 1{
@@ -451,9 +462,10 @@ class apachViewController: UIViewController {
         }else if k.selectedSegmentIndex == 6{
             kNumber = 4
         }
-        
-        
-        //血清クレアチニンのセグメント設定
+    }
+    
+    //血清クレアチニンのセグメント設定
+    @IBAction func creSeg(_ sender: UISegmentedControl) {
         if cre.selectedSegmentIndex == 0{
             creNumber = 4
         }else if cre.selectedSegmentIndex == 1{
@@ -465,9 +477,10 @@ class apachViewController: UIViewController {
         }else if cre.selectedSegmentIndex == 4{
             creNumber = 2
         }
+    }
 
-        
-        //ヘマトクリットのセグメント設定
+    //ヘマトクリットのセグメント設定
+    @IBAction func htSeg(_ sender: UISegmentedControl) {
         if ht.selectedSegmentIndex == 0{
             htNumber = 4
         }else if ht.selectedSegmentIndex == 1{
@@ -481,9 +494,10 @@ class apachViewController: UIViewController {
         }else if ht.selectedSegmentIndex == 5{
             htNumber = 4
         }
-        
-        
-        //白血球のセグメントの設定
+    }
+    
+    //白血球のセグメントの設定
+    @IBAction func wbcSeg(_ sender: UISegmentedControl) {
         if wbc.selectedSegmentIndex == 0{
             wbcNumber = 4
         }else if wbc.selectedSegmentIndex == 1{
@@ -497,9 +511,10 @@ class apachViewController: UIViewController {
         }else if wbc.selectedSegmentIndex == 5{
             wbcNumber = 4
         }
-        
-        
-        //血清HCO3のセグメントの設定
+    }
+    
+    //血清HCO3のセグメントの設定
+    @IBAction func hco3(_ sender: UISegmentedControl) {
         if hco3.selectedSegmentIndex == 0{
             hco3Number = 4
         }else if hco3.selectedSegmentIndex == 1{
@@ -515,9 +530,10 @@ class apachViewController: UIViewController {
         }else if hco3.selectedSegmentIndex == 6{
             hco3Number = 4
         }
-        
-        
-        //年齢
+    }
+    
+    //年齢
+    @IBAction func ageSeg(_ sender: UISegmentedControl) {
         if age.selectedSegmentIndex == 0{
             ageNumber = 0
         }else if age.selectedSegmentIndex == 1{
@@ -529,23 +545,136 @@ class apachViewController: UIViewController {
         }else if age.selectedSegmentIndex == 4{
             ageNumber = 6
         }
-        
-        
-        //非手術・緊急手術の有無
+    }
+    
+    //非手術・緊急手術の有無
+    @IBAction func opeSeg(_ sender: UISegmentedControl) {
         if ope.selectedSegmentIndex == 0{
             opeNumber = 0
         }else if ope.selectedSegmentIndex == 1{
             opeNumber = 5
         }
-        
-        //定期手術の有無
+    }
+    
+    //定期手術の有無
+    @IBAction func afteropeSeg(_ sender: UISegmentedControl) {
         if afterope.selectedSegmentIndex == 0{
             afteropeNumber = 0
         }else if afterope.selectedSegmentIndex == 1{
             afteropeNumber = 2
         }
     }
+
     
+//体温の詳細
+    @IBAction func tempButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "体温", message: "４点 ≧ 41\n3点: 39−40\n1点: 38.5-38.9\n0点: 36-38.4\n1点: 34-35.9\n2点: 32-33.9\n3点: 30-31.9\n4点 ≦ 29.9", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+    
+//平均血圧の詳細
+    @IBAction func mapButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "平均血圧", message: "４点 ≧ 160\n3点: 130−159\n2点: 110-129\n0点: 70-109\n2点: 50-69\n4点 ≦ 49", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+    
+//心拍数の詳細
+    @IBAction func hrButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "心拍数", message: "４点 ≧ 180\n3点: 140−179\n2点: 110-139\n0点: 70-109\n2点: 50-69\n3点: 40-54\n4点 ≦ 39", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+
+//phの詳細
+    @IBAction func phButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "pH", message: "４点 ≧ 7.7\n3点: 7.6−7.69\n1点: 7.5-7.59\n0点: 7.33-7.49\n2点: 7.25-7.32\n3点: 7.15-7.24\n4点 < 7.15", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+
+//Naの詳細
+    @IBAction func naButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "Na", message: "４点 ≧ 180\n3点: 160−179\n1点: 150-159\n0点: 130-149\n2点: 120-129\n4点 ≦ 119", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+
+//Kの詳細
+    @IBAction func kButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "K", message: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+
+//htの詳細
+    @IBAction func htButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "ヘマトクリット", message: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5", preferredStyle:  .alert)
+            
+            //アラートにOKボタンを追加
+            alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+            
+            //アラートを表示する
+            present(alertController,animated: true,completion: nil)
+    }
+
+//WBCの詳細
+    @IBAction func wbcButton(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "白血球", message: "４点 ≧ 40\n3点: 20−39.9\n1点: 15-19.9\n0点: 3-14.9\n2点: 1-2.9\n4点 < 1", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+    
+//HCO3の詳細
+    @IBAction func hco3Button(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "HCO3", message: "４点 ≧ 52\n3点: 41−51.9\n1点: 32-40.9\n0点: 22-31.9\n2点: 18-21.9\n3点: 15-17.9\n4点 < 15", preferredStyle:  .alert)
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+
+
     
 //慢性病態ポイント(
     @IBAction func chronicButton(_ sender: UIButton) {
