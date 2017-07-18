@@ -22,21 +22,17 @@ class GanmaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //結果ボタンのデザイン　円形
         resultBtn.layer.cornerRadius = 20.0
         
     }
     
-    
     @IBAction func resultBtn(_ sender: UIButton) {
-        let getWt:Float = Float(wt.text!)!
-        let getVolume:Float = Float(volumeOfMed.text!)!
-        let getTotal:Float = Float(totalV.text!)!
-        
         if wt.text == "" || volumeOfMed.text == "" || totalV.text == ""{
             print("入力されていない値があります")
         }else{
-            ganma.text = String(0.06 * getWt / ( getVolume / getTotal))
+            ganma.text = String(0.06 * Float(wt.text!)! / ( Float(volumeOfMed.text!)! / Float(totalV.text!)!))
         }
     }
     

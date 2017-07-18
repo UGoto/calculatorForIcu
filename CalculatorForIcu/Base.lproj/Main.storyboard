@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-Ki-1Uj">
-                                <rect key="frame" x="0.0" y="20" width="320" height="980"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jho-Ga-MsD">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="887"/>
@@ -1098,7 +1098,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smn-Yl-WWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7403" y="2483"/>
+            <point key="canvasLocation" x="7371" y="2436"/>
         </scene>
         <!--Abg View Controller-->
         <scene sceneID="L3e-cO-uGu">
@@ -1113,7 +1113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-B7-1Dj">
-                                <rect key="frame" x="0.0" y="20" width="320" height="780"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-cC-LaS">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
@@ -1704,7 +1704,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exB-Um-fGA">
-                                <rect key="frame" x="0.0" y="20" width="320" height="830"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="737"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-mf-oT6">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="737"/>
@@ -2058,7 +2058,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcO-ts-cBi">
-                                                        <rect key="frame" x="0.0" y="1" width="160" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="0.9971436521" green="1" blue="0.62800265389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="呼吸アセスメント">
@@ -2067,19 +2067,6 @@
                                                         <connections>
                                                             <action selector="tapButtonToNvc:" destination="O55-Ad-wHK" eventType="touchUpInside" id="z5l-xN-IfB"/>
                                                             <action selector="tapButtonToRespi:" destination="vLU-mW-cJe" eventType="touchUpInside" id="Xqr-Jv-K4N"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-wr-P4n">
-                                                        <rect key="frame" x="160" y="1" width="160" height="64"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="0.70750879690000001" blue="0.71080022070000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="血液ガス分析">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="BCf-bl-yIT"/>
-                                                            <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="1tQ-tN-npu"/>
-                                                            <action selector="tapButtonToAbg:" destination="vLU-mW-cJe" eventType="touchUpInside" id="xRJ-jR-716"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-D4-2HB">
@@ -2114,6 +2101,19 @@
                                                         <connections>
                                                             <action selector="buttonToApache:" destination="vLU-mW-cJe" eventType="touchUpInside" id="RHi-ez-KCB"/>
                                                             <action selector="tapButtonToApa:" destination="vLU-mW-cJe" eventType="touchUpInside" id="gAb-XY-9uo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-wr-P4n">
+                                                        <rect key="frame" x="160" y="0.0" width="160" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="1" green="0.70750879690000001" blue="0.71080022070000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="血液ガス分析">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="BCf-bl-yIT"/>
+                                                            <action selector="tapButtonToAbg:" destination="O55-Ad-wHK" eventType="touchUpInside" id="1tQ-tN-npu"/>
+                                                            <action selector="tapButtonToAbg:" destination="vLU-mW-cJe" eventType="touchUpInside" id="xRJ-jR-716"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2350,7 +2350,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-Px-KCL">
-                                <rect key="frame" x="0.0" y="20" width="320" height="1080"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="987"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-4T-wCc">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="987"/>
@@ -2912,7 +2912,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-rX-1MJ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="1630"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="1537"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-PW-yFA">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1537"/>
@@ -3631,7 +3631,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pO-WY-ecu">
-                                                <rect key="frame" x="199" y="360" width="110" height="30"/>
+                                                <rect key="frame" x="190" y="360" width="119" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
@@ -3656,7 +3656,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKL-Tl-OHJ">
-                                                <rect key="frame" x="199" y="316" width="110" height="30"/>
+                                                <rect key="frame" x="190" y="316" width="119" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
@@ -3674,7 +3674,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF1-Oj-4nQ">
-                                                <rect key="frame" x="199" y="453" width="110" height="30"/>
+                                                <rect key="frame" x="190" y="453" width="119" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
@@ -3699,7 +3699,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oC-dH-HOU">
-                                                <rect key="frame" x="199" y="408" width="110" height="30"/>
+                                                <rect key="frame" x="190" y="408" width="119" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
@@ -3749,7 +3749,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4cV-b2-ioy">
-                                                <rect key="frame" x="199" y="498" width="110" height="30"/>
+                                                <rect key="frame" x="190" y="498" width="119" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
@@ -3890,7 +3890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1g-Nq-Wjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4363" y="-1741"/>
+            <point key="canvasLocation" x="-4363.125" y="-1741.9014084507041"/>
         </scene>
         <!--Sofa View Controller-->
         <scene sceneID="U7y-Yz-fw2">
@@ -3905,7 +3905,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEb-VE-Se2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="780"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-hO-ZUB">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="687"/>
@@ -4438,7 +4438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8E-gI-Q1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5794" y="988"/>
+            <point key="canvasLocation" x="-5672" y="1050"/>
         </scene>
         <!--アプリについて-->
         <scene sceneID="Z1s-Ab-PiS">
@@ -4477,11 +4477,12 @@
                     <tabBarItem key="tabBarItem" title="アプリについて" id="yNT-Ec-aoC"/>
                     <connections>
                         <outlet property="historyTableView" destination="GJh-DG-dDR" id="jOr-cR-JGc"/>
+                        <segue destination="ueM-BW-4WA" kind="showDetail" identifier="showDetail" id="pVa-jy-k8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IB6-zE-ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5063" y="988"/>
+            <point key="canvasLocation" x="-4826.25" y="987.67605633802816"/>
         </scene>
         <!--各種公式-->
         <scene sceneID="QNa-Un-uNZ">
@@ -4672,7 +4673,7 @@
                             <constraint firstItem="OaW-uF-dZO" firstAttribute="width" secondItem="fdO-GM-SPf" secondAttribute="width" id="tdx-Td-h80"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="各種公式" id="kHA-2g-rOl"/>
+                    <tabBarItem key="tabBarItem" title="各種公式" image="fomula" id="kHA-2g-rOl"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                 </viewController>
@@ -4692,7 +4693,6 @@
                     <connections>
                         <segue destination="Rxh-dk-43M" kind="relationship" relationship="viewControllers" id="WVd-9x-42Q"/>
                         <segue destination="erx-1F-h4F" kind="relationship" relationship="viewControllers" id="EvU-13-CTM"/>
-                        <segue destination="gf5-9J-gWQ" kind="relationship" relationship="viewControllers" id="zQq-Tx-XZp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kq-x8-HJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5169,7 +5169,7 @@
         <scene sceneID="QDP-6c-nx6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxh-dk-43M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" id="3TG-ZI-Dqe"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="3TG-ZI-Dqe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XVh-uD-Io7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -5185,12 +5185,16 @@
             <point key="canvasLocation" x="-3534" y="114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fomula" width="25" height="25"/>
+        <image name="home" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e8i-uh-ZPg"/>
-        <segue reference="SSB-gx-Xja"/>
-        <segue reference="Uda-hX-3pn"/>
+        <segue reference="ZmW-Ru-Pfc"/>
         <segue reference="bGu-YX-azk"/>
-        <segue reference="udX-6l-kT8"/>
-        <segue reference="LIU-Xl-v4g"/>
+        <segue reference="PJx-MO-Gmk"/>
+        <segue reference="ltp-15-CLK"/>
+        <segue reference="0KI-mh-fWf"/>
+        <segue reference="sOw-kq-P9Q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -87,12 +87,14 @@ class abgViewController: UIViewController,UITextFieldDelegate{
         //血ガス診断　４種類
             if (getPh < 7.35 && getPaco2 > 45) {
                 bloodGas.text = "呼吸性アシドーシス"
-            }else if(getPh < 7.35 && getHco3 > 24){
+            }else if(getPh < 7.35 && getHco3 < 22){
                 bloodGas.text = "代謝性アシドーシス"
             }else if(getPh > 7.45 && getPaco2 < 35){
                 bloodGas.text = "呼吸性アルカローシス"
-            }else if(getPh > 7.45 && getHco3 < 24){
+            }else if(getPh > 7.45 && getHco3 > 26){
                 bloodGas.text = "代謝性アルカローシス"
+            }else if(getPh < 7.35 && getPaco2>45 && getHco3 < 22){
+                bloodGas.text = "混合性アシドーシス"
             }else{
                 bloodGas.text = ""
             }
