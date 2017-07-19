@@ -232,10 +232,86 @@ class AssessDeliViewController: UIViewController {
     
     //      amount = mapNumber + templatureNumber
 //    totalScore.text = String(amount)
-    
+
+//CAMICU　1.
+    @IBAction func acuteDetail(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "急性発症または変動性の経過", message: "基準線からの精神状態の急性変化があるか？または患者の精神状態が過去２４時間で変動したか？", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "基準線からの精神状態の急性変化があるか？または患者の精神状態が過去２４時間で変動したか？",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
     
 
+//CAMICU 2.
+    @IBAction func AttentionDetail(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "注意力の欠如", message: "① 次の10個の数字を読み上げる：2,3,1,4,5,7,1,9,3,1\n② 1の時に手を握ってくださいと指示する。\nエラー:1の時に手を握りしめなかった回数 または、1以外の時に手を握りしめた回数\nスコア:エラーの回数", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "① 次の10個の数字を読み上げる：2,3,1,4,5,7,1,9,3,1\n② 1の時に手を握ってくださいと指示。\nエラー:1の時に手を握りしめなかった回数 または1以外の時に手を握りしめた回数\nスコア:エラーの回数",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
 
+//CAMICU 3.
+    
+    @IBAction func ideaDetail(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "無秩序な思考", message:"1.石は水に浮くか？(葉っぱは水に浮くか？)\n2.魚は海にいるか？(像は海にいるか)\n3.1グラムは2グラムよりも重いか？(2グラムは1グラムよりも軽思いか？)\n4.釘を打つのにハンマーを使うか？(木を切るのにハンマーを使うか？)\n5.指示:２本の指をあげてみせ、同じことをさせる。ハンチの手で同じことをさせる。", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "1.石は水に浮くか？(葉っぱは水に浮くか？)\n2.魚は海にいるか？(像は海にいるか)\n3.1グラムは2グラムよりも重いか？(2グラムは1グラムよりも軽思いか？)\n4.釘を打つのにハンマーを使うか？(木を切るのにハンマーを使うか？)\n5.指示:２本の指をあげてみせ、同じことをさせる。ハンチの手で同じことをさせる。",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

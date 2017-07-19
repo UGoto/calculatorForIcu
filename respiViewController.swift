@@ -61,7 +61,6 @@ class respiViewController: UIViewController {
     }
     
     
-    
     //appDelegateのインスタンスの作成
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -100,14 +99,17 @@ class respiViewController: UIViewController {
             appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
         }else if vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
             appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+            appDelegate.valueOfBreathe = Float(breathe.text!)!
         }else if vaporPressure.text == "" || pressure.text == "" && breathe.text == "" {
             appDelegate.valueOfAaDo2 = (713 * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
         }else if breathe.text == "" {
             appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
         }else if fio2.text == ""{
             appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * 0.21 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+            appDelegate.valueOfBreathe = Float(breathe.text!)!
         }else{
             appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+            appDelegate.valueOfBreathe = Float(breathe.text!)!
         }
         
         //P/F値
@@ -189,10 +191,12 @@ class respiViewController: UIViewController {
         if pao2.text == "" {
         }else if rr.text == ""{
         }else if paco2.text == "" {
+        }else if fio2.text == ""{
         }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
         appDelegate.valueOfPaco2 = Float(paco2.text!)!
         appDelegate.valueOfrr = Float(rr.text!)!
+        appDelegate.valueOfFio2 = Float(fio2.text!)!
         }
         }
     

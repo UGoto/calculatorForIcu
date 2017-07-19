@@ -2009,7 +2009,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-eX-5v6">
-                                <rect key="frame" x="0.0" y="20" width="320" height="730"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="637"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0N-6c-Gtr">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="682"/>
@@ -3342,13 +3342,6 @@
                                                     <action selector="creSeg:" destination="Pjb-wx-iMJ" eventType="valueChanged" id="g9U-3t-32G"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux2-pc-oNx">
-                                                <rect key="frame" x="29" y="1377" width="242" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-ol-ZSY">
                                                 <rect key="frame" x="222" y="1076" width="18" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3363,13 +3356,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="APACHE Ⅱ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-Lc-Xxb">
-                                                <rect key="frame" x="120" y="8" width="79" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="慢性病態ポイント" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-gz-pHR">
                                                 <rect key="frame" x="14" y="1177" width="170" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3526,6 +3512,20 @@
                                                     <action selector="hco3Button:" destination="Pjb-wx-iMJ" eventType="touchUpInside" id="eQu-mh-phC"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux2-pc-oNx">
+                                                <rect key="frame" x="14" y="1374" width="266" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="APACHE Ⅱ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-Lc-Xxb">
+                                                <rect key="frame" x="101" y="8" width="120" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -4049,13 +4049,6 @@
                                                     <action selector="hrSeg:" destination="648-Zh-1U7" eventType="valueChanged" id="KJw-fq-3W3"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOFA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JA-tC-xHr">
-                                                <rect key="frame" x="139" y="0.0" width="43" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s3l-Lh-ibC">
                                                 <rect key="frame" x="0.0" y="323" width="320" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4132,7 +4125,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuQ-Dx-OCT">
                                                         <rect key="frame" x="213" y="64" width="107" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.98483389160000001" green="0.71887411739999996" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="APACHE Ⅱ">
                                                             <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -4169,6 +4162,13 @@
                                                     <action selector="mapDetail:" destination="648-Zh-1U7" eventType="touchUpInside" id="uK5-42-AMq"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOFA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JA-tC-xHr">
+                                                <rect key="frame" x="124" y="0.0" width="73" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -4234,13 +4234,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-bE-iMJ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="467"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="γ（ガンマ）計算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-U7-0fq">
-                                                <rect key="frame" x="91" y="21" width="131" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3K-QH-TlE">
                                                 <rect key="frame" x="47" y="76" width="35" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4362,6 +4355,13 @@
                                                     <action selector="resultBtn:" destination="Ie3-ew-xcW" eventType="touchUpInside" id="Tqx-Xs-jMy"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="γ（ガンマ）計算" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-U7-0fq">
+                                                <rect key="frame" x="66" y="8" width="189" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -4493,14 +4493,14 @@
                         <viewControllerLayoutGuide type="bottom" id="ZFg-eO-EHF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fdO-GM-SPf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="730"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG3-TP-MSx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="681"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaW-uF-dZO">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="681"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="基礎代謝エネルギー消費量（BEE）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FJ-Hk-GfY">
                                                 <rect key="frame" x="8" y="77" width="273" height="21"/>
@@ -4560,13 +4560,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-J7-AWw">
-                                                <rect key="frame" x="13" y="316" width="348" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="44歳以上の患者には年齢に合わせて加算する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MI-k2-LfJ">
                                                 <rect key="frame" x="17" y="338" width="303" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4611,11 +4604,11 @@
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-iu-KPB">
-                                                <rect key="frame" x="8" y="503" width="304" height="140.5"/>
+                                                <rect key="frame" x="8" y="516" width="304" height="140.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">　呼吸・循環・中枢神経・肝臓・腎臓及び凝固系といった臓器障害を簡便に点数化してその合計点で重症度を判定することを目的に作成されたもの。算出するタイミングは、一般的にICU入室時とその後48時間毎。ICU入室時にSOFAスコアが9点以下では死亡率33％以下、11点以上では死亡率95％とされる。また、48時間以内に点数が増加する症例では、死亡率50％との報告もある。</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-b9-5Vj">
@@ -4636,15 +4629,15 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="APACHE Ⅱ" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciL-Od-Ski">
                                                 <rect key="frame" x="103" y="233" width="82" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.63942892573321686" green="0.89597874365482233" blue="0.34066481711634294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.71330104240000003" green="0.99948961660000002" blue="0.38002123360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SOFA " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNe-XX-w4c">
-                                                <rect key="frame" x="103" y="478" width="82" height="30"/>
+                                                <rect key="frame" x="103" y="487" width="82" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.63942892573321686" green="0.89597874365482233" blue="0.34066481711634294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.71330104240000003" green="0.99948961660000002" blue="0.38002123360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -4652,7 +4645,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="751" id="fzy-H9-K5m"/>
+                                            <constraint firstAttribute="height" constant="681" id="fzy-H9-K5m"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4675,7 +4668,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="各種公式" image="fomula" id="kHA-2g-rOl"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="800"/>
+                    <size key="freeformSize" width="320" height="730"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ao-jc-1RC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4717,8 +4710,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AY-c3-Ttd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-8T-0Ld">
-                                                <rect key="frame" x="139" y="287" width="228" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-8T-0Ld">
+                                                <rect key="frame" x="139" y="278" width="228" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="WQF-IU-PVZ"/>
                                                 </constraints>
@@ -4732,8 +4725,8 @@
                                                     <action selector="cam4bSegment:" destination="MLt-Zl-ynH" eventType="valueChanged" id="2sj-fy-OiO"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sNN-Kt-sjm">
-                                                <rect key="frame" x="204" y="240" width="163" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sNN-Kt-sjm">
+                                                <rect key="frame" x="204" y="241" width="163" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="MEX-WK-BsS"/>
                                                 </constraints>
@@ -4757,12 +4750,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.意識レベルの変化(RASS評価)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bE-ch-8Pv">
-                                                <rect key="frame" x="8" y="167" width="205" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Trd-I5-Fh6">
                                                 <rect key="frame" x="230" y="168" width="137" height="29"/>
                                                 <constraints>
@@ -4777,22 +4764,13 @@
                                                 </connections>
                                             </segmentedControl>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.注意力の欠如" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qeg-0F-7dr">
-                                                <rect key="frame" x="8" y="101" width="222" height="30"/>
+                                                <rect key="frame" x="8" y="101" width="101" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.急性発症または変動性の経過" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMa-D5-QIN">
-                                                <rect key="frame" x="8" y="37" width="223" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="NVv-3p-z3d"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aj8-ff-TOl">
-                                                <rect key="frame" x="258" y="38" width="109" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aj8-ff-TOl">
+                                                <rect key="frame" x="255" y="38" width="112" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="ffF-NF-h9w"/>
                                                 </constraints>
@@ -4811,18 +4789,18 @@
                                                     <constraint firstAttribute="width" constant="97" id="VbR-0q-lXT"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-Ft-pvd">
-                                                <rect key="frame" x="257" y="110" width="99" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-Ft-pvd">
+                                                <rect key="frame" x="255" y="102" width="112" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="PZD-5N-d29"/>
                                                     <constraint firstAttribute="width" constant="99" id="icF-Ug-HLg"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="3未満"/>
-                                                    <segment title="3以上"/>
+                                                    <segment title="3つ未満"/>
+                                                    <segment title="3つ以上"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="cam2Segment:" destination="MLt-Zl-ynH" eventType="valueChanged" id="xKk-Vz-itR"/>
@@ -4852,10 +4830,63 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkM-f0-0fU">
+                                                <rect key="frame" x="212" y="36" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細"/>
+                                                <connections>
+                                                    <action selector="acuteDetail:" destination="MLt-Zl-ynH" eventType="touchUpInside" id="fHy-B4-XAg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-zL-Bk8">
+                                                <rect key="frame" x="112" y="100" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細"/>
+                                                <connections>
+                                                    <action selector="AttentionDetail:" destination="MLt-Zl-ynH" eventType="touchUpInside" id="AmU-8g-Wv9"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.急性発症または変動性の経過" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMa-D5-QIN">
+                                                <rect key="frame" x="8" y="36" width="222" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="NVv-3p-z3d"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※「はい」のなら次へ「いいえ」なら結果へ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-f8-0ak">
+                                                <rect key="frame" x="19" y="59" width="211" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※エラーが3つ以上なら次へ　それ以外なら結果へ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2o-rP-Ff1">
+                                                <rect key="frame" x="19" y="123" width="228" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyf-Xt-bHZ">
+                                                <rect key="frame" x="112" y="240" width="31" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="詳細"/>
+                                                <connections>
+                                                    <action selector="ideaDetail:" destination="MLt-Zl-ynH" eventType="touchUpInside" id="dOk-Pr-6Rv"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.意識レベルの変化(RASS評価)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bE-ch-8Pv">
+                                                <rect key="frame" x="8" y="166" width="205" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63044287310000002" green="0.96446657530000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="qw4-Ft-pvd" firstAttribute="leading" secondItem="Qeg-0F-7dr" secondAttribute="trailing" constant="27" id="1s2-Yo-YwJ"/>
+                                            <constraint firstItem="qw4-Ft-pvd" firstAttribute="leading" secondItem="Qeg-0F-7dr" secondAttribute="trailing" constant="148" id="1s2-Yo-YwJ"/>
                                             <constraint firstItem="sNN-Kt-sjm" firstAttribute="top" secondItem="Trd-I5-Fh6" secondAttribute="bottom" constant="44" id="2n9-aU-jG4"/>
                                             <constraint firstItem="IMa-D5-QIN" firstAttribute="top" secondItem="BwG-nS-s5N" secondAttribute="bottom" constant="7" id="7ZQ-rG-EZL"/>
                                             <constraint firstItem="sNN-Kt-sjm" firstAttribute="leading" secondItem="UWO-Fw-IqH" secondAttribute="trailing" constant="86" id="8A8-iJ-YaR"/>
@@ -4873,7 +4904,7 @@
                                             <constraint firstItem="IMa-D5-QIN" firstAttribute="centerY" secondItem="aj8-ff-TOl" secondAttribute="centerY" id="PeR-ZO-EnT"/>
                                             <constraint firstItem="0bE-ch-8Pv" firstAttribute="leading" secondItem="UWO-Fw-IqH" secondAttribute="leading" id="Pm2-Vj-Ehl"/>
                                             <constraint firstItem="Qeg-0F-7dr" firstAttribute="top" secondItem="IMa-D5-QIN" secondAttribute="bottom" constant="34" id="QZr-M1-Y4j"/>
-                                            <constraint firstItem="IMa-D5-QIN" firstAttribute="centerX" secondItem="Qeg-0F-7dr" secondAttribute="centerX" id="SuL-x4-C3s"/>
+                                            <constraint firstItem="IMa-D5-QIN" firstAttribute="centerX" secondItem="Qeg-0F-7dr" secondAttribute="centerX" constant="60.5" id="SuL-x4-C3s"/>
                                             <constraint firstItem="UWO-Fw-IqH" firstAttribute="top" secondItem="sNN-Kt-sjm" secondAttribute="top" id="UYo-gz-6In"/>
                                             <constraint firstItem="dV9-8T-0Ld" firstAttribute="top" secondItem="sNN-Kt-sjm" secondAttribute="bottom" constant="19" id="UaT-3e-GB4"/>
                                             <constraint firstItem="aj8-ff-TOl" firstAttribute="trailing" secondItem="6AY-c3-Ttd" secondAttribute="trailingMargin" id="UeK-Ie-87H"/>
@@ -4891,10 +4922,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrM-z0-j0m">
-                                        <rect key="frame" x="0.0" y="455" width="375" height="631"/>
+                                        <rect key="frame" x="0.0" y="455" width="375" height="632"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.意識レベルの変化" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CuV-Vb-O7G">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.意識レベルの変化" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CuV-Vb-O7G">
                                                 <rect key="frame" x="8" y="57" width="141" height="30"/>
+                                                <color key="backgroundColor" red="0.86782159169999995" green="1" blue="0.87840543459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GFk-WA-cSJ"/>
                                                     <constraint firstAttribute="width" constant="141" id="hoQ-zV-MqJ"/>
@@ -4910,47 +4942,47 @@
                                                     <constraint firstAttribute="width" constant="97" id="TIh-AV-5IS"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.注意力の欠如" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-Ua-oYl">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.注意力の欠如" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phb-Ua-oYl">
                                                 <rect key="frame" x="8" y="119" width="141" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.失見当識" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJt-8r-yJ5">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3.失見当識" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJt-8r-yJ5">
                                                 <rect key="frame" x="8" y="178" width="141" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.幻覚、妄想、精神障害" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcY-az-8Lc">
-                                                <rect key="frame" x="8" y="237" width="177" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.幻覚、妄想、精神障害" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcY-az-8Lc">
+                                                <rect key="frame" x="8" y="237" width="160" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5.精神運動的な興奮あるいは遅滞" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="okg-Jn-BDU">
-                                                <rect key="frame" x="8" y="299" width="233" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5.精神運動的な興奮あるいは遅滞" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="okg-Jn-BDU">
+                                                <rect key="frame" x="8" y="305" width="216" height="17"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.不適切な会話あるいは情緒" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-Ky-FXT">
-                                                <rect key="frame" x="8" y="358" width="205" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.不適切な会話あるいは情緒" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-Ky-FXT">
+                                                <rect key="frame" x="8" y="351" width="188" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7.睡眠・覚醒のサイクルの障害" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-nL-J2w">
-                                                <rect key="frame" x="8" y="416" width="217" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7.睡眠・覚醒のサイクルの障害" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-nL-J2w">
+                                                <rect key="frame" x="8" y="409" width="200" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8.症状の変動" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-77-1lj">
-                                                <rect key="frame" x="8" y="475" width="205" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8.症状の変動" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-77-1lj">
+                                                <rect key="frame" x="8" y="468" width="188" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9gP-87-LiS"/>
                                                 </constraints>
@@ -4959,7 +4991,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FaX-6M-CJF">
-                                                <rect key="frame" x="271" y="119" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="119" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -4969,7 +5001,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-K8-HcZ">
-                                                <rect key="frame" x="271" y="170" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="170" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -4978,8 +5010,8 @@
                                                     <action selector="icd3Segment:" destination="MLt-Zl-ynH" eventType="valueChanged" id="tOj-a8-On2"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="az0-mp-HfZ">
-                                                <rect key="frame" x="271" y="237" width="83" height="29"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="az0-mp-HfZ">
+                                                <rect key="frame" x="254" y="237" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -4989,7 +5021,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x4F-KI-ZKp">
-                                                <rect key="frame" x="271" y="301" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="294" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -4999,7 +5031,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OCV-jH-qgw">
-                                                <rect key="frame" x="271" y="360" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="353" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -5009,7 +5041,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fPU-Ur-OMt">
-                                                <rect key="frame" x="271" y="416" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="409" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -5019,7 +5051,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fZv-II-dMW">
-                                                <rect key="frame" x="271" y="475" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="468" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -5029,7 +5061,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-eu-FRL">
-                                                <rect key="frame" x="271" y="71" width="83" height="29"/>
+                                                <rect key="frame" x="254" y="71" width="83" height="29"/>
                                                 <segments>
                                                     <segment title="０点"/>
                                                     <segment title="１点"/>
@@ -5039,7 +5071,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-ky-DTZ">
-                                                <rect key="frame" x="142" y="519" width="90" height="41"/>
+                                                <rect key="frame" x="142" y="512" width="90" height="33"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="XxT-nF-42Y"/>
@@ -5054,7 +5086,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV9-Y7-FOx">
-                                                <rect key="frame" x="131" y="583" width="112" height="29"/>
+                                                <rect key="frame" x="131" y="568" width="112" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="112" id="k9u-4s-Hgq"/>
                                                     <constraint firstAttribute="height" constant="29" id="osX-yk-8II"/>
@@ -5089,7 +5121,7 @@
                                             <constraint firstItem="xoq-XF-n1A" firstAttribute="top" secondItem="rrM-z0-j0m" secondAttribute="topMargin" id="P6G-H5-Azh"/>
                                             <constraint firstItem="qcY-az-8Lc" firstAttribute="top" secondItem="az0-mp-HfZ" secondAttribute="top" id="QGT-qv-6ae"/>
                                             <constraint firstItem="Qjz-K8-HcZ" firstAttribute="top" secondItem="FaX-6M-CJF" secondAttribute="bottom" constant="23" id="QdQ-pG-dIS"/>
-                                            <constraint firstItem="x4F-KI-ZKp" firstAttribute="centerY" secondItem="rrM-z0-j0m" secondAttribute="centerY" id="R0o-ER-U4j"/>
+                                            <constraint firstItem="x4F-KI-ZKp" firstAttribute="centerY" secondItem="rrM-z0-j0m" secondAttribute="centerY" constant="-8" id="R0o-ER-U4j"/>
                                             <constraint firstItem="Phb-Ua-oYl" firstAttribute="top" secondItem="CuV-Vb-O7G" secondAttribute="bottom" constant="32" id="Rbo-Vv-Rmx"/>
                                             <constraint firstItem="qcY-az-8Lc" firstAttribute="top" secondItem="WJt-8r-yJ5" secondAttribute="bottom" constant="29" id="TCY-Tj-C6c"/>
                                             <constraint firstItem="CuV-Vb-O7G" firstAttribute="leading" secondItem="rrM-z0-j0m" secondAttribute="leadingMargin" id="UcX-xg-SXW"/>
@@ -5108,19 +5140,30 @@
                                             <constraint firstItem="VV9-Y7-FOx" firstAttribute="top" secondItem="iZO-ky-DTZ" secondAttribute="bottom" constant="23" id="nvX-ay-S7b"/>
                                             <constraint firstItem="WJt-8r-yJ5" firstAttribute="leading" secondItem="qcY-az-8Lc" secondAttribute="leading" id="r20-O0-kKw"/>
                                             <constraint firstItem="qcY-az-8Lc" firstAttribute="leading" secondItem="okg-Jn-BDU" secondAttribute="leading" id="tWn-DK-GjW"/>
-                                            <constraint firstAttribute="bottom" secondItem="VV9-Y7-FOx" secondAttribute="bottom" constant="19" id="wU5-Qy-jdU"/>
+                                            <constraint firstAttribute="bottom" secondItem="VV9-Y7-FOx" secondAttribute="bottom" constant="35" id="wU5-Qy-jdU"/>
                                             <constraint firstItem="x4F-KI-ZKp" firstAttribute="top" secondItem="az0-mp-HfZ" secondAttribute="bottom" constant="36" id="xx4-sb-4AF"/>
                                             <constraint firstItem="iZO-ky-DTZ" firstAttribute="top" secondItem="fn0-77-1lj" secondAttribute="bottom" constant="14" id="yVa-PY-rly"/>
                                             <constraint firstItem="CuV-Vb-O7G" firstAttribute="top" secondItem="xoq-XF-n1A" secondAttribute="bottom" constant="19" id="zDm-Ds-wqm"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※RASSが「0」なら次へ、それ以外は結果へ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOg-aP-kCQ">
+                                        <rect key="frame" x="21" y="190" width="203" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="top" id="393-0h-32l"/>
+                                    <constraint firstAttribute="bottom" secondItem="6AY-c3-Ttd" secondAttribute="bottom" constant="630" id="5Uu-Oy-kZC"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="leading" secondItem="rrM-z0-j0m" secondAttribute="leading" id="CTg-gu-fGR"/>
-                                    <constraint firstAttribute="bottom" secondItem="rrM-z0-j0m" secondAttribute="bottom" constant="52" id="EcL-gi-5sU"/>
+                                    <constraint firstAttribute="bottom" secondItem="rrM-z0-j0m" secondAttribute="bottom" id="EcL-gi-5sU"/>
+                                    <constraint firstItem="6AY-c3-Ttd" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="top" id="GYx-Pk-JvS"/>
                                     <constraint firstAttribute="trailing" secondItem="6AY-c3-Ttd" secondAttribute="trailing" id="PWh-Iw-ESd"/>
+                                    <constraint firstItem="6AY-c3-Ttd" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="RRX-Ir-DMX"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="leading" secondItem="Ue7-SP-nBV" secondAttribute="leading" id="SQn-HH-KLs"/>
+                                    <constraint firstAttribute="trailing" secondItem="6AY-c3-Ttd" secondAttribute="trailing" id="TNX-qB-l0X"/>
                                     <constraint firstItem="rrM-z0-j0m" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="top" constant="455" id="XWi-bz-gAF"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="centerX" secondItem="Ue7-SP-nBV" secondAttribute="centerX" id="n1H-Yl-gvV"/>
                                     <constraint firstItem="6AY-c3-Ttd" firstAttribute="trailing" secondItem="rrM-z0-j0m" secondAttribute="trailing" id="t1h-l8-ctN"/>
@@ -5130,10 +5173,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                         <constraints>
+                            <constraint firstItem="Jjl-ht-3Wr" firstAttribute="top" secondItem="Ue7-SP-nBV" secondAttribute="bottom" id="5kN-6S-agB"/>
+                            <constraint firstItem="Ue7-SP-nBV" firstAttribute="top" secondItem="IJF-v0-mpj" secondAttribute="bottom" id="HPg-aZ-Qih"/>
+                            <constraint firstItem="Ue7-SP-nBV" firstAttribute="leading" secondItem="jEp-7o-yO8" secondAttribute="leading" id="Jqr-re-dRG"/>
                             <constraint firstAttribute="trailing" secondItem="Ue7-SP-nBV" secondAttribute="trailing" id="NN4-aj-B4G"/>
                             <constraint firstItem="Ue7-SP-nBV" firstAttribute="top" secondItem="IJF-v0-mpj" secondAttribute="bottom" id="RQj-dc-lrQ"/>
+                            <constraint firstItem="6AY-c3-Ttd" firstAttribute="width" secondItem="jEp-7o-yO8" secondAttribute="width" id="T8X-Qv-2kh"/>
                             <constraint firstItem="6AY-c3-Ttd" firstAttribute="width" secondItem="jEp-7o-yO8" secondAttribute="width" id="XFJ-cN-dv8"/>
+                            <constraint firstAttribute="trailing" secondItem="Ue7-SP-nBV" secondAttribute="trailing" id="ZgD-OS-kWD"/>
                             <constraint firstItem="rrM-z0-j0m" firstAttribute="width" secondItem="jEp-7o-yO8" secondAttribute="width" id="esr-v5-Vpf"/>
+                            <constraint firstItem="rrM-z0-j0m" firstAttribute="width" secondItem="jEp-7o-yO8" secondAttribute="width" id="f4d-iC-pe2"/>
                             <constraint firstItem="Ue7-SP-nBV" firstAttribute="bottom" secondItem="Jjl-ht-3Wr" secondAttribute="top" id="jKx-td-Rd3"/>
                             <constraint firstItem="rrM-z0-j0m" firstAttribute="width" secondItem="jEp-7o-yO8" secondAttribute="width" id="qDQ-ht-2WM"/>
                             <constraint firstItem="Ue7-SP-nBV" firstAttribute="leading" secondItem="jEp-7o-yO8" secondAttribute="leading" id="rxF-YF-DmX"/>
@@ -5190,11 +5239,11 @@
         <image name="home" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZmW-Ru-Pfc"/>
-        <segue reference="bGu-YX-azk"/>
-        <segue reference="PJx-MO-Gmk"/>
-        <segue reference="ltp-15-CLK"/>
-        <segue reference="0KI-mh-fWf"/>
-        <segue reference="sOw-kq-P9Q"/>
+        <segue reference="SSB-gx-Xja"/>
+        <segue reference="Uda-hX-3pn"/>
+        <segue reference="XKt-pS-hbG"/>
+        <segue reference="PGm-LD-fvt"/>
+        <segue reference="FLa-uV-by4"/>
+        <segue reference="9ng-X2-KLK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -46,19 +46,19 @@ class apachViewController: UIViewController {
     var amount:Int = 0
     
     //セグメントが選択されない時の初期値の設定
-    var temNumber:Int = 0
-    var mapNumber:Int = 0
-    var hrNumber:Int = 0
-    var rrNumber:Int = 0
-    var aaDo2Number:Int = 0
+    var temNumber:Int = 4
+    var mapNumber:Int = 4
+    var hrNumber:Int = 4
+    var rrNumber:Int = 4
+    var aaDo2Number:Int = 4
     var po2Number:Int = 0
-    var phNumber:Int = 0
-    var naNumber:Int = 0
-    var kNumber:Int = 0
-    var creNumber:Int = 0
-    var htNumber:Int = 0
-    var wbcNumber:Int = 0
-    var hco3Number:Int = 0
+    var phNumber:Int = 4
+    var naNumber:Int = 4
+    var kNumber:Int = 4
+    var creNumber:Int = 4
+    var htNumber:Int = 4
+    var wbcNumber:Int = 4
+    var hco3Number:Int = 4
     var ageNumber:Int = 0
     var opeNumber:Int = 0
     var afteropeNumber:Int = 0
@@ -69,6 +69,16 @@ class apachViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Fio2の値でセグメント（AaDo2,Pao2）を隠す
+        if appDelegate.valueOfFio2 >= 0.5{
+            po2.isHidden = true
+            aaDo2.isHidden = false
+        }else{
+            aaDo2.isHidden = true
+            po2.isHidden = false
+        }
+        
         resultBtn.layer.cornerRadius = 20.0
 
     //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
@@ -89,6 +99,20 @@ class apachViewController: UIViewController {
             aaDo2Number = 0
         }
         
+//        }else if breathe.text == "" && vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
+//            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+//        }else if vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
+//            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+//        }else if vaporPressure.text == "" || pressure.text == "" && breathe.text == "" {
+//            appDelegate.valueOfAaDo2 = (713 * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+//        }else if breathe.text == "" {
+//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
+//        }else if fio2.text == ""{
+//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * 0.21 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+//        }else{
+//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
+//        }
+//        
 
         
         //PaO2
@@ -277,32 +301,9 @@ class apachViewController: UIViewController {
             hr.selectedSegmentIndex = 6
             hrNumber = 4
         }
-        
-        
-
-    
-    
-    
-//        //セグメントの設定　Systemは普段edit画面で使っているものと同じ
-//        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: 0)
     }
     
-    
-    //セグメントをタップした時TextColorを白、タップされていない時青色にするif文
-//    @IBAction func map(_ sender: UISegmentedControl) {
-////        //selectedIndex = 白　それ以外を青　でif文にするø
-////        if pfSeg.selectedSegmentIndex == 0{
-////            pfNumber = 0
-////        if sender.isMomentary == true{
-////            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,)
-////        }else{
-////            map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.white)
-////
-////        }
-//        
-//        map.makeMultiline(withFontName: "System", fontSize: 11, textColor: UIColor.blue,selectedIndex: sender.selectedSegmentIndex)
-//    }
-//    
+
 
     //体温のセグメントの設定
     @IBAction func tempSeg(_ sender: UISegmentedControl) {
@@ -569,7 +570,21 @@ class apachViewController: UIViewController {
 //体温の詳細
     @IBAction func tempButton(_ sender: UIButton) {
         //部品のアラートを作成
-        let alertController = UIAlertController(title: "体温", message: "４点 ≧ 41\n3点: 39−40\n1点: 38.5-38.9\n0点: 36-38.4\n1点: 34-35.9\n2点: 32-33.9\n3点: 30-31.9\n4点 ≦ 29.9", preferredStyle:  .alert)
+        let alertController = UIAlertController(title: "体温", message:"４点 ≧ 41\n3点: 39−40\n1点: 38.5-38.9\n0点: 36-38.4\n1点: 34-35.9\n2点: 32-33.9\n3点: 30-31.9\n4点 ≦ 29.9", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 41\n3点: 39−40\n1点: 38.5-38.9\n0点: 36-38.4\n1点: 34-35.9\n2点: 32-33.9\n3点: 30-31.9\n4点 ≦ 29.9",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
         
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
@@ -583,6 +598,19 @@ class apachViewController: UIViewController {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "平均血圧", message: "４点 ≧ 160\n3点: 130−159\n2点: 110-129\n0点: 70-109\n2点: 50-69\n4点 ≦ 49", preferredStyle:  .alert)
         
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 160\n3点: 130−159\n2点: 110-129\n0点: 70-109\n2点: 50-69\n4点 ≦ 49",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+            alertController.setValue(messageText, forKey: "attributedMessage")
+        
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
         
@@ -594,6 +622,19 @@ class apachViewController: UIViewController {
     @IBAction func hrButton(_ sender: UIButton) {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "心拍数", message: "４点 ≧ 180\n3点: 140−179\n2点: 110-139\n0点: 70-109\n2点: 50-69\n3点: 40-54\n4点 ≦ 39", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 180\n3点: 140−179\n2点: 110-139\n0点: 70-109\n2点: 50-69\n3点: 40-54\n4点 ≦ 39",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+            alertController.setValue(messageText, forKey: "attributedMessage")
         
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
@@ -607,6 +648,20 @@ class apachViewController: UIViewController {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "pH", message: "４点 ≧ 7.7\n3点: 7.6−7.69\n1点: 7.5-7.59\n0点: 7.33-7.49\n2点: 7.25-7.32\n3点: 7.15-7.24\n4点 < 7.15", preferredStyle:  .alert)
         
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 7.7\n3点: 7.6−7.69\n1点: 7.5-7.59\n0点: 7.33-7.49\n2点: 7.25-7.32\n3点: 7.15-7.24\n4点 < 7.15",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
         
@@ -618,6 +673,20 @@ class apachViewController: UIViewController {
     @IBAction func naButton(_ sender: UIButton) {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "Na", message: "４点 ≧ 180\n3点: 160−179\n1点: 150-159\n0点: 130-149\n2点: 120-129\n4点 ≦ 119", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 180\n3点: 160−179\n1点: 150-159\n0点: 130-149\n2点: 120-129\n4点 ≦ 119",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
         
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
@@ -631,6 +700,20 @@ class apachViewController: UIViewController {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "K", message: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5", preferredStyle:  .alert)
         
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
         
@@ -642,7 +725,21 @@ class apachViewController: UIViewController {
     @IBAction func htButton(_ sender: UIButton) {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "ヘマトクリット", message: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5", preferredStyle:  .alert)
-            
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 7\n3点: 6.0−6.9\n1点: 5.5-5.9\n0点: 3.5-5.4\n1点: 3-3.4\n2点: 2.5-2.9\n4点 < 2.5",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
             //アラートにOKボタンを追加
             alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
             
@@ -654,6 +751,20 @@ class apachViewController: UIViewController {
     @IBAction func wbcButton(_ sender: UIButton) {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "白血球", message: "４点 ≧ 40\n3点: 20−39.9\n1点: 15-19.9\n0点: 3-14.9\n2点: 1-2.9\n4点 < 1", preferredStyle:  .alert)
+        
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 40\n3点: 20−39.9\n1点: 15-19.9\n0点: 3-14.9\n2点: 1-2.9\n4点 < 1",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
         
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
@@ -667,20 +778,46 @@ class apachViewController: UIViewController {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "HCO3", message: "４点 ≧ 52\n3点: 41−51.9\n1点: 32-40.9\n0点: 22-31.9\n2点: 18-21.9\n3点: 15-17.9\n4点 < 15", preferredStyle:  .alert)
         
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "４点 ≧ 52\n3点: 41−51.9\n1点: 32-40.9\n0点: 22-31.9\n2点: 18-21.9\n3点: 15-17.9\n4点 < 15",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
         
         //アラートを表示する
         present(alertController,animated: true,completion: nil)
     }
-
-
     
 //慢性病態ポイント(
     @IBAction func chronicButton(_ sender: UIButton) {
         //部品のアラートを作成
         let alertController = UIAlertController(title: "慢性病態ポイント", message: "（1）肝：生検にて確認された肝硬変、門脈圧亢進症および門脈圧亢進による上部消化管出血の既往、または肝不全・肝性脳症・肝性昏睡のあること。\n（2）心血管系：NYHA クラス IV    \n（3）呼吸器：慢性拘束性・閉塞性または血管疾患で重度の運動障害（階段を上がれない、家事ができないなど)があること。慢性低酸素血症、高炭酸ガス血症、二次性多血症、慢性肺高血圧（>40mmHg）。または人工呼吸器離脱不能例\n（4）免疫不全：感染への抵抗力を抑制する治療（免疫抑制剤、癌化学療法、放射線照射、長期または現在の大量のステロイド投与など）を受けている者、または感染への抵抗力を著明に減じる疾患（白血病、リンパ腫またはAIDSなど）に罹患している者。", preferredStyle:  .alert)
       
+        //messageを左寄せ
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "（1）肝：生検にて確認された肝硬変、門脈圧亢進症および門脈圧亢進による上部消化管出血の既往、または肝不全・肝性脳症・肝性昏睡のあること。\n（2）心血管系：NYHA クラス IV    \n（3）呼吸器：慢性拘束性・閉塞性または血管疾患で重度の運動障害（階段を上がれない、家事ができないなど)があること。慢性低酸素血症、高炭酸ガス血症、二次性多血症、慢性肺高血圧（>40mmHg）。または人工呼吸器離脱不能例\n（4）免疫不全：感染への抵抗力を抑制する治療（免疫抑制剤、癌化学療法、放射線照射、長期または現在の大量のステロイド投与など）を受けている者、または感染への抵抗力を著明に減じる疾患（白血病、リンパ腫またはAIDSなど）に罹患している者。",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
         //アラートにOKボタンを追加
         alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
 
@@ -696,13 +833,19 @@ class apachViewController: UIViewController {
         if gcs.text == "" {
             comment.text = "GCSスコアが未入力です"
         }else if Int(gcs.text!)! > 15 || Int(gcs.text!)! < 3{
-            comment.text = "GCスコアを正しく入力してください"
-        }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3 {
-            amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
+            comment.text = "GCSスコアを正しく入力してください"
+        }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3{
+            amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
+            
+            total.text = String(amount)
+            comment.text = ""
+        }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3{
+            amount = temNumber + mapNumber + hrNumber + rrNumber + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
             
             total.text = String(amount)
             comment.text = ""
         }
+
     
     }
     

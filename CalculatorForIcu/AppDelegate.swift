@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var valueOfOer:Float = 0
     var valueOfPres:Float = 0
     var valueOfVapor:Float = 0
+    var valueOfBreathe:Float = 0
     
     //栄養アセスメント
     var mof:Float = 0
@@ -65,9 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //    //呼吸アセスメント
 //    var resultList = ""
-    
-    
-    
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
