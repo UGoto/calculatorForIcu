@@ -70,15 +70,18 @@ class apachViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Fio2の値でセグメント（AaDo2,Pao2）を隠す
-        if appDelegate.valueOfFio2 >= 0.5{
-            po2.isHidden = true
-            aaDo2.isHidden = false
-        }else{
-            aaDo2.isHidden = true
-            po2.isHidden = false
-        }
-        
+//        Fio2の値でセグメント（AaDo2,Pao2）を隠す
+//        if appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.isHidden = false
+//            po2.isHidden = true
+//        }else if appDelegate.valueOfFio2 < 0.5{
+//            aaDo2.isHidden = true
+//            po2.isHidden = false
+//        }else if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
+//            aaDo2.isHidden = false
+//            po2.isHidden = false
+//        }
+//
         resultBtn.layer.cornerRadius = 20.0
 
     //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
