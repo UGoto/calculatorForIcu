@@ -71,17 +71,17 @@ class apachViewController: UIViewController {
         super.viewDidLoad()
         
 //        Fio2の値でセグメント（AaDo2,Pao2）を隠す
-//        if appDelegate.valueOfFio2 >= 0.5{
-//            aaDo2.isHidden = false
-//            po2.isHidden = true
-//        }else if appDelegate.valueOfFio2 < 0.5{
-//            aaDo2.isHidden = true
-//            po2.isHidden = false
-//        }else if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
-//            aaDo2.isHidden = false
-//            po2.isHidden = false
-//        }
-//
+        if appDelegate.valueOfFio2 == 0{
+            aaDo2.isHidden = false
+            po2.isHidden = false
+        }else if appDelegate.valueOfFio2 >= 0.5{
+            aaDo2.isHidden = false
+            po2.isHidden = true
+        }else if appDelegate.valueOfFio2 < 0.5{
+            aaDo2.isHidden = true
+            po2.isHidden = false
+        }
+        
         resultBtn.layer.cornerRadius = 20.0
 
     //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
@@ -100,22 +100,21 @@ class apachViewController: UIViewController {
         }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 3
             aaDo2Number = 0
+        }else if appDelegate.valueOfAaDo2 >= 500{
+            aaDo2.selectedSegmentIndex = 0
+            aaDo2Number = 4
+        }else if appDelegate.valueOfAaDo2 >= 350 && appDelegate.valueOfAaDo2 < 500{
+            aaDo2.selectedSegmentIndex = 1
+            aaDo2Number = 3
+        }else if appDelegate.valueOfAaDo2 >= 200 && appDelegate.valueOfAaDo2 < 350{
+            aaDo2.selectedSegmentIndex = 2
+            aaDo2Number = 2
+        }else if appDelegate.valueOfAaDo2 < 200{
+            aaDo2.selectedSegmentIndex = 3
+            aaDo2Number = 0
         }
         
-//        }else if breathe.text == "" && vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
-//            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
-//        }else if vaporPressure.text == "" && pressure.text == "" && fio2.text == ""{
-//            appDelegate.valueOfAaDo2 = (150 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
-//        }else if vaporPressure.text == "" || pressure.text == "" && breathe.text == "" {
-//            appDelegate.valueOfAaDo2 = (713 * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
-//        }else if breathe.text == "" {
-//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / 0.8)) - Float(pao2.text!)!
-//        }else if fio2.text == ""{
-//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * 0.21 - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
-//        }else{
-//            appDelegate.valueOfAaDo2 = ((Float(pressure.text!)! - Float(vaporPressure.text!)!) * Float(fio2.text!)! - (Float(paco2.text!)! / Float(breathe.text!)!)) - Float(pao2.text!)!
-//        }
-//        
+ 
 
         
         //PaO2
@@ -840,7 +839,7 @@ class apachViewController: UIViewController {
         }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3{
             amount = temNumber + mapNumber + hrNumber + rrNumber + aaDo2Number + phNumber + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)
             
-            total.text = String(amount)
+            total.text = String(amount) + "点"
             comment.text = ""
         }else if Int(gcs.text!)! <= 15 && Int(gcs.text!)! >= 3{
             amount = temNumber + mapNumber + hrNumber + rrNumber + phNumber + po2Number + naNumber + kNumber + creNumber + htNumber + wbcNumber + ageNumber + opeNumber + afteropeNumber + (15 - Int(gcs.text!)!)

@@ -16,7 +16,7 @@ class sofaViewController: UIViewController {
     @IBOutlet weak var mapSeg: UISegmentedControl!
     @IBOutlet weak var gcsSeg: UISegmentedControl!
     @IBOutlet weak var creSeg: UISegmentedControl!
-    @IBOutlet weak var hrSeg: UISegmentedControl!
+//    @IBOutlet weak var hrSeg: UISegmentedControl!
     
     @IBOutlet weak var resultBtn: UIButton!
     @IBOutlet weak var total: UILabel!
@@ -35,7 +35,7 @@ class sofaViewController: UIViewController {
     var mapNumber:Int = 0
     var gcsNumber:Int = 0
     var creNumber:Int = 0
-    var hrNumber:Int = 0
+//    var hrNumber:Int = 0
     
 
     override func viewDidLoad() {
@@ -179,16 +179,16 @@ class sofaViewController: UIViewController {
         }
     }
     
-    //尿量のセグメントの設定
-    @IBAction func hrSeg(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
-            hrNumber = 0
-        }else if sender.selectedSegmentIndex == 1{
-            hrNumber = 3
-        }else if sender.selectedSegmentIndex == 2{
-            hrNumber = 4
-        }
-    }
+//    //尿量のセグメントの設定
+//    @IBAction func hrSeg(_ sender: UISegmentedControl) {
+//        if sender.selectedSegmentIndex == 0{
+//            hrNumber = 0
+//        }else if sender.selectedSegmentIndex == 1{
+//            hrNumber = 3
+//        }else if sender.selectedSegmentIndex == 2{
+//            hrNumber = 4
+//        }
+//    }
 
 //平均動脈圧の詳細
     @IBAction func mapDetail(_ sender: UIButton) {
@@ -216,13 +216,39 @@ class sofaViewController: UIViewController {
         present(alertController,animated: true,completion: nil)
 }
 
+//クレアチニン　or 尿量の詳細
+    @IBAction func creDetail(_ sender: UIButton) {
+        //部品のアラートを作成
+        let alertController = UIAlertController(title: "平均動脈圧", message: "0点: クレアチニン < 1.2\n1点: クレアチニン 1.2 - 1.9\n2点: クレアチニン 2.0 - 3.4\n3点:クレアチニン 3.5 - 4.9 or 尿量 < 500ml/日\n4点: クレアチニン > 5.0 or 尿量　< 200ml/日", preferredStyle:  .alert)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.left
+        
+        let messageText = NSMutableAttributedString(
+            string: "0点: クレアチニン < 1.2\n1点: クレアチニン 1.2 - 1.9\n2点: クレアチニン 2.0 - 3.4\n3点:クレアチニン 3.5 - 4.9 or 尿量 < 500ml/日\n4点: クレアチニン > 5.0 or 尿量　< 200ml/日",
+            attributes: [
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: UIFont.systemFont(ofSize: 13.0)
+            ]
+        )
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        
+        
+        //アラートにOKボタンを追加
+        alertController.addAction(UIAlertAction(title: "OK", style:  .default, handler: nil))
+        
+        //アラートを表示する
+        present(alertController,animated: true,completion: nil)
+    }
+    
+
     
     
 //結果buttonが押された時、totalに合計点が出力される
     @IBAction func totalScoreButton(_ sender: UIButton) {
-        amount = pfNumber + pltNumber + bilNumber + mapNumber + gcsNumber + creNumber + hrNumber
-//        totalScore.text = String(amount)
-        total.text = String(amount)
+        amount = pfNumber + pltNumber + bilNumber + mapNumber + gcsNumber + creNumber
+        total.text = String(amount) + "点"
     }
     
 //値の遷移
