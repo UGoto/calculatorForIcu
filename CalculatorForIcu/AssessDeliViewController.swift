@@ -31,7 +31,7 @@ class AssessDeliViewController: UIViewController {
     var cam2Score:Int = 1
     var cam3Score:Int = 1
     var cam4aScore:Int = 1
-    var cam4bScore:Int = 1
+//    var cam4bScore:Int = 1
 
 
 //ICDSD
@@ -108,30 +108,30 @@ class AssessDeliViewController: UIViewController {
         }
     }
     
-    //CAM　質問4-b
-    @IBAction func cam4bSegment(_ sender: UISegmentedControl) {
-        if cam4b.selectedSegmentIndex == 0{
-            cam4bScore = 1
-        }else{
-            cam4bScore = 0
-        }
-    }
+//    //CAM　質問4-b
+//    @IBAction func cam4bSegment(_ sender: UISegmentedControl) {
+//        if cam4b.selectedSegmentIndex == 0{
+//            cam4bScore = 1
+//        }else{
+//            cam4bScore = 0
+//        }
+//    }
     
     //CAM　結果ボタン
     @IBAction func resultButton(_ sender: UIButton) {
-        amountCam = cam1Score + cam2Score + cam3Score + cam4aScore + cam4bScore
-        if amountCam == 0{
-            resultLabel.text = "せん妄でない"
-//        }else if amount == 5{
-//            resultLabel.text = "せん妄"
-        }else if cam1Score == 1 && cam2Score == 1 && cam3Score == 1 && cam4aScore == 1 && cam4bScore == 1{
+//        amountCam = cam1Score + cam2Score + cam3Score + cam4aScore + cam4bScore
+//        if amountCam == 0{
+//            resultLabel.text = "せん妄なし"
+        if cam1Score == 0{
+            resultLabel.text = "せん妄なし"
+        }else if cam1Score == 1 && cam2Score == 1{
+            resultLabel.text = "せん妄なし"
+        }else if cam1Score == 1 && cam2Score == 0 && cam3Score == 0{
             resultLabel.text = "せん妄"
-        }else if cam3Score == 1{
+        }else if cam1Score == 1 && cam2Score == 0 && cam3Score == 1 && cam4aScore == 1{
             resultLabel.text = "せん妄"
-        }else if cam4aScore == 1{
-            resultLabel.text = "せん妄"
-        }else if cam4bScore == 1{
-            resultLabel.text = "せん妄"
+        }else if cam1Score == 1 && cam2Score == 0 && cam3Score == 1 && cam4aScore == 0{
+            resultLabel.text = "せん妄なし"
         }else{
             resultLabel.text = ""
         }

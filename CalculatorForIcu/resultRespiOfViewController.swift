@@ -23,7 +23,7 @@ class resultRespiOfViewController: UIViewController {
     let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
-        //呼吸アセスメントのページからデータを受け取る
+//        //呼吸アセスメントのページからデータを受け取る
         super.viewDidLoad()
         ttv.text = String(appDelegate.valueOfTvv)
         AaDo2.text = String(appDelegate.valueOfAaDo2)
@@ -36,6 +36,19 @@ class resultRespiOfViewController: UIViewController {
         
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        //呼吸アセスメントのページからデータを受け取る
+//        super.viewDidLoad()
+//        ttv.text = String(appDelegate.valueOfTvv)
+//        AaDo2.text = String(appDelegate.valueOfAaDo2)
+//        pf.text = String(appDelegate.valueOfPf)
+//        do2.text = String(appDelegate.valueOfDo2)
+//        qt.text = String(appDelegate.valueOfQt)
+//        cao2.text = String (appDelegate.valueOfCao2)
+//        vo2.text = String(appDelegate.valueOfVo2)
+//        oer.text = String(appDelegate.valueOfOer)
+//    }
+//    
     
 
     override func didReceiveMemoryWarning() {

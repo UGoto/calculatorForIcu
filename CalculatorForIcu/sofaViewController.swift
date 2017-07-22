@@ -43,8 +43,8 @@ class sofaViewController: UIViewController {
         //結果ボタンのデザイン
             resultBtn.layer.cornerRadius = 20.0
         
-    //AppDelegateから値を引き受ける
-        //P/F
+//    //AppDelegateから値を引き受ける
+//        //P/F
         if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfFio2 == 0{
             pfSeg.selectedSegmentIndex = 0
             pfNumber = 0
@@ -65,8 +65,8 @@ class sofaViewController: UIViewController {
             pfSeg.selectedSegmentIndex = 4
             pfNumber = 4
         }
-        
-        //GCS
+//
+//        //GCS
         if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {
             gcsSeg.selectedSegmentIndex = 0
             gcsNumber = 0
@@ -86,6 +86,49 @@ class sofaViewController: UIViewController {
         
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        //AppDelegateから値を引き受ける
+//        //P/F
+//        if appDelegate.valueOfPao2 == 0 || appDelegate.valueOfFio2 == 0{
+//            pfSeg.selectedSegmentIndex = 0
+//            pfNumber = 0
+//            print(pfSeg.selectedSegmentIndex)
+//        }else if appDelegate.valueOfPf >= 400{
+//            pfSeg.selectedSegmentIndex = 0
+//            pfNumber = 0
+//        }else if appDelegate.valueOfPf < 400 && appDelegate.valueOfPf >= 300{
+//            pfSeg.selectedSegmentIndex = 1
+//            pfNumber = 1
+//        }else if appDelegate.valueOfPf < 300 && appDelegate.valueOfPf >= 200{
+//            pfSeg.selectedSegmentIndex = 2
+//            pfNumber = 2
+//        }else if appDelegate.valueOfPf < 200 && appDelegate.valueOfPf >= 100{
+//            pfSeg.selectedSegmentIndex = 3
+//            pfNumber = 3
+//        }else if appDelegate.valueOfPf < 100 {
+//            pfSeg.selectedSegmentIndex = 4
+//            pfNumber = 4
+//        }
+//        
+//        //GCS
+//        if appDelegate.valueOfGcs >= 15 || appDelegate.valueOfGcs < 3 {
+//            gcsSeg.selectedSegmentIndex = 0
+//            gcsNumber = 0
+//        }else if appDelegate.valueOfGcs < 15 && appDelegate.valueOfGcs >= 13 {
+//            gcsSeg.selectedSegmentIndex = 1
+//            gcsNumber = 1
+//        }else if appDelegate.valueOfGcs < 13 && appDelegate.valueOfGcs >= 10 {
+//            gcsSeg.selectedSegmentIndex = 2
+//            gcsNumber = 2
+//        }else if appDelegate.valueOfGcs < 10 && appDelegate.valueOfGcs >= 6 {
+//            gcsSeg.selectedSegmentIndex = 3
+//            gcsNumber = 3
+//        }else if appDelegate.valueOfGcs < 6 || appDelegate.valueOfGcs >= 3 {
+//            gcsSeg.selectedSegmentIndex = 4
+//            gcsNumber = 4
+//        }
+//    }
+//    
 
 //セグメントの設定
     //PaO2/FiO2のセグメント設定

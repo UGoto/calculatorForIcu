@@ -70,36 +70,256 @@ class apachViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Fio2の値でセグメント（AaDo2,Pao2）を隠す
-        if appDelegate.valueOfFio2 == 0{
-            aaDo2.isHidden = false
-            po2.isHidden = false
-        }else if appDelegate.valueOfFio2 >= 0.5{
+        // Fio2の値でセグメント（AaDo2,Pao2）を隠す
+        if appDelegate.valueOfFio2 >= 0.5{
             aaDo2.isHidden = false
             po2.isHidden = true
-        }else if appDelegate.valueOfFio2 < 0.5{
+        }else if appDelegate.valueOfFio2 < 0.5 && appDelegate.valueOfFio2 > 0{
             aaDo2.isHidden = true
             po2.isHidden = false
+        }else{
+            aaDo2.isHidden = true
         }
         
         resultBtn.layer.cornerRadius = 20.0
 
-    //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
-        //A-aDO2
-        if  appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
+//    //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
+        if  appDelegate.valueOfAaDo2 == 0 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 0
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 500 && appDelegate.valueOfFio2 >= 0.5{
+        }else if appDelegate.valueOfAaDo2 >= 500 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 0
             aaDo2Number = 4
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 350 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 500 && appDelegate.valueOfFio2 >= 0.5{
+        }else if appDelegate.valueOfAaDo2 >= 350 && appDelegate.valueOfAaDo2 < 500 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 1
             aaDo2Number = 3
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 200 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 350 && appDelegate.valueOfFio2 >= 0.5{
-            po2.selectedSegmentIndex = 2
-            po2Number = 2
-        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 && appDelegate.valueOfFio2 >= 0.5{
+        }else if appDelegate.valueOfAaDo2 >= 200 && appDelegate.valueOfAaDo2 < 350 && appDelegate.valueOfFio2 >= 0.5{
+            aaDo2.selectedSegmentIndex = 2
+            aaDo2Number = 2
+        }else if appDelegate.valueOfAaDo2 < 200 && appDelegate.valueOfFio2 >= 0.5{
             aaDo2.selectedSegmentIndex = 3
             aaDo2Number = 0
+        }
+//
+// 
+//
+//        
+//        //PaO2
+        if  appDelegate.valueOfPao2 == 0 {
+            po2.selectedSegmentIndex = 0
+        }else if appDelegate.valueOfPao2 > 70.0 && appDelegate.valueOfFio2 < 0.5{
+            po2.selectedSegmentIndex = 0
+            po2Number = 0
+        }else if appDelegate.valueOfPao2 <= 70.0 && appDelegate.valueOfPao2 > 60.0 && appDelegate.valueOfFio2 < 0.5{
+            po2.selectedSegmentIndex = 1
+            po2Number = 1
+        }else if appDelegate.valueOfPao2 <= 60.0 && appDelegate.valueOfPao2 >= 55.0 && appDelegate.valueOfFio2 < 0.5{
+            po2.selectedSegmentIndex = 2
+            po2Number = 3
+        }else if appDelegate.valueOfPao2 < 55.0 && appDelegate.valueOfFio2 < 0.5{
+            po2.selectedSegmentIndex = 3
+            po2Number = 4
+        }
+//
+//        //RR
+        if appDelegate.valueOfrr == 0{
+            rr.selectedSegmentIndex = 0
+        }else if appDelegate.valueOfrr >= 50 {
+            rr.selectedSegmentIndex = 0
+            rrNumber = 4
+        }else if appDelegate.valueOfrr <= 49 && appDelegate.valueOfrr >= 35 {
+            rr.selectedSegmentIndex = 1
+            rrNumber = 3
+        }else if appDelegate.valueOfrr <= 34 && appDelegate.valueOfrr >= 25 {
+            rr.selectedSegmentIndex = 2
+            rrNumber = 1
+        }else if appDelegate.valueOfrr <= 24  && appDelegate.valueOfrr >= 12 {
+            rr.selectedSegmentIndex = 3
+            rrNumber = 0
+        }else if appDelegate.valueOfrr <= 11 && appDelegate.valueOfrr >= 10 {
+            rr.selectedSegmentIndex = 4
+            rrNumber = 1
+        }else if appDelegate.valueOfrr <= 9 && appDelegate.valueOfrr >= 6 {
+            rr.selectedSegmentIndex = 5
+            rrNumber = 2
+        }else if appDelegate.valueOfrr <= 5 {
+            rr.selectedSegmentIndex = 6
+            rrNumber = 4
+        }
+//
+//        //Age)
+        if appDelegate.valueOfAge <= 44{
+            age.selectedSegmentIndex = 0
+            ageNumber = 0
+        }else if appDelegate.valueOfAge >= 45 && appDelegate.valueOfAge <= 54 {
+            age.selectedSegmentIndex = 1
+            ageNumber = 1
+        }else if appDelegate.valueOfAge >= 55 && appDelegate.valueOfAge <= 64{
+            age.selectedSegmentIndex = 2
+            ageNumber = 3
+        }else if appDelegate.valueOfAge >= 65 && appDelegate.valueOfAge <= 74{
+            age.selectedSegmentIndex = 3
+            ageNumber = 5
+        }else if appDelegate.valueOfAge >= 75 {
+            age.selectedSegmentIndex = 4
+            ageNumber = 6
+        }
+//
+//        //Ph
+        if  appDelegate.valueOfPh == 0.0{
+            ph.selectedSegmentIndex = 0
+            phNumber = 4
+            print(appDelegate.valueOfPf)
+            print(ph.selectedSegmentIndex)
+        }else if appDelegate.valueOfPh > 7.7 {
+            ph.selectedSegmentIndex = 0
+            phNumber = 4
+        }else if appDelegate.valueOfPh >= 7.6 && appDelegate.valueOfPh < 7.7{
+            ph.selectedSegmentIndex = 1
+            phNumber = 3
+        }else if appDelegate.valueOfPh >= 7.5 && appDelegate.valueOfPh < 7.6{
+            ph.selectedSegmentIndex = 2
+            phNumber = 2
+        }else if appDelegate.valueOfPh >= 7.33 && appDelegate.valueOfPh < 7.5{
+            ph.selectedSegmentIndex = 3
+            phNumber = 0
+        }else if appDelegate.valueOfPh >= 7.25 && appDelegate.valueOfPh < 7.33{
+            ph.selectedSegmentIndex = 4
+            phNumber = 2
+        }else if appDelegate.valueOfPh >= 7.15 && appDelegate.valueOfPh < 7.25{
+            ph.selectedSegmentIndex = 5
+            phNumber = 3
+        }else if appDelegate.valueOfPh < 7.15{
+            ph.selectedSegmentIndex = 6
+            phNumber = 4
+            
+        }
+//
+//        //HCO3
+        if appDelegate.valueOfHco3 == 0 || appDelegate.valueOfHco3 >= 52 {
+            hco3.selectedSegmentIndex = 0
+            hco3Number = 4
+        }else if appDelegate.valueOfHco3 < 52  && appDelegate.valueOfHco3 >= 41 {
+            hco3.selectedSegmentIndex = 1
+            hco3Number = 3
+        }else if appDelegate.valueOfHco3 < 41 && appDelegate.valueOfHco3 >= 32{
+            hco3.selectedSegmentIndex = 2
+            hco3Number = 1
+        }else if appDelegate.valueOfHco3 < 32 && appDelegate.valueOfHco3 >= 22 {
+            hco3.selectedSegmentIndex = 3
+            hco3Number = 0
+        }else if appDelegate.valueOfHco3 < 22 && appDelegate.valueOfHco3 >= 18 {
+            hco3.selectedSegmentIndex = 4
+            hco3Number = 2
+        }else if appDelegate.valueOfHco3 < 18 && appDelegate.valueOfHco3 >= 15 {
+            hco3.selectedSegmentIndex = 5
+            hco3Number = 3
+        }else if appDelegate.valueOfHco3 < 15 {
+            hco3.selectedSegmentIndex = 6
+            hco3Number = 4
+        }
+//
+//        //Na
+        if appDelegate.valueOfNa == 0 || appDelegate.valueOfNa >= 180 {
+            na.selectedSegmentIndex = 0
+            naNumber = 4
+        }else if appDelegate.valueOfNa < 180  && appDelegate.valueOfNa >= 160 {
+            na.selectedSegmentIndex = 1
+            naNumber = 3
+        }else if appDelegate.valueOfNa < 160 && appDelegate.valueOfNa >= 155{
+            na.selectedSegmentIndex = 2
+            naNumber = 2
+        }else if appDelegate.valueOfNa < 155 && appDelegate.valueOfNa >= 150 {
+            na.selectedSegmentIndex = 3
+            naNumber = 1
+        }else if appDelegate.valueOfNa < 150 && appDelegate.valueOfNa >= 130 {
+            na.selectedSegmentIndex = 4
+            naNumber = 0
+        }else if appDelegate.valueOfNa < 130 && appDelegate.valueOfNa >= 120 {
+            na.selectedSegmentIndex = 5
+            naNumber = 2
+        }else if appDelegate.valueOfNa <= 119 {
+            na.selectedSegmentIndex = 6
+            naNumber = 4
+        }
+//
+//        //K
+        if appDelegate.valueOfK == 0 || appDelegate.valueOfK >= 7 {
+            k.selectedSegmentIndex = 0
+            naNumber = 4
+        }else if appDelegate.valueOfK < 7  && appDelegate.valueOfK >= 6.0 {
+            k.selectedSegmentIndex = 1
+            kNumber = 3
+        }else if appDelegate.valueOfK < 6.0 && appDelegate.valueOfK >= 5.5{
+            k.selectedSegmentIndex = 2
+            kNumber = 1
+        }else if appDelegate.valueOfK < 5.5 && appDelegate.valueOfK >= 3.5 {
+            k.selectedSegmentIndex = 3
+            kNumber = 0
+        }else if appDelegate.valueOfK < 3.5 && appDelegate.valueOfK >= 3.0 {
+            k.selectedSegmentIndex = 4
+            kNumber = 1
+        }else if appDelegate.valueOfK < 3.0 && appDelegate.valueOfK >= 2.5 {
+            k.selectedSegmentIndex = 5
+            kNumber = 2
+        }else if appDelegate.valueOfK < 2.5  {
+            k.selectedSegmentIndex = 6
+            kNumber = 4
+        }
+//
+//        //HR
+        if appDelegate.valueOfHr == 0 || appDelegate.valueOfHr >= 180 {
+            hr.selectedSegmentIndex = 0
+            hrNumber = 4
+        }else if appDelegate.valueOfHr < 180  && appDelegate.valueOfHr >= 140 {
+            hr.selectedSegmentIndex = 1
+            hrNumber = 3
+        }else if appDelegate.valueOfHr < 140 && appDelegate.valueOfHr >= 110{
+            hr.selectedSegmentIndex = 2
+            hrNumber = 2
+        }else if appDelegate.valueOfHr < 110 && appDelegate.valueOfHr >= 70 {
+            hr.selectedSegmentIndex = 3
+            hrNumber = 0
+        }else if appDelegate.valueOfHr < 70 && appDelegate.valueOfHr >= 55 {
+            hr.selectedSegmentIndex = 4
+            hrNumber = 2
+        }else if appDelegate.valueOfHr < 55 && appDelegate.valueOfHr >= 40 {
+            hr.selectedSegmentIndex = 5
+            hrNumber = 3
+        }else if appDelegate.valueOfHr < 40{
+            hr.selectedSegmentIndex = 6
+            hrNumber = 4
+        }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//    // Fio2の値でセグメント（AaDo2,Pao2）を隠す
+//        if appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.isHidden = false
+//            po2.isHidden = true
+//        }else if appDelegate.valueOfFio2 < 0.5 && appDelegate.valueOfFio2 > 0{
+//            aaDo2.isHidden = true
+//            po2.isHidden = false
+//        }
+    
+    
+    //AppDelegateから値を引き継いで、その値が入るセグメントを選択する
+        //A-aDO2
+//        if  appDelegate.valueOfPao2 == 0 || appDelegate.valueOfPaco2 == 0 {
+//            aaDo2.selectedSegmentIndex = 0
+//        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 500 && appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.selectedSegmentIndex = 0
+//            aaDo2Number = 4
+//        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 350 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 500 && appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.selectedSegmentIndex = 1
+//            aaDo2Number = 3
+//        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) >= 200 && (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 350 && appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.selectedSegmentIndex = 2
+//            aaDo2Number = 2
+//        }else if (150 - (appDelegate.valueOfPaco2 / 0.8) - appDelegate.valueOfPao2) < 200 && appDelegate.valueOfFio2 >= 0.5{
+//            aaDo2.selectedSegmentIndex = 3
+//            aaDo2Number = 0
+//        }else
+        if  appDelegate.valueOfAaDo2 == 0{
+            aaDo2.selectedSegmentIndex = 0
         }else if appDelegate.valueOfAaDo2 >= 500{
             aaDo2.selectedSegmentIndex = 0
             aaDo2Number = 4
@@ -114,8 +334,8 @@ class apachViewController: UIViewController {
             aaDo2Number = 0
         }
         
- 
-
+        
+        
         
         //PaO2
         if  appDelegate.valueOfPao2 == 0 {
@@ -177,7 +397,7 @@ class apachViewController: UIViewController {
             age.selectedSegmentIndex = 4
             ageNumber = 6
         }
-    
+        
         //Ph
         if  appDelegate.valueOfPh == 0.0{
             ph.selectedSegmentIndex = 0
@@ -304,7 +524,6 @@ class apachViewController: UIViewController {
             hrNumber = 4
         }
     }
-    
 
 
     //体温のセグメントの設定

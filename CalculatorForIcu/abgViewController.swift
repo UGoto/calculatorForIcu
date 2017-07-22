@@ -61,6 +61,17 @@ class abgViewController: UIViewController,UITextFieldDelegate{
         }
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        if appDelegate.valueOfPao2 == 0{
+//            pao2OfAbg.text = ""
+//        }else if appDelegate.valueOfPaco2 == 0{
+//            paco2OfAbg.text = ""
+//        }else{
+//            pao2OfAbg.text = String(appDelegate.valueOfPao2)
+//            paco2OfAbg.text = String(appDelegate.valueOfPaco2)
+//        }
+//    }
+    
     
     //結果の表示
         //AG計算
@@ -85,13 +96,13 @@ class abgViewController: UIViewController,UITextFieldDelegate{
                 .text!)!
             
         //血ガス診断　４種類
-            if (getPh < 7.35 && getPaco2 > 45) {
+            if (getPh < 7.35 && getPaco2 > 45 && getHco3 >= 22 && getHco3 <= 26 ) {
                 bloodGas.text = "呼吸性アシドーシス"
-            }else if(getPh < 7.35 && getHco3 < 22){
+            }else if(getPh < 7.35 && getHco3 < 22 && getPaco2 >= 35 && getPaco2 <= 45 ){
                 bloodGas.text = "代謝性アシドーシス"
-            }else if(getPh > 7.45 && getPaco2 < 35){
+            }else if(getPh > 7.45 && getPaco2 < 35 && getHco3 >= 22 && getHco3 <= 26){
                 bloodGas.text = "呼吸性アルカローシス"
-            }else if(getPh > 7.45 && getHco3 > 26){
+            }else if(getPh > 7.45 && getHco3 > 26 && getPaco2 >= 35 && getPaco2 <= 45){
                 bloodGas.text = "代謝性アルカローシス"
             }else if(getPh < 7.35 && getPaco2>45 && getHco3 < 22){
                 bloodGas.text = "混合性アシドーシス"

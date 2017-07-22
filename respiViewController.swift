@@ -79,6 +79,19 @@ class respiViewController: UIViewController {
         paco2.text = String(appDelegate.valueOfPaco2)
     }
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        
+//        //各テキストの初期値に０が入らないようにする
+//        if appDelegate.valueOfPao2 == 0{
+//            pao2.text = ""
+//        }else if appDelegate.valueOfPaco2 == 0{
+//            paco2.text = ""
+//        }else{
+//            pao2.text = String(appDelegate.valueOfPao2)
+//            paco2.text = String(appDelegate.valueOfPaco2)
+//        }
+//    }
   
 //呼吸アセスメントの結果ページへデータを遷移
     @IBAction func resultButton(_ sender: UIButton) {
@@ -186,19 +199,29 @@ class respiViewController: UIViewController {
         }
         }
     
-    //ApacheⅡのページへ遷移(PaO2,PaCO2,RR)
+    //ApacheⅡのページへ遷移(PaO2,PaCO2,RR,Fio2)
     @IBAction func buttonToApache(_ sender: UIButton) {
         if pao2.text == "" {
-        }else if rr.text == ""{
-        }else if paco2.text == "" {
-        }else if fio2.text == ""{
         }else{
         appDelegate.valueOfPao2 = Float(pao2.text!)!
-        appDelegate.valueOfPaco2 = Float(paco2.text!)!
+        }
+        
+        if rr.text == "" {
+        }else{
         appDelegate.valueOfrr = Float(rr.text!)!
+        }
+
+        if paco2.text == ""{
+        }else{
+        appDelegate.valueOfPaco2 = Float(paco2.text!)!
+        }
+    
+        if fio2.text == ""{
+        }else{
         appDelegate.valueOfFio2 = Float(fio2.text!)!
         }
-        }
+    }
+    
     
     //SOFAのページへ遷移（PaO2,fio2）
     @IBAction func buttonToSofa(_ sender: UIButton) {

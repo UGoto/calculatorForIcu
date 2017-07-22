@@ -40,7 +40,7 @@ class dicViewController: UIViewController {
         super.viewDidLoad()
         //結果ボタンのデザイン
         resultBtn.layer.cornerRadius = 20.0
-        //RR
+//        //RR
         if appDelegate.valueOfrr == 0{
             rrSeg.selectedSegmentIndex = 0
         }else if appDelegate.valueOfrr >= 50 {
@@ -66,6 +66,34 @@ class dicViewController: UIViewController {
                 rrNumber = 4
         }
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        //RR
+//        if appDelegate.valueOfrr == 0{
+//            rrSeg.selectedSegmentIndex = 0
+//        }else if appDelegate.valueOfrr >= 50 {
+//            rrSeg.selectedSegmentIndex = 0
+//            rrNumber = 4
+//        }else if appDelegate.valueOfrr <= 49 && appDelegate.valueOfrr >= 35 {
+//            rrSeg.selectedSegmentIndex = 1
+//            rrNumber = 3
+//        }else if appDelegate.valueOfrr <= 34 && appDelegate.valueOfrr >= 25 {
+//            rrSeg.selectedSegmentIndex = 2
+//            rrNumber = 1
+//        }else if appDelegate.valueOfrr <= 24  && appDelegate.valueOfrr >= 12 {
+//            rrSeg.selectedSegmentIndex = 3
+//            rrNumber = 0
+//        }else if appDelegate.valueOfrr <= 11 && appDelegate.valueOfrr >= 10 {
+//            rrSeg.selectedSegmentIndex = 4
+//            rrNumber = 1
+//        }else if appDelegate.valueOfrr <= 9 && appDelegate.valueOfrr >= 6 {
+//            rrSeg.selectedSegmentIndex = 5
+//            rrNumber = 2
+//        }else if appDelegate.valueOfrr <= 5 {
+//            rrSeg.selectedSegmentIndex = 6
+//            rrNumber = 4
+//        }
+//    }
     
 //セグメントの設定
     //体温のセグメント設定

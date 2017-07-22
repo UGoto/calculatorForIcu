@@ -44,7 +44,7 @@ class resultNutriOfViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //BEE男性の値を出力
+//        //BEE男性の値を出力
         mof.text = String(appDelegate.mof)
         mof2.text = String(appDelegate.mof2)
         mof4.text = String(appDelegate.mof4)
@@ -52,15 +52,15 @@ class resultNutriOfViewController: UIViewController {
         mof8.text = String(appDelegate.mof8)
         mof0.text = String(appDelegate.mof0)
         
-        //BEE女性の値を出力
+//        //BEE女性の値を出力
         fof.text = String(appDelegate.fof)
         fof2.text = String(appDelegate.fof2)
         fof4.text = String(appDelegate.fof4)
         fof6.text = String(appDelegate.fof6)
         fof8.text = String(appDelegate.fof8)
         fof0.text = String(appDelegate.fof0)
-        
-        //栄養その他結果
+//
+//        //栄養その他結果
         bmi.text = String(appDelegate.bmi)
         loseWt.text = String(appDelegate.loseWt)
         energy.text = String(appDelegate.ee)
@@ -68,10 +68,34 @@ class resultNutriOfViewController: UIViewController {
         giveNi.text = String(appDelegate.giveN)
         outNi.text = String(appDelegate.excreteN)
         inOutNi.text = String(appDelegate.casherN)
-        
-        
-        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        //BEE男性の値を出力
+//        mof.text = String(appDelegate.mof)
+//        mof2.text = String(appDelegate.mof2)
+//        mof4.text = String(appDelegate.mof4)
+//        mof6.text = String(appDelegate.mof6)
+//        mof8.text = String(appDelegate.mof8)
+//        mof0.text = String(appDelegate.mof0)
+//        
+//        //BEE女性の値を出力
+//        fof.text = String(appDelegate.fof)
+//        fof2.text = String(appDelegate.fof2)
+//        fof4.text = String(appDelegate.fof4)
+//        fof6.text = String(appDelegate.fof6)
+//        fof8.text = String(appDelegate.fof8)
+//        fof0.text = String(appDelegate.fof0)
+//        
+//        //栄養その他結果
+//        bmi.text = String(appDelegate.bmi)
+//        loseWt.text = String(appDelegate.loseWt)
+//        energy.text = String(appDelegate.ee)
+//        nb.text = String(appDelegate.nb)
+//        giveNi.text = String(appDelegate.giveN)
+//        outNi.text = String(appDelegate.excreteN)
+//        inOutNi.text = String(appDelegate.casherN)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
