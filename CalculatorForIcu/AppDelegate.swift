@@ -64,8 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var valueOfCre:Float = 0
     var valueOfPlt:Int = 0
     
-//    //呼吸アセスメント
-//    var resultList = ""
+//コアデータ見える化にするため
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
