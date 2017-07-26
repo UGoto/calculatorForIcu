@@ -71,10 +71,10 @@ class nutriViewController: UIViewController {
         appDelegate.fof0 = appDelegate.fof * 2.0
         
         //BMI
-        if wt.text == "" || ht.text == "" {
+        if pwt.text == "" || ht.text == "" {
             print("入力されていない項目があります")
         }else{
-        appDelegate.bmi = Float(wt.text!)! / ((Float(ht.text!)!/100) * (Float(ht.text!)!/100))
+        appDelegate.bmi = Float(pwt.text!)! / ((Float(ht.text!)!/100) * (Float(ht.text!)!/100))
         }
         //体重減少率
         if wt.text == "" || pwt.text == "" {

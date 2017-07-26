@@ -79,19 +79,6 @@ class respiViewController: UIViewController {
         paco2.text = String(appDelegate.valueOfPaco2)
     }
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        
-//        //各テキストの初期値に０が入らないようにする
-//        if appDelegate.valueOfPao2 == 0{
-//            pao2.text = ""
-//        }else if appDelegate.valueOfPaco2 == 0{
-//            paco2.text = ""
-//        }else{
-//            pao2.text = String(appDelegate.valueOfPao2)
-//            paco2.text = String(appDelegate.valueOfPaco2)
-//        }
-//    }
   
 //呼吸アセスメントの結果ページへデータを遷移
     @IBAction func resultButton(_ sender: UIButton) {
