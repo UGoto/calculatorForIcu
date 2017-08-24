@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C84FD1050F05E5312231AC1 /* Pods_CalculatorForIcuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3DBF5CAC0D2A2F664CE70B /* Pods_CalculatorForIcuUITests.framework */; };
+		5F2AA365BE3145F0CAF11B74 /* Pods_CalculatorForIcu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF6DE8052F8F492931F1A63 /* Pods_CalculatorForIcu.framework */; };
 		BA05A2011F0DB4360062D408 /* resultRespiOfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05A2001F0DB4360062D408 /* resultRespiOfViewController.swift */; };
 		BA05A2031F0DFE530062D408 /* resultNutriOfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05A2021F0DFE530062D408 /* resultNutriOfViewController.swift */; };
 		BA41ED4F1F19E730004462CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41ED4E1F19E730004462CE /* DetailViewController.swift */; };
 		BA49288E1EF678CA009B8988 /* AssessDeliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */; };
 		BA592A6C1F0348B1008997F1 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6B1F0348B1008997F1 /* historyViewController.swift */; };
 		BA592A6E1F0348F2008997F1 /* formulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA592A6D1F0348F2008997F1 /* formulaViewController.swift */; };
+		BA7360961F4DAB9D00283194 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA7360951F4DAB9D00283194 /* GoogleService-Info.plist */; };
 		BA84B7D71F1E40AE000AB6C6 /* InforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84B7D61F1E40AE000AB6C6 /* InforViewController.swift */; };
 		BA8ABCF11F0B5DAB001A13F3 /* nutriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */; };
 		BA8ABCF31F0B6783001A13F3 /* sofaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */; };
@@ -33,6 +36,7 @@
 		BAFC96D61F0BCF6900B5C714 /* dicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D51F0BCF6900B5C714 /* dicViewController.swift */; };
 		BAFC96D81F0CAB0400B5C714 /* apachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC96D71F0CAB0400B5C714 /* apachViewController.swift */; };
 		BAFFBC311F1C83BA00810C03 /* GanmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFBC301F1C83BA00810C03 /* GanmaViewController.swift */; };
+		D7D806CB0484E3062FDF923D /* Pods_CalculatorForIcuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD620051C97E084D65BA8B /* Pods_CalculatorForIcuTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +57,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05EC7BE6E68C61C11A53261D /* Pods-CalculatorForIcuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcuUITests/Pods-CalculatorForIcuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1D3DBF5CAC0D2A2F664CE70B /* Pods_CalculatorForIcuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorForIcuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D1B45922CDD55E3E7CB6727 /* Pods-CalculatorForIcuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcuTests/Pods-CalculatorForIcuTests.release.xcconfig"; sourceTree = "<group>"; };
+		3067F4973E3480B1811A7D06 /* Pods-CalculatorForIcuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcuUITests/Pods-CalculatorForIcuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5000D936258ED6ED9BC0B618 /* Pods-CalculatorForIcu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcu/Pods-CalculatorForIcu.debug.xcconfig"; sourceTree = "<group>"; };
+		6ADF932B890D8807E4917BC0 /* Pods-CalculatorForIcuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcuTests/Pods-CalculatorForIcuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FF6DE8052F8F492931F1A63 /* Pods_CalculatorForIcu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorForIcu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95AD620051C97E084D65BA8B /* Pods_CalculatorForIcuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorForIcuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14BB0A8315661C0107439E4 /* Pods-CalculatorForIcu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorForIcu.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculatorForIcu/Pods-CalculatorForIcu.release.xcconfig"; sourceTree = "<group>"; };
 		BA05A2001F0DB4360062D408 /* resultRespiOfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultRespiOfViewController.swift; sourceTree = "<group>"; };
 		BA05A2021F0DFE530062D408 /* resultNutriOfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultNutriOfViewController.swift; sourceTree = "<group>"; };
 		BA41ED4E1F19E730004462CE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA49288D1EF678CA009B8988 /* AssessDeliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessDeliViewController.swift; sourceTree = "<group>"; };
 		BA592A6B1F0348B1008997F1 /* historyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		BA592A6D1F0348F2008997F1 /* formulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = formulaViewController.swift; sourceTree = "<group>"; };
+		BA7360951F4DAB9D00283194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA84B7D61F1E40AE000AB6C6 /* InforViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InforViewController.swift; sourceTree = "<group>"; };
 		BA8ABCF01F0B5DAB001A13F3 /* nutriViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nutriViewController.swift; sourceTree = "<group>"; };
 		BA8ABCF21F0B6783001A13F3 /* sofaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sofaViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2AA365BE3145F0CAF11B74 /* Pods_CalculatorForIcu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D806CB0484E3062FDF923D /* Pods_CalculatorForIcuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +122,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C84FD1050F05E5312231AC1 /* Pods_CalculatorForIcuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0DD5F87E1A8C7924F1905B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FF6DE8052F8F492931F1A63 /* Pods_CalculatorForIcu.framework */,
+				95AD620051C97E084D65BA8B /* Pods_CalculatorForIcuTests.framework */,
+				1D3DBF5CAC0D2A2F664CE70B /* Pods_CalculatorForIcuUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA7F6947E9D0F9E1991AE9AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5000D936258ED6ED9BC0B618 /* Pods-CalculatorForIcu.debug.xcconfig */,
+				B14BB0A8315661C0107439E4 /* Pods-CalculatorForIcu.release.xcconfig */,
+				6ADF932B890D8807E4917BC0 /* Pods-CalculatorForIcuTests.debug.xcconfig */,
+				2D1B45922CDD55E3E7CB6727 /* Pods-CalculatorForIcuTests.release.xcconfig */,
+				3067F4973E3480B1811A7D06 /* Pods-CalculatorForIcuUITests.debug.xcconfig */,
+				05EC7BE6E68C61C11A53261D /* Pods-CalculatorForIcuUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BAE88B711EF5EB6E001D0557 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +162,8 @@
 				BAE88B911EF5EB6F001D0557 /* CalculatorForIcuTests */,
 				BAE88B9C1EF5EB6F001D0557 /* CalculatorForIcuUITests */,
 				BAE88B7B1EF5EB6E001D0557 /* Products */,
+				AA7F6947E9D0F9E1991AE9AA /* Pods */,
+				8D0DD5F87E1A8C7924F1905B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +200,7 @@
 				BAE88B811EF5EB6E001D0557 /* Main.storyboard */,
 				BAE88B841EF5EB6E001D0557 /* Assets.xcassets */,
 				BAE88B861EF5EB6E001D0557 /* LaunchScreen.storyboard */,
+				BA7360951F4DAB9D00283194 /* GoogleService-Info.plist */,
 				BAE88B891EF5EB6E001D0557 /* Info.plist */,
 				BA84B7D61F1E40AE000AB6C6 /* InforViewController.swift */,
 			);
@@ -189,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE88BA21EF5EB6F001D0557 /* Build configuration list for PBXNativeTarget "CalculatorForIcu" */;
 			buildPhases = (
+				4988C5613E141F38B35EBEF7 /* [CP] Check Pods Manifest.lock */,
 				BAE88B761EF5EB6E001D0557 /* Sources */,
 				BAE88B771EF5EB6E001D0557 /* Frameworks */,
 				BAE88B781EF5EB6E001D0557 /* Resources */,
+				8FCEC0D7CE7E8AD440095FC6 /* [CP] Embed Pods Frameworks */,
+				92C957CA1553480DF80A2182 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE88BA51EF5EB6F001D0557 /* Build configuration list for PBXNativeTarget "CalculatorForIcuTests" */;
 			buildPhases = (
+				415AF409FDACA932D016ADB9 /* [CP] Check Pods Manifest.lock */,
 				BAE88B8A1EF5EB6F001D0557 /* Sources */,
 				BAE88B8B1EF5EB6F001D0557 /* Frameworks */,
 				BAE88B8C1EF5EB6F001D0557 /* Resources */,
+				A33264F160811D5E3C79E7C7 /* [CP] Embed Pods Frameworks */,
+				811AB814FEFF53A2CBD31A4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE88BA81EF5EB6F001D0557 /* Build configuration list for PBXNativeTarget "CalculatorForIcuUITests" */;
 			buildPhases = (
+				BB183AB8077409183DF62701 /* [CP] Check Pods Manifest.lock */,
 				BAE88B951EF5EB6F001D0557 /* Sources */,
 				BAE88B961EF5EB6F001D0557 /* Frameworks */,
 				BAE88B971EF5EB6F001D0557 /* Resources */,
+				2C40038754DACAE551CD9855 /* [CP] Embed Pods Frameworks */,
+				B84AC9596CBBD0DAA8CB03F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE88B881EF5EB6E001D0557 /* LaunchScreen.storyboard in Resources */,
+				BA7360961F4DAB9D00283194 /* GoogleService-Info.plist in Resources */,
 				BAE88B851EF5EB6E001D0557 /* Assets.xcassets in Resources */,
 				BAE88B831EF5EB6E001D0557 /* Main.storyboard in Resources */,
 			);
@@ -311,6 +364,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C40038754DACAE551CD9855 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcuUITests/Pods-CalculatorForIcuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		415AF409FDACA932D016ADB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalculatorForIcuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4988C5613E141F38B35EBEF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalculatorForIcu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		811AB814FEFF53A2CBD31A4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcuTests/Pods-CalculatorForIcuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FCEC0D7CE7E8AD440095FC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcu/Pods-CalculatorForIcu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcu/Pods-CalculatorForIcu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92C957CA1553480DF80A2182 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcu/Pods-CalculatorForIcu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33264F160811D5E3C79E7C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcuTests/Pods-CalculatorForIcuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84AC9596CBBD0DAA8CB03F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalculatorForIcuUITests/Pods-CalculatorForIcuUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB183AB8077409183DF62701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalculatorForIcuUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAE88B761EF5EB6E001D0557 /* Sources */ = {
@@ -489,11 +692,12 @@
 		};
 		BAE88BA31EF5EB6F001D0557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5000D936258ED6ED9BC0B618 /* Pods-CalculatorForIcu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3WPTU8YD39;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yujiyamamoto.calculatorForIcuAPP;
@@ -506,11 +710,12 @@
 		};
 		BAE88BA41EF5EB6F001D0557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14BB0A8315661C0107439E4 /* Pods-CalculatorForIcu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yuji Yamamoto (3WPTU8YD39)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3WPTU8YD39;
 				INFOPLIST_FILE = CalculatorForIcu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yujiyamamoto.calculatorForIcuAPP;
@@ -523,6 +728,7 @@
 		};
 		BAE88BA61EF5EB6F001D0557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ADF932B890D8807E4917BC0 /* Pods-CalculatorForIcuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +743,7 @@
 		};
 		BAE88BA71EF5EB6F001D0557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D1B45922CDD55E3E7CB6727 /* Pods-CalculatorForIcuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +758,7 @@
 		};
 		BAE88BA91EF5EB6F001D0557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3067F4973E3480B1811A7D06 /* Pods-CalculatorForIcuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CalculatorForIcuUITests/Info.plist;
@@ -564,6 +772,7 @@
 		};
 		BAE88BAA1EF5EB6F001D0557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05EC7BE6E68C61C11A53261D /* Pods-CalculatorForIcuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CalculatorForIcuUITests/Info.plist;

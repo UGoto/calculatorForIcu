@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 //プロトコルの設定
 class ViewController: UIViewController {
+    //広告用
+    let AdMobID = "ca-app-pub-8485715608308777~1331315398"
+    let TEST_ID = "ca-app-pub-3940256099942544/2934735716"
+    
+    let AdMobTest:Bool = false
+    
+    
     @IBOutlet weak var respiBtn: UIButton!
     @IBOutlet weak var nutriBtn: UIButton!
     @IBOutlet weak var abgBtn: UIButton!
@@ -22,6 +30,35 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        admobView.frame.origin = CGPoint(x: 0, y: self.view.frame.size.height - admobView.frame.height)
+        
+        admobView.frame.size = CGSize(width: self.view.frame.width, height: admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.load(admobRequest)
+        
+        self.view.addSubview(admobView)
+
+        
+        
+        
+        
         respiBtn.layer.cornerRadius = 20.0
         nutriBtn.layer.cornerRadius = 20.0
         abgBtn.layer.cornerRadius = 20.0
